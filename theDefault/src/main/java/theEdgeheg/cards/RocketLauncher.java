@@ -1,7 +1,9 @@
 package theEdgeheg.cards;
 
+import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,7 +15,7 @@ import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class DefaultRareAttack extends AbstractDynamicCard {
+public class RocketLauncher extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -24,7 +26,7 @@ public class DefaultRareAttack extends AbstractDynamicCard {
 
     // TEXT DECLARATION 
 
-    public static final String ID = DefaultMod.makeID(DefaultRareAttack.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(RocketLauncher.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
@@ -33,19 +35,19 @@ public class DefaultRareAttack extends AbstractDynamicCard {
     // STAT DECLARATION 	
 
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 2;
+    private static final int COST = 3;
 
-    private static final int DAMAGE = 30;
+    private static final int DAMAGE = 25;
     private static final int UPGRADE_PLUS_DMG = 5;
 
     // /STAT DECLARATION/
 
 
-    public DefaultRareAttack() {
+    public RocketLauncher() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
     }
@@ -54,13 +56,13 @@ public class DefaultRareAttack extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
-        }
-        AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
-                        AbstractGameAction.AttackEffect.NONE));
+        m = AbstractDungeon.getCurrRoom().monsters.monsters.get(0);
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new WeightyImpactEffect(m.hb.cX, m.hb.cY)));
 
+        for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(mo, new DamageInfo(p, damage, damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.NONE));
+        }
     }
 
     //Upgraded stats.

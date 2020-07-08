@@ -403,17 +403,18 @@ public class DefaultMod implements
         BaseMod.addCard(new StarterShootAttack());
         BaseMod.addCard(new BloodyKatana());
         BaseMod.addCard(new ChaosControlSkill());
+        BaseMod.addCard(new MachineGun());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
-        BaseMod.addCard(new OrbSkill());
-        BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        BaseMod.addCard(new DefaultAttackWithVariable());
+        //BaseMod.addCard(new OrbSkill());
+        //BaseMod.addCard(new DefaultSecondMagicNumberSkill());
+        //BaseMod.addCard(new DefaultAttackWithVariable());
         BaseMod.addCard(new DefaultCommonPower());
         BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
-        BaseMod.addCard(new DefaultRareAttack());
+        BaseMod.addCard(new RocketLauncher());
         BaseMod.addCard(new DefaultRareSkill());
         BaseMod.addCard(new DefaultRarePower());
         
@@ -430,7 +431,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-        UnlockTracker.unlockCard(DefaultRareAttack.ID);
+        UnlockTracker.unlockCard(RocketLauncher.ID);
         UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
         

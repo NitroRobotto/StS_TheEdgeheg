@@ -16,6 +16,10 @@
     "NAME": "Chaos Control",
     "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Stun all enemies."
   },
+  "theEdgeheg:MachineGun": {
+    "NAME": "Fire Machine Gun",
+    "DESCRIPTION": "Deals !D! [#ff0000]Damage[] !M! times."
+  },
   "theEdgeheg:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theEdgeheg:Keyword. theEdgeheg:Multiword_Keyword.",
@@ -34,9 +38,9 @@
     "DESCRIPTION": "Gain X theEdgeheg:Keywords.",
     "UPGRADE_DESCRIPTION": "Gain X +1 theEdgeheg:Keywords."
   },
-  "theEdgeheg:DefaultRareAttack": {
-    "NAME": "TOUCH",
-    "DESCRIPTION": "Deal !D! Damage."
+  "theEdgeheg:RocketLauncher": {
+    "NAME": "Fire Rocket Launcher",
+    "DESCRIPTION": "Deal !D! [#ff0000]Damage[] to all enemies."
   },
   "theEdgeheg:DefaultRareSkill": {
     "NAME": "For Each Loop x2",

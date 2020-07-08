@@ -42,7 +42,7 @@ public class ChaosControlSkill extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 0;
+    private static final int COST = 1;
     private static final int CHAOS_ENERGY_COST = 5;
     private static final int CHAOS_ENERGY_UPGRADE = -1;
 

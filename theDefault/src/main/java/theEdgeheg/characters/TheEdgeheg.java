@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.RocketLauncher;
 import theEdgeheg.cards.attacks.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.skills.ChaosControlSkill;
@@ -162,7 +163,6 @@ public class TheEdgeheg extends CustomPlayer {
         retVal.add(StarterShootAttack.ID);
         retVal.add(StarterShootAttack.ID);
         //retVal.add(DefaultUncommonAttack.ID);
-        //retVal.add(DefaultRareAttack.ID);
 
         retVal.add(BloodyKatana.ID);
         retVal.add(ChaosControlSkill.ID);

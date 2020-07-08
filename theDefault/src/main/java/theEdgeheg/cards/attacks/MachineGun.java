@@ -1,17 +1,18 @@
 package theEdgeheg.cards.attacks;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.actions.BloodyKatanaAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class BloodyKatana extends AbstractDynamicCard {
+public class MachineGun extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -21,7 +22,7 @@ public class BloodyKatana extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(BloodyKatana.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(MachineGun.class.getSimpleName());
     public static final String IMG = makeCardPath("Attack.png");
 
     // /TEXT DECLARATION/
@@ -34,28 +35,27 @@ public class BloodyKatana extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 2;
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 5;
-    private static final int HEAL = 1;
-    private static final int UPGRADE_PLUS_HEAL = 1;
+    private static final int COST = 1;
+    private static final int DAMAGE = 2;
+    private static final int UPGRADE_PLUS_DMG = 1;
+    private static final int SHOTS = 4;
 
     // /STAT DECLARATION/
 
-    public BloodyKatana() {
+    public MachineGun() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         baseDamage = DAMAGE;
-        baseMagicNumber = HEAL;
+        baseMagicNumber = SHOTS;
         magicNumber = baseMagicNumber;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new BloodyKatanaAction(m, new DamageInfo(p, damage, damageTypeForTurn), 1)
-        );
+        for (int i = 0; i < magicNumber; ++i)  {
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
     }
 
     // Upgraded stats.
@@ -64,7 +64,6 @@ public class BloodyKatana extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(UPGRADE_PLUS_HEAL);
             initializeDescription();
         }
     }

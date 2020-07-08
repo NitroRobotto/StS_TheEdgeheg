@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.cards.DefaultRareAttack;
+import theEdgeheg.cards.RocketLauncher;
 import theEdgeheg.util.TextureLoader;
 
 public class RarePower extends AbstractPower implements CloneablePowerInterface {
@@ -47,7 +47,7 @@ public class RarePower extends AbstractPower implements CloneablePowerInterface 
 
     @Override
     public void atStartOfTurn() { // At the start of your turn
-        AbstractCard playCard = new DefaultRareAttack(); // Declare Card - the DefaultRareAttack card. We will name it 'playCard'.
+        AbstractCard playCard = new RocketLauncher(); // Declare Card - the RocketLauncher card. We will name it 'playCard'.
         AbstractMonster targetMonster = AbstractDungeon.getRandomMonster(); // Declare Target - Random Monster. We will name the monster 'targetMonster'.
 
         playCard.freeToPlayOnce = true; //Self Explanatory
