@@ -1,0 +1,43 @@
+package theEdgeheg.relics;
+
+import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Texture;
+import theEdgeheg.DefaultMod;
+import theEdgeheg.util.TextureLoader;
+
+import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
+import static theEdgeheg.DefaultMod.makeRelicPath;
+
+public class UltimateLifeformRelic extends CustomRelic {
+    /*
+     * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
+     *
+     * Reduce all damage taken to 1 (like Intangible).
+     */
+
+    // ID, images, text.
+    public static final String ID = DefaultMod.makeID(UltimateLifeformRelic.class.getSimpleName());
+
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
+
+    public UltimateLifeformRelic() {
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
+    }
+
+    public int onLoseHpLast(int damageAmount) {
+        if (damageAmount > 1) {
+            this.flash();
+            return 1;
+        }
+
+        return damageAmount;
+    }
+
+    // Description
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+}

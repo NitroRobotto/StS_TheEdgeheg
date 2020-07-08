@@ -1,0 +1,10 @@
+{
+"theEdgeheg:DodgePower": {
+        "NAME": "*dodges*",
+        "DESCRIPTIONS": ["Dodge the next ", " attack.", "  attacks."]
+},
+"theEdgeheg:RarePower": {
+        "NAME": "Placeholder Power",
+        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+}
+}
