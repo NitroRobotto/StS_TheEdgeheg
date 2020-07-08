@@ -52,7 +52,7 @@ import org.apache.logging.log4j.Logger;
  * Let's get to it!
  */
 
-@SpirePatch(    // "Use the @SpirePatch annotation on the patch class."
+/*@SpirePatch(    // "Use the @SpirePatch annotation on the patch class."
         clz = AbstractDungeon.class, // This is the class where the method we will be patching is. In our case - Abstract Dungeon
         method = "returnRandomRelicKey" // This is the name of the method we will be patching.
         /*
@@ -66,8 +66,8 @@ import org.apache.logging.log4j.Logger;
                 AbstractRelic.LandingSound.class
         }
         to this annotation, after the method parameter. (If we wanted to patch the first one, we'd only put "AbstractRelic.RelicTier.class".
-        */
-)
+
+)*/
 public class DefaultInsertPatch {// Don't worry about the "never used" warning - *You* usually don't use/call them anywhere. Mod The Spire does.
     
     // You can have as many inner classes with patches as you want inside this one - you don't have to separate each patch into it's own file.
