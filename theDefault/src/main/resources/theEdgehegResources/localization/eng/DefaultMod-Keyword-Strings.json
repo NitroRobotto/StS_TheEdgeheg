@@ -18,14 +18,12 @@
     "DESCRIPTION": "If this attack kills a non-minion enemy, recover X [#ff0000]Health[]."
   },
   {
-    "PROPER_NAME": "Multiword Keyword",
+    "PROPER_NAME": "Chaos Control X",
     "NAMES": [
-      "Multiword Keyword",
-      "multiword_keyword",
-      "multiword_keywords",
-      "multikey",
-      "multikeyword"
+      "Chaos Control X",
+      "chaos_control",
+      "chaoscontrol"
     ],
-    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest is to match keywords like the single word keyword."
+    "DESCRIPTION": "Spends energy collected from the chaos emeralds."
   }
 ]

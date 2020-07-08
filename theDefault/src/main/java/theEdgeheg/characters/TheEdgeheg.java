@@ -21,7 +21,9 @@ import org.apache.logging.log4j.Logger;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.attacks.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
+import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
+import theEdgeheg.relics.GreenEmeraldRelic;
 import theEdgeheg.relics.UltimateLifeformRelic;
 import theEdgeheg.util.NullAnimation;
 
@@ -163,6 +165,7 @@ public class TheEdgeheg extends CustomPlayer {
         //retVal.add(DefaultRareAttack.ID);
 
         retVal.add(BloodyKatana.ID);
+        retVal.add(ChaosControlSkill.ID);
 
         retVal.add(StarterDodgeSkill.ID);
         retVal.add(StarterDodgeSkill.ID);
@@ -188,10 +191,12 @@ public class TheEdgeheg extends CustomPlayer {
 
         //retVal.add(SoulDevourerRelic.ID);
         retVal.add(UltimateLifeformRelic.ID);
+        retVal.add(GreenEmeraldRelic.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         //UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);
         UnlockTracker.markRelicAsSeen(UltimateLifeformRelic.ID);
+        UnlockTracker.markRelicAsSeen(GreenEmeraldRelic.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;

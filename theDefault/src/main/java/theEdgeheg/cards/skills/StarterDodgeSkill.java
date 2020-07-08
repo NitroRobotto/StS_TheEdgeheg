@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.effects.DodgePower;
+import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -37,7 +37,6 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-
 
     // /STAT DECLARATION/
 

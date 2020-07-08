@@ -20,12 +20,10 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.cards.*;
-import theEdgeheg.cards.attacks.BloodyKatana;
-import theEdgeheg.cards.attacks.StarterShootAttack;
-import theEdgeheg.cards.skills.StarterDodgeSkill;
+import theEdgeheg.cards.attacks.*;
+import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.relics.SoulDevourerRelic;
-import theEdgeheg.relics.UltimateLifeformRelic;
+import theEdgeheg.relics.*;
 import theEdgeheg.util.IDCheckDontTouchPls;
 import theEdgeheg.util.TextureLoader;
 import theEdgeheg.variables.DefaultCustomVariable;
@@ -369,6 +367,8 @@ public class DefaultMod implements
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new SoulDevourerRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new UltimateLifeformRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new GreenEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        //BaseMod.addRelicToCustomPool(new Green, TheEdgeheg.Enums.COLOR_PURPLE);
         //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheEdgeheg.Enums.COLOR_GRAY);
         //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheEdgeheg.Enums.COLOR_GRAY);
         
@@ -402,6 +402,7 @@ public class DefaultMod implements
         BaseMod.addCard(new StarterDodgeSkill());
         BaseMod.addCard(new StarterShootAttack());
         BaseMod.addCard(new BloodyKatana());
+        BaseMod.addCard(new ChaosControlSkill());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.

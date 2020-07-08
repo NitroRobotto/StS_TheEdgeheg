@@ -12,6 +12,10 @@
     "NAME": "Bloody Katana",
     "DESCRIPTION": "Deal !D! [#ff0000]Damage[]. NL NL If Fatal, heal !M!."
   },
+  "theEdgeheg:ChaosControlSkill": {
+    "NAME": "Chaos Control",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Stun all enemies."
+  },
   "theEdgeheg:DefaultCommonPower": {
     "NAME": "Hold Place",
     "DESCRIPTION": "Gain !M! theEdgeheg:Keyword. theEdgeheg:Multiword_Keyword.",

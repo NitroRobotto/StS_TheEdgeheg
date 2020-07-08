@@ -3,6 +3,10 @@
         "NAME": "*dodges*",
         "DESCRIPTIONS": ["Dodge the next ", " attack.", "  attacks."]
 },
+"theEdgeheg:ChaosEnergyPower": {
+        "NAME": "Chaos Energy",
+        "DESCRIPTIONS": ["Use the power from the Chaos Emeralds to fuel your cards."]
+},
 "theEdgeheg:RarePower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]

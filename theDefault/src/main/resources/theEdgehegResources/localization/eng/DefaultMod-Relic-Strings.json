@@ -13,6 +13,13 @@
       "As the ultimate lifeform, attacks merely scratch you. NL Take a maximum of 1 Damage from all sources."
     ]
   },
+  "theEdgeheg:GreenEmeraldRelic": {
+    "NAME": "Green Chaos Emerald",
+    "FLAVOR": "The best one green is the best colour.",
+    "DESCRIPTIONS": [
+      "Gain #b1 Chaos Energy at the start of each turn."
+    ]
+  },
   "theEdgeheg:DefaultClickableRelic": {
     "NAME": "Right-Clicky Relic",
     "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
