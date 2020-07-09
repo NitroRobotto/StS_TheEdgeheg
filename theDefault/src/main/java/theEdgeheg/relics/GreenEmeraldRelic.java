@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.powers.ChaosEnergyPower;
+import theEdgeheg.powers.GunsPower;
 import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
@@ -21,11 +22,11 @@ public class GreenEmeraldRelic extends CustomRelic {
     // ID, images, text.
     public static final String ID = DefaultMod.makeID(GreenEmeraldRelic.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("redEmerald.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("emeraldOutline.png"));
 
     public GreenEmeraldRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
     @Override
@@ -33,7 +34,8 @@ public class GreenEmeraldRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(
                         AbstractDungeon.player, AbstractDungeon.player,
-                        new ChaosEnergyPower(AbstractDungeon.player, 1)));
+                        new GunsPower(AbstractDungeon.player
+                        /*new ChaosEnergyPower(AbstractDungeon.player*/, 1)));
     }
 
     public int onLoseHpLast(int damageAmount) {

@@ -12,17 +12,17 @@ import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makePowerPath;
 
-public class ChaosEnergyPower extends AbstractPower implements CloneablePowerInterface {
+public class GunsPower extends AbstractPower implements CloneablePowerInterface {
 
-    public static final String POWER_ID = DefaultMod.makeID(ChaosEnergyPower.class.getSimpleName());
+    public static final String POWER_ID = DefaultMod.makeID(GunsPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
-    
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public ChaosEnergyPower(AbstractCreature owner, int stacks)
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+
+    public GunsPower(AbstractCreature owner, int stacks)
     {
         name = NAME;
         ID = POWER_ID;
@@ -39,9 +39,9 @@ public class ChaosEnergyPower extends AbstractPower implements CloneablePowerInt
         updateDescription();
     }
 
-    public static int GetChaosStrength(AbstractCreature owner)
+    public static int GetGunStrength(AbstractCreature owner)
     {
-        AbstractPower power = owner.getPower(ChaosEnergyPower.POWER_ID);
+        AbstractPower power = owner.getPower(GunsPower.POWER_ID);
         return power != null ? power.amount : 0;
     }
 

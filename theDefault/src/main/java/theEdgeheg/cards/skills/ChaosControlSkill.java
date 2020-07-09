@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
 import theEdgeheg.powers.DodgePower;
@@ -53,6 +54,8 @@ public class ChaosControlSkill extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseMagicNumber = CHAOS_ENERGY_COST;
         magicNumber = baseMagicNumber;
+
+        tags.add(EdgehegCardTags.CHAOS);
     }
 
     @Override
@@ -62,8 +65,7 @@ public class ChaosControlSkill extends AbstractDynamicCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        AbstractPower chaosEnergy = p.getPower(ChaosEnergyPower.POWER_ID);
-        return chaosEnergy != null && chaosEnergy.amount >= magicNumber;
+        return magicNumber <= ChaosEnergyPower.GetChaosStrength(p);
     }
 
     // Actions the card should do.

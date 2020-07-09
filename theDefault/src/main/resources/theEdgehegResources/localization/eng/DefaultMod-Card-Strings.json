@@ -1,24 +1,23 @@
 {
   "theEdgeheg:StarterShootAttack": {
     "NAME": "*shoots*",
-    "DESCRIPTION": "Deal !D! [#ff0000]Damage[]."
+    "DESCRIPTION": "sShoot gun NL ( !D! damage"
   },
   "theEdgeheg:StarterDodgeSkill": {
     "NAME": "*dodges*",
-    "DESCRIPTION": "theedgeheg:Dodge 1",
-    "UPGRADE_DESCRIPTION": "Gain theedgeheg:Dodge 1. Gain 1 Intangible."
+    "DESCRIPTION": "theedgeheg:Dodge NL (once)"
   },
   "theEdgeheg:BloodyKatana": {
-    "NAME": "Bloody Katana",
-    "DESCRIPTION": "Deal !D! [#ff0000]Damage[]. NL NL If Fatal, heal !M!."
+    "NAME": "*bloody katana*",
+    "DESCRIPTION": "theedgeheg:precise cut for !D! [#ff0000]Damage[]. NL NL if Fatal, heal !M!."
   },
   "theEdgeheg:ChaosControlSkill": {
-    "NAME": "Chaos Control",
-    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Stun all enemies."
+    "NAME": "chaos Control",
+    "DESCRIPTION": "Cahos Control !M!. Stuns all enemies."
   },
   "theEdgeheg:MachineGun": {
-    "NAME": "Fire Machine Gun",
-    "DESCRIPTION": "Deals !D! [#ff0000]Damage[] !M! times."
+    "NAME": "machine GUN",
+    "DESCRIPTION": "Deal !D! Damage !M! [#ff0000]times[] or more if you have more guns."
   },
   "theEdgeheg:DefaultCommonPower": {
     "NAME": "Hold Place",

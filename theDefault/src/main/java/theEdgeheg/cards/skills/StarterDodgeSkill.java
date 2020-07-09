@@ -37,6 +37,7 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     // /STAT DECLARATION/
 
@@ -62,6 +63,7 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

@@ -7,8 +7,8 @@
         "NAME": "Chaos Energy",
         "DESCRIPTIONS": ["Use the power from the Chaos Emeralds to fuel your cards."]
 },
-"theEdgeheg:RarePower": {
+"theEdgeheg:GunsPower": {
         "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["At the start of your turn, TOUCH #b", " enemy." , " enemies."]
+        "DESCRIPTIONS": ["You have #b guns."]
 }
 }

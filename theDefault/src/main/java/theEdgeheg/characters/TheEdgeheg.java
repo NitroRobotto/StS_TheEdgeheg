@@ -191,12 +191,12 @@ public class TheEdgeheg extends CustomPlayer {
 
         //retVal.add(SoulDevourerRelic.ID);
         retVal.add(UltimateLifeformRelic.ID);
-        retVal.add(GreenEmeraldRelic.ID);
+        //retVal.add(GreenEmeraldRelic.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         //UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);
         UnlockTracker.markRelicAsSeen(UltimateLifeformRelic.ID);
-        UnlockTracker.markRelicAsSeen(GreenEmeraldRelic.ID);
+        //UnlockTracker.markRelicAsSeen(GreenEmeraldRelic.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;

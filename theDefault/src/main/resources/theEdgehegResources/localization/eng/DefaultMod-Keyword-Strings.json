@@ -10,12 +10,12 @@
     "DESCRIPTION": "The next X attacks you take deal 0 damage."
   },
   {
-    "PROPER_NAME": "Bloodbath X",
+    "PROPER_NAME": "GUNS",
     "NAMES": [
-      "Bloodbath",
-      "bloodbath"
+      "guns",
+      "Guns"
     ],
-    "DESCRIPTION": "If this attack kills a non-minion enemy, recover X [#ff0000]Health[]."
+    "DESCRIPTION": "GUNS make your Gun cards better."
   },
   {
     "PROPER_NAME": "Chaos Control X",
@@ -25,5 +25,40 @@
       "chaoscontrol"
     ],
     "DESCRIPTION": "Spends energy collected from the chaos emeralds."
+  },
+  {
+    "PROPER_NAME": "Gun Card",
+    "NAMES": [
+      "Gun Card",
+      "gun_card",
+      "guncard"
+    ],
+    "DESCRIPTION": "GUNS cards ignore Strength but they get better with GUNS."
+  },
+  {
+    "PROPER_NAME": "Katana Card",
+    "NAMES": [
+      "Katana Card",
+      "katana_card",
+      "katanacard"
+    ],
+    "DESCRIPTION": "KATANA cards use a katana to do things."
+  },
+  {
+    "PROPER_NAME": "Chaos Card",
+    "NAMES": [
+      "Chaos Card",
+      "chaos_card",
+      "chaoscard"
+    ],
+    "DESCRIPTION": "CHAOS cards play with Chaos Energy."
+  },
+  {
+    "PROPER_NAME": "Precise",
+    "NAMES": [
+      "Precise",
+      "precise"
+    ],
+    "DESCRIPTION": "Precise attacks increase their Damage based off of your Dexterity."
   }
 ]

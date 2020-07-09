@@ -8,7 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.powers.GunsPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -48,13 +50,19 @@ public class MachineGun extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = SHOTS;
         magicNumber = baseMagicNumber;
+
+        tags.add(EdgehegCardTags.GUN);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < magicNumber; ++i)  {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        int shotCount = magicNumber + GunsPower.GetGunStrength(p);
+        for (int i = 0; i < shotCount; ++i)  {
+            AbstractDungeon.actionManager.addToBottom(
+                    new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
+                    AbstractGameAction.AttackEffect.BLUNT_LIGHT)
+            );
         }
     }
 

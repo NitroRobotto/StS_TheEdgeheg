@@ -8,6 +8,7 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.actions.BloodyKatanaAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.cards.EdgehegCardTags;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -48,6 +49,8 @@ public class BloodyKatana extends AbstractDynamicCard {
         baseDamage = DAMAGE;
         baseMagicNumber = HEAL;
         magicNumber = baseMagicNumber;
+
+        tags.add(EdgehegCardTags.KATANA);
     }
 
     // Actions the card should do.
