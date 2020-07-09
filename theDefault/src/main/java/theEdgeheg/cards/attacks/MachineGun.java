@@ -19,7 +19,7 @@ public class MachineGun extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Bloody Katana (2): Deal 10(12) damage. If it kills, heal 1.
+     * Deal 2(3) damage 4 times. Adds additional shots based on GUNS, but ignores Strength
      */
 
     // TEXT DECLARATION
@@ -47,9 +47,8 @@ public class MachineGun extends AbstractDynamicCard {
     public MachineGun() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        baseDamage = DAMAGE;
-        baseMagicNumber = SHOTS;
-        magicNumber = baseMagicNumber;
+        damage = baseDamage = DAMAGE;
+        magicNumber = baseMagicNumber = SHOTS;
 
         tags.add(EdgehegCardTags.GUN);
     }

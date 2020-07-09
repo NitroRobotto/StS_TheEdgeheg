@@ -1,9 +1,7 @@
-package theEdgeheg.cards;
+package theEdgeheg.cards.attacks;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -11,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -20,7 +19,7 @@ public class RocketLauncher extends AbstractDynamicCard {
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * TOUCH Deal 30(35) damage.
+     * Deal 25(30) damage to all enemies.
      */
 
 

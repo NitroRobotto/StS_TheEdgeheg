@@ -1,5 +1,6 @@
 package theEdgeheg.cards.attacks;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,6 +10,7 @@ import theEdgeheg.actions.BloodyKatanaAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.cards.EdgehegCardTags;
+import theEdgeheg.modifiers.PreciseModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -51,6 +53,8 @@ public class BloodyKatana extends AbstractDynamicCard {
         magicNumber = baseMagicNumber;
 
         tags.add(EdgehegCardTags.KATANA);
+
+        CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.
