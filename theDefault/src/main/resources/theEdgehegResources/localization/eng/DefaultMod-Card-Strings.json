@@ -23,6 +23,10 @@
     "NAME": "Badass Arsenal",
     "DESCRIPTION": "you get !M! more theedgeheg:guns"
   },
+  "theEdgeheg:GatherChaos": {
+    "NAME": "Chaos power",
+    "DESCRIPTION": "Gain Chaos Power ( theedgeheg:chaos_energy ) from the emeralds. and exile"
+  },
   "theEdgeheg:DefaultUncommonAttack": {
     "NAME": "Big slap",
     "DESCRIPTION": "Deal !D! Damage."

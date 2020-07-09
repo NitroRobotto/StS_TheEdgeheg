@@ -19,11 +19,11 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.cards.RocketLauncher;
 import theEdgeheg.cards.attacks.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.powers.BadassArsenal;
 import theEdgeheg.cards.skills.ChaosControlSkill;
+import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
 import theEdgeheg.relics.GreenEmeraldRelic;
 import theEdgeheg.relics.UltimateLifeformRelic;
@@ -167,6 +167,7 @@ public class TheEdgeheg extends CustomPlayer {
 
         retVal.add(BloodyKatana.ID);
         retVal.add(ChaosControlSkill.ID);
+        retVal.add(GatherChaos.ID);
 
         retVal.add(StarterDodgeSkill.ID);
         retVal.add(StarterDodgeSkill.ID);
@@ -192,12 +193,12 @@ public class TheEdgeheg extends CustomPlayer {
 
         //retVal.add(SoulDevourerRelic.ID);
         retVal.add(UltimateLifeformRelic.ID);
-        //retVal.add(GreenEmeraldRelic.ID);
+        retVal.add(GreenEmeraldRelic.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         //UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);
         UnlockTracker.markRelicAsSeen(UltimateLifeformRelic.ID);
-        //UnlockTracker.markRelicAsSeen(GreenEmeraldRelic.ID);
+        UnlockTracker.markRelicAsSeen(GreenEmeraldRelic.ID);
         //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;
@@ -305,6 +306,12 @@ public class TheEdgeheg extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
+    }
+
+    public static int CountEmeralds(AbstractPlayer p)
+    {
+        // repeat the above for each of the other 6 emeralds Emerald as they're added
+        return p.hasRelic(GreenEmeraldRelic.ID) ? 1 : 0;
     }
 
 }

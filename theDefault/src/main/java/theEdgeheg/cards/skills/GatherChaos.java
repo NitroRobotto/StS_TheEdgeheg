@@ -6,51 +6,61 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.DodgePower;
+import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class StarterDodgeSkill extends AbstractDynamicCard {
+public class GatherChaos extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Defend Gain 5 (8) block.
+     * Gain Chaos Energy = (Current Chaos Emerald Relics) * 1(2).
+     * Exhaust.
      */
 
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(StarterDodgeSkill.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(GatherChaos.class.getSimpleName());
     public static final String IMG = makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
 
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 0;
+    private static final int CHAOS_ENERGY = 1;
+    private static final int CHAOS_ENERGY_INCREASE = 1;
 
     // /STAT DECLARATION/
 
-
-    public StarterDodgeSkill() {
+    public GatherChaos() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-
-        this.tags.add(CardTags.STARTER_DEFEND); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
+        tags.add(EdgehegCardTags.CHAOS);
+        magicNumber = baseMagicNumber = CHAOS_ENERGY;
+        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DodgePower(p, 1)));
+        int chaosEnergyCount = TheEdgeheg.CountEmeralds(p) * magicNumber;
+
+        if (chaosEnergyCount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
+                    new ChaosEnergyPower(p, chaosEnergyCount)
+                    , chaosEnergyCount)
+            );
+        }
     }
 
     //Upgraded stats.
@@ -58,7 +68,7 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(CHAOS_ENERGY_INCREASE);
             initializeDescription();
         }
     }

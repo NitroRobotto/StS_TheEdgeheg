@@ -27,6 +27,15 @@
     "DESCRIPTION": "Spends energy collected from the chaos emeralds."
   },
   {
+    "PROPER_NAME": "Chaos Energy",
+    "NAMES": [
+      "Chaos Energy",
+      "chaos_energy",
+      "chaosenergy"
+    ],
+    "DESCRIPTION": "Used to fuel Chaos Control cards."
+  },
+  {
     "PROPER_NAME": "Gun Card",
     "NAMES": [
       "Gun Card",
