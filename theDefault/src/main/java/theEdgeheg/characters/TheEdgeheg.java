@@ -22,6 +22,7 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.RocketLauncher;
 import theEdgeheg.cards.attacks.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
+import theEdgeheg.cards.powers.BadassArsenal;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
 import theEdgeheg.relics.GreenEmeraldRelic;
@@ -175,7 +176,7 @@ public class TheEdgeheg extends CustomPlayer {
 
 
 
-        //retVal.add(DefaultCommonPower.ID);
+        retVal.add(BadassArsenal.ID);
         //retVal.add(DefaultUncommonPower.ID);
         //retVal.add(DefaultRarePower.ID);
 

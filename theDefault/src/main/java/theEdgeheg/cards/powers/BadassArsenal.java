@@ -1,4 +1,4 @@
-package theEdgeheg.cards;
+package theEdgeheg.cards.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -7,27 +7,26 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.CommonPower;
+import theEdgeheg.powers.GunsPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class DefaultCommonPower extends AbstractDynamicCard {
+public class BadassArsenal extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
      *
-     * Hold Place Gain 1(2) Keywords(s).
+     * Gain 3(5) GUNS.
      */
 
 
     // TEXT DECLARATION 
 
-    public static final String ID = DefaultMod.makeID(DefaultCommonPower.class.getSimpleName());
-    public static final String IMG = makeCardPath("Power.png");
-
-    private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
-    public static final String UPGRADE_DESCRIPTION = cardStrings.UPGRADE_DESCRIPTION;
+    public static final String ID = DefaultMod.makeID(BadassArsenal.class.getSimpleName());
+    public static final String IMG = makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
 
@@ -40,20 +39,16 @@ public class DefaultCommonPower extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int MAGIC = 1;
-    private static final int UPGRADE_MAGIC = 1;
-
-    // Hey want a second magic/damage/block/unique number??? Great!
-    // Go check out DefaultAttackWithVariable and theDefault.variable.DefaultCustomVariable
-    // that's how you get your own custom variable that you can use for anything you like.
-    // Feel free to explore other mods to see what variables they personally have and create your own ones.
+    private static final int UPGRADED_COST = 2;
+    private static final int GUNS = 3;
+    private static final int GUNS_UPGRADE = 2;
 
     // /STAT DECLARATION/
 
 
-    public DefaultCommonPower() {
+    public BadassArsenal() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = MAGIC;
+        magicNumber = baseMagicNumber = GUNS;
     }
 
 
@@ -61,7 +56,7 @@ public class DefaultCommonPower extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                new CommonPower(p, p, magicNumber), magicNumber));
+                new GunsPower(p, magicNumber), magicNumber));
         /*
         Hey do you see this "amount" and "stackAmount" up here^ (press ctrl+p inside the parentheses to see parameters)
         THIS DOES NOT MEAN APPLY 1 POWER 1 TIMES. If you put 2 in both numbers it would apply 2. NOT "2 STACKS, 2 TIMES".
@@ -80,8 +75,8 @@ public class DefaultCommonPower extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
-            rawDescription = UPGRADE_DESCRIPTION;
+            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(GUNS_UPGRADE);
             initializeDescription();
         }
     }

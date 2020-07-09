@@ -9,6 +9,6 @@
 },
 "theEdgeheg:GunsPower": {
         "NAME": "Placeholder Power",
-        "DESCRIPTIONS": ["You have #b guns."]
+        "DESCRIPTIONS": ["You have #b", "gun", " guns"]
 }
 }

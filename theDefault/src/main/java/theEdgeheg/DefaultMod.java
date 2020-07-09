@@ -21,6 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.cards.*;
 import theEdgeheg.cards.attacks.*;
+import theEdgeheg.cards.powers.BadassArsenal;
 import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.relics.*;
@@ -410,7 +411,7 @@ public class DefaultMod implements
         //BaseMod.addCard(new OrbSkill());
         //BaseMod.addCard(new DefaultSecondMagicNumberSkill());
         //BaseMod.addCard(new DefaultAttackWithVariable());
-        BaseMod.addCard(new DefaultCommonPower());
+        BaseMod.addCard(new BadassArsenal());
         BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
@@ -427,7 +428,7 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(StarterShootAttack.ID);
         UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
         UnlockTracker.unlockCard(StarterDodgeSkill.ID);
-        UnlockTracker.unlockCard(DefaultCommonPower.ID);
+        UnlockTracker.unlockCard(BadassArsenal.ID);
         UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
         UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);

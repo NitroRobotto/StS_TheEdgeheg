@@ -19,10 +19,9 @@
     "NAME": "machine GUN",
     "DESCRIPTION": "Deal !D! Damage !M! [#ff0000]times[] or more if you have more guns."
   },
-  "theEdgeheg:DefaultCommonPower": {
-    "NAME": "Hold Place",
-    "DESCRIPTION": "Gain !M! theEdgeheg:Keyword. theEdgeheg:Multiword_Keyword.",
-    "UPGRADE_DESCRIPTION": "Gain !M! theEdgeheg:Keywords. theEdgeheg:Multiword_Keyword."
+  "theEdgeheg:BadassArsenal": {
+    "NAME": "Badass Arsenal",
+    "DESCRIPTION": "you get !M! more theedgeheg:guns"
   },
   "theEdgeheg:DefaultUncommonAttack": {
     "NAME": "Big slap",

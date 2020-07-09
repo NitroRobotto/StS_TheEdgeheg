@@ -34,8 +34,7 @@ public class GreenEmeraldRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(
                         AbstractDungeon.player, AbstractDungeon.player,
-                        new GunsPower(AbstractDungeon.player
-                        /*new ChaosEnergyPower(AbstractDungeon.player*/, 1)));
+                        new ChaosEnergyPower(AbstractDungeon.player, 1)));
     }
 
     public int onLoseHpLast(int damageAmount) {
