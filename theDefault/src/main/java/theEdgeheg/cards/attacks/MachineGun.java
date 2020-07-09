@@ -1,5 +1,7 @@
 package theEdgeheg.cards.attacks;
 
+import basemod.BaseMod;
+import basemod.interfaces.OnPowersModifiedSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,7 +16,7 @@ import theEdgeheg.powers.GunsPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class MachineGun extends AbstractDynamicCard {
+public class MachineGun extends AbstractDynamicCard implements OnPowersModifiedSubscriber {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -49,14 +51,26 @@ public class MachineGun extends AbstractDynamicCard {
 
         damage = baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = SHOTS;
-
         tags.add(EdgehegCardTags.GUN);
+
+        initializeDescription();
+    }
+
+    @Override
+    public void triggerWhenDrawn() {
+        updateGunsNumber();
+        BaseMod.subscribe(this);
+    }
+
+    @Override
+    public void onMoveToDiscard() {
+        BaseMod.unsubscribe(this);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int shotCount = magicNumber + GunsPower.GetGunStrength(p);
+        int shotCount = magicNumber;
         for (int i = 0; i < shotCount; ++i)  {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
@@ -73,5 +87,18 @@ public class MachineGun extends AbstractDynamicCard {
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
+    }
+
+    public void updateGunsNumber() {
+        int previousMagicNumber = magicNumber;
+        magicNumber = baseMagicNumber + GunsPower.GetGunStrength(AbstractDungeon.player);
+
+        isMagicNumberModified = magicNumber != baseMagicNumber;
+        if (magicNumber != previousMagicNumber) initializeDescription();
+    }
+
+    @Override
+    public void receivePowersModified() {
+        updateGunsNumber();
     }
 }
