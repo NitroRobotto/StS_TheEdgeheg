@@ -2,10 +2,10 @@ package theEdgeheg.modifiers;
 
 import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
-import basemod.interfaces.OnPowersModifiedSubscriber;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theEdgeheg.powers.GunsPower;
 
 /**
@@ -14,11 +14,10 @@ import theEdgeheg.powers.GunsPower;
  * @version 1.0
  * @since 2020-07-11
  */
-public class GunScalingModifier extends AbstractCardModifier implements OnPowersModifiedSubscriber {
+public class GunScalingModifier extends AbstractCardModifier {
 
     private final boolean isInherent;
     private final int gunsScaling;
-    private AbstractCard baseCard;
 
     public GunScalingModifier(int gunsScaling, boolean isInherent) {
         this.gunsScaling = gunsScaling;
@@ -35,8 +34,11 @@ public class GunScalingModifier extends AbstractCardModifier implements OnPowers
 
     @Override
     public void onInitialApplication(AbstractCard card) {
-        baseCard = card;
-        updateMagicNumber(card);
+        if (!isInherent)
+        {
+            AbstractRoom room = AbstractDungeon.getCurrRoom();
+            if (room != null && room.phase == AbstractRoom.RoomPhase.COMBAT) updateMagicNumber(card);
+        }
     }
 
     /**
@@ -56,18 +58,11 @@ public class GunScalingModifier extends AbstractCardModifier implements OnPowers
     @Override
     public void onDrawn(AbstractCard card) {
         if (updateMagicNumber(card)) card.initializeDescription();
-        BaseMod.subscribe(this);
     }
 
     @Override
-    public void atEndOfTurn(AbstractCard card, CardGroup group)
-    {
-        if (group.type == CardGroup.CardGroupType.HAND) BaseMod.unsubscribe(this);
-    }
-
-    @Override
-    public void receivePowersModified() {
-        if (updateMagicNumber(baseCard)) baseCard.initializeDescription();
+    public void onApplyPowers(AbstractCard card) {
+        if (updateMagicNumber(card)) card.initializeDescription();
     }
 
     @Override

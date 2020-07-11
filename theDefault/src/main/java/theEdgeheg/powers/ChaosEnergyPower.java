@@ -48,6 +48,8 @@ public class ChaosEnergyPower extends AbstractPower implements CloneablePowerInt
 
     public static int GetChaosStrength(AbstractCreature owner)
     {
+        if (owner == null) return 0;
+
         AbstractPower power = owner.getPower(ChaosEnergyPower.POWER_ID);
         return power != null ? power.amount : 0;
     }

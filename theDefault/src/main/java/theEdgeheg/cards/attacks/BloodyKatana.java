@@ -58,7 +58,7 @@ public class BloodyKatana extends AbstractDynamicCard {
 
         tags.add(EdgehegCardTags.KATANA);
 
-        CardModifierManager.addModifier(this, new PreciseModifier(true));
+       CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.
