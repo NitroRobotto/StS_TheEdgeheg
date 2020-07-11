@@ -1,24 +1,23 @@
-package theEdgeheg.cards.attacks;
+package theEdgeheg.cards.skills;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.EnemyData;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
-import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (3->2) Chaos Control 4.
+ * Instakill target (boss = 20% chance, elite = 40%, everyone else 100%).
+ * Heal user for 1.
+ */
 public class NothingPersonal extends AbstractDynamicCard {
 
     /*
@@ -43,7 +42,6 @@ public class NothingPersonal extends AbstractDynamicCard {
     private static final int COST = 3;
     private static final int UPGRADED_COST = 2;
     private static final int CHAOS_ENERGY_COST = 4;
-    private static final int CHAOS_ENERGY_COST_UPGRADE = -1;
     private static final float ELITE_INSTAKILL_CHANCE = 0.4f;
     private static final float BOSS_INSTAKILL_CHANCE = 0.2f;
 
@@ -81,7 +79,6 @@ public class NothingPersonal extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             updateCost(UPGRADED_COST);
-            upgradeMagicNumber(CHAOS_ENERGY_COST_UPGRADE);
             initializeDescription();
         }
     }

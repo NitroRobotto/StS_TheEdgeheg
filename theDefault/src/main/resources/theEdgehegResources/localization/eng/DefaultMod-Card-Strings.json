@@ -40,6 +40,10 @@
     "NAME": "nuthin personnel",
     "DESCRIPTION": "theedgeheg:Chaos_Control 5 *kills u*im not ur mome"
   },
+  "theEdgeheg:SupersonicSpeed": {
+    "NAME": "RUNNING AROUND AT THE SPEED OF SOUND",
+    "DESCRIPTION": "dodge faster than sonic with theedgeheg:chaos_control"
+  },
   "theEdgeheg:DefaultUncommonAttack": {
     "NAME": "Big slap",
     "DESCRIPTION": "Deal !D! Damage."

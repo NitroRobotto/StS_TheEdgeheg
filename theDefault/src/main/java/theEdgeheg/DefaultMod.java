@@ -1,6 +1,5 @@
 package theEdgeheg;
 
-import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -13,7 +12,6 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -411,18 +409,20 @@ public class DefaultMod implements
         BaseMod.addCard(new RegularGun());
         BaseMod.addCard(new ChaosGrenade());
         BaseMod.addCard(new NothingPersonal());
+        BaseMod.addCard(new RocketLauncher());
+        BaseMod.addCard(new BadassArsenal());
+        BaseMod.addCard(new SupersonicSpeed());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
         //BaseMod.addCard(new OrbSkill());
         //BaseMod.addCard(new DefaultSecondMagicNumberSkill());
         //BaseMod.addCard(new DefaultAttackWithVariable());
-        BaseMod.addCard(new BadassArsenal());
+
         BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
-        BaseMod.addCard(new RocketLauncher());
-        BaseMod.addCard(new DefaultRareSkill());
+
         BaseMod.addCard(new DefaultRarePower());
         
         logger.info("Making sure the cards are unlocked.");
@@ -439,7 +439,6 @@ public class DefaultMod implements
         UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
         UnlockTracker.unlockCard(DefaultUncommonPower.ID);
         UnlockTracker.unlockCard(RocketLauncher.ID);
-        UnlockTracker.unlockCard(DefaultRareSkill.ID);
         UnlockTracker.unlockCard(DefaultRarePower.ID);
         
         logger.info("Done adding cards!");
