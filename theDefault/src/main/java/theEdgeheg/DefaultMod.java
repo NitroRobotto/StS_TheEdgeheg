@@ -410,6 +410,7 @@ public class DefaultMod implements
         BaseMod.addCard(new GatherChaos());
         BaseMod.addCard(new RegularGun());
         BaseMod.addCard(new ChaosGrenade());
+        BaseMod.addCard(new NothingPersonal());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.

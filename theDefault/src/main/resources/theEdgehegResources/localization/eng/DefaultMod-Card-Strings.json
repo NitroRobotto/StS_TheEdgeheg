@@ -36,6 +36,10 @@
     "DESCRIPTION": "deal 5 with granade......  it's stun in fatal. and exiles",
     "UPGRADE_DESCRIPTION": "deal 5 with granade......  it's stun in fatal. and exiles. awlays stun target"
   },
+  "theEdgeheg:NothingPersonal": {
+    "NAME": "nuthin personnel",
+    "DESCRIPTION": "theedgeheg:Chaos_Control 5 *kills u*im not ur mome"
+  },
   "theEdgeheg:DefaultUncommonAttack": {
     "NAME": "Big slap",
     "DESCRIPTION": "Deal !D! Damage."

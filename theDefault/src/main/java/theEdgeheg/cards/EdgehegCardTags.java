@@ -13,4 +13,5 @@ public class EdgehegCardTags {
     @SpireEnum public static AbstractCard.CardTags GUN;
     @SpireEnum public static AbstractCard.CardTags KATANA;
     @SpireEnum public static AbstractCard.CardTags CHAOS;
+    @SpireEnum public static AbstractCard.CardTags CHAOS_CONTROL;
 }

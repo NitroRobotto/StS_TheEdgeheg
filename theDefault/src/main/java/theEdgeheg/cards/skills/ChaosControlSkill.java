@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
@@ -21,7 +21,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  *  @version 1.0
  *  @since 2020-07-09
  */
-public class ChaosControlSkill extends AbstractDynamicCard {
+public class ChaosControlSkill extends AbstractChaosControlCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Card
@@ -52,20 +52,9 @@ public class ChaosControlSkill extends AbstractDynamicCard {
 
     public ChaosControlSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        baseMagicNumber = CHAOS_ENERGY_COST;
-        magicNumber = baseMagicNumber;
+        magicNumber = baseMagicNumber = CHAOS_ENERGY_COST;
 
         tags.add(EdgehegCardTags.CHAOS);
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        this.glowColor = canPlay(this) ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
-    }
-
-    @Override
-    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        return magicNumber <= ChaosEnergyPower.GetChaosStrength(p);
     }
 
     // Actions the card should do.
