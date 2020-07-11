@@ -14,12 +14,16 @@ import theEdgeheg.modifiers.PreciseModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (2): Deal 10(12) damage. If it kills, heal 1.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-09
+ */
 public class BloodyKatana extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Bloody Katana (2): Deal 10(12) damage. If it kills, heal 1.
      */
 
     // TEXT DECLARATION

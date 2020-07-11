@@ -10,12 +10,16 @@ import theEdgeheg.util.TextureLoader;
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
+/**
+ * Heal 1 after killing a non-minion enemy.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-08
+ */
 public class SoulDevourerRelic extends CustomRelic {
 
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
-     *
-     * Gain 1 energy.
      */
 
     // ID, images, text.

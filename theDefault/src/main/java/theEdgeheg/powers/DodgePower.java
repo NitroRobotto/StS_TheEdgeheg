@@ -5,11 +5,16 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theEdgeheg.DefaultMod;
 
+/**
+ * Reduces the damage from the next attack to 0. Removed at the end of turn.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-08
+ */
 public class DodgePower extends AbstractPower {
     public static final String POWER_ID = DefaultMod.makeID(DodgePower.class.getSimpleName());
     private static final PowerStrings powerStrings;

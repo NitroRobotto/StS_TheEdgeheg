@@ -23,6 +23,13 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 // Abstract Dynamic Card builds up on Abstract Default Card even more and makes it so that you don't need to add
 // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
 // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately.
+
+/**
+ * (1): Deal 6(9) damage.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-07
+ */
 public class StarterShootAttack extends CustomCard {
 
     /*

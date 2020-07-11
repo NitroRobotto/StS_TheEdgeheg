@@ -7,24 +7,24 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
-import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (1): Chaos Control (5->4). Apply Stun to all enemies.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-09
+ */
 public class ChaosControlSkill extends AbstractDynamicCard {
 
     /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Defend Gain 5 (8) block.
+     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Card
      */
 
 

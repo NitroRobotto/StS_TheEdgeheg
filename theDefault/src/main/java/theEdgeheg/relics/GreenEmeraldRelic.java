@@ -6,17 +6,20 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.powers.ChaosEnergyPower;
-import theEdgeheg.powers.GunsPower;
 import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
+/**
+ * Gain 1 Chaos Energy at the start of each turn.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-09
+ */
 public class GreenEmeraldRelic extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
-     *
-     * Gain 1 Chaos Energy at the start of each turn.
      */
 
     // ID, images, text.

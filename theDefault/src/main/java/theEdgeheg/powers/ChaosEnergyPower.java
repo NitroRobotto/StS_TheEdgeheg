@@ -12,6 +12,13 @@ import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makePowerPath;
 
+/**
+ * Resource required to use cards that have "Chaos Control".
+ * Use the "GetChaosStrength" function to quickly get the current amount of Chaos Energy.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-09
+ */
 public class ChaosEnergyPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = DefaultMod.makeID(ChaosEnergyPower.class.getSimpleName());

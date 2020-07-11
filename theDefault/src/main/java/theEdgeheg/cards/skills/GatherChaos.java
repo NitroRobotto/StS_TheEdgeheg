@@ -12,6 +12,12 @@ import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (0): Gain Chaos Energy = Current Chaos Emeralds * 1(2). Exhaust.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-09
+ */
 public class GatherChaos extends AbstractDynamicCard {
 
     /*

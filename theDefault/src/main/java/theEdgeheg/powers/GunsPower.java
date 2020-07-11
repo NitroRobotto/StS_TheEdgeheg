@@ -12,6 +12,13 @@ import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makePowerPath;
 
+/**
+ * Equivalent to "Strength", but it only enhances cards that specifically refer to it.
+ * To calculate that, you can either use the "GunScalingModifier" for that or just call GetGunStrength().
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-09
+ */
 public class GunsPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = DefaultMod.makeID(GunsPower.class.getSimpleName());

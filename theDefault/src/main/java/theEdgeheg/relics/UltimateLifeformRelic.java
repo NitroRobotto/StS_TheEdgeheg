@@ -8,11 +8,15 @@ import theEdgeheg.util.TextureLoader;
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
+/**
+ * Reduce all damage taken to 1 (like a sort of permanent intangible).
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-08
+ */
 public class UltimateLifeformRelic extends CustomRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
-     *
-     * Reduce all damage taken to 1 (like Intangible).
      */
 
     // ID, images, text.

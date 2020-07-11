@@ -1,7 +1,6 @@
 package theEdgeheg.cards.attacks;
 
-import basemod.BaseMod;
-import basemod.interfaces.OnPowersModifiedSubscriber;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -12,16 +11,20 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.GunsPower;
+import theEdgeheg.modifiers.GunScalingModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class MachineGun extends AbstractDynamicCard implements OnPowersModifiedSubscriber {
+/**
+ * (1): Deals 2(3) damage 3+GUNS times.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-11
+ */
+public class MachineGun extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Deal 2(3) damage 4 times. Adds additional shots based on GUNS, but ignores Strength
      */
 
     // TEXT DECLARATION
@@ -42,7 +45,7 @@ public class MachineGun extends AbstractDynamicCard implements OnPowersModifiedS
     private static final int COST = 1;
     private static final int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
-    private static final int SHOTS = 4;
+    private static final int SHOTS = 3;
 
     // /STAT DECLARATION/
 
@@ -53,18 +56,8 @@ public class MachineGun extends AbstractDynamicCard implements OnPowersModifiedS
         magicNumber = baseMagicNumber = SHOTS;
         tags.add(EdgehegCardTags.GUN);
 
-        initializeDescription();
-    }
-
-    @Override
-    public void triggerWhenDrawn() {
-        updateGunsNumber();
-        BaseMod.subscribe(this);
-    }
-
-    @Override
-    public void onMoveToDiscard() {
-        BaseMod.unsubscribe(this);
+        CardModifierManager.addModifier(this, new GunScalingModifier( true));
+        // We don't call "initializeDescription" here because addModifier already does it
     }
 
     // Actions the card should do.
@@ -87,18 +80,5 @@ public class MachineGun extends AbstractDynamicCard implements OnPowersModifiedS
             upgradeDamage(UPGRADE_PLUS_DMG);
             initializeDescription();
         }
-    }
-
-    public void updateGunsNumber() {
-        int previousMagicNumber = magicNumber;
-        magicNumber = baseMagicNumber + GunsPower.GetGunStrength(AbstractDungeon.player);
-
-        isMagicNumberModified = magicNumber != baseMagicNumber;
-        if (magicNumber != previousMagicNumber) initializeDescription();
-    }
-
-    @Override
-    public void receivePowersModified() {
-        updateGunsNumber();
     }
 }

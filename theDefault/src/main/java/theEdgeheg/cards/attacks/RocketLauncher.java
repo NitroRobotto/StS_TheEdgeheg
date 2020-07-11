@@ -14,12 +14,16 @@ import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (3): Deal 25(30) damage to all enemies.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-08
+ */
 public class RocketLauncher extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     *
-     * Deal 25(30) damage to all enemies.
      */
 
 
