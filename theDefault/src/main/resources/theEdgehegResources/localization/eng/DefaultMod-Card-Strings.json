@@ -27,6 +27,10 @@
     "NAME": "Chaos power",
     "DESCRIPTION": "Gain Chaos Power ( theedgeheg:chaos_energy ) from the emeralds. and exile"
   },
+  "theEdgeheg:RegularGun": {
+    "NAME": "gun",
+    "DESCRIPTION": "shoot GUN and GAIN energy for next rounD! ( theedgeheg:precise )"
+  },
   "theEdgeheg:DefaultUncommonAttack": {
     "NAME": "Big slap",
     "DESCRIPTION": "Deal !D! Damage."

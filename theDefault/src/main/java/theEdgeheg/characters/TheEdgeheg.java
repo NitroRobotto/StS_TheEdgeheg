@@ -163,27 +163,15 @@ public class TheEdgeheg extends CustomPlayer {
         retVal.add(StarterShootAttack.ID);
         retVal.add(StarterShootAttack.ID);
         retVal.add(StarterShootAttack.ID);
-        //retVal.add(DefaultUncommonAttack.ID);
+
+        retVal.add(StarterDodgeSkill.ID);
+        retVal.add(StarterDodgeSkill.ID);
+        retVal.add(StarterDodgeSkill.ID);
 
         retVal.add(BloodyKatana.ID);
         retVal.add(ChaosControlSkill.ID);
         retVal.add(GatherChaos.ID);
 
-        retVal.add(StarterDodgeSkill.ID);
-        retVal.add(StarterDodgeSkill.ID);
-        retVal.add(StarterDodgeSkill.ID);
-        //retVal.add(DefaultUncommonSkill.ID);
-        //retVal.add(DefaultRareSkill.ID);
-
-
-
-        retVal.add(BadassArsenal.ID);
-        //retVal.add(DefaultUncommonPower.ID);
-        //retVal.add(DefaultRarePower.ID);
-
-        //retVal.add(DefaultAttackWithVariable.ID);
-        //retVal.add(DefaultSecondMagicNumberSkill.ID);
-        //retVal.add(OrbSkill.ID);
         return retVal;
     }
 

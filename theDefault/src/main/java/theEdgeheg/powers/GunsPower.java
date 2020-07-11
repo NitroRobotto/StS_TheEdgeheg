@@ -14,7 +14,7 @@ import static theEdgeheg.DefaultMod.makePowerPath;
 
 /**
  * Equivalent to "Strength", but it only enhances cards that specifically refer to it.
- * To calculate that, you can either use the "GunScalingModifier" for that or just call GetGunStrength().
+ * To calculate that, you can either use the "MagicGunScalingModifier" for that or just call GetGunStrength().
  *  @author NITRO
  *  @version 1.0
  *  @since 2020-07-09

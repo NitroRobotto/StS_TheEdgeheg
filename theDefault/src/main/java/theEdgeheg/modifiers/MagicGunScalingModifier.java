@@ -1,9 +1,7 @@
 package theEdgeheg.modifiers;
 
-import basemod.BaseMod;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theEdgeheg.powers.GunsPower;
@@ -14,21 +12,21 @@ import theEdgeheg.powers.GunsPower;
  * @version 1.0
  * @since 2020-07-11
  */
-public class GunScalingModifier extends AbstractCardModifier {
+public class MagicGunScalingModifier extends AbstractCardModifier {
 
     private final boolean isInherent;
     private final int gunsScaling;
 
-    public GunScalingModifier(int gunsScaling, boolean isInherent) {
+    public MagicGunScalingModifier(int gunsScaling, boolean isInherent) {
         this.gunsScaling = gunsScaling;
         this.isInherent = isInherent;
     }
 
-    public GunScalingModifier(boolean isInherent) {
+    public MagicGunScalingModifier(boolean isInherent) {
         this(1, isInherent);
     }
 
-    public GunScalingModifier(int gunsScaling) {
+    public MagicGunScalingModifier(int gunsScaling) {
         this(gunsScaling, false);
     }
 
@@ -72,6 +70,6 @@ public class GunScalingModifier extends AbstractCardModifier {
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new GunScalingModifier(gunsScaling, isInherent);
+        return new MagicGunScalingModifier(gunsScaling, isInherent);
     }
 }
