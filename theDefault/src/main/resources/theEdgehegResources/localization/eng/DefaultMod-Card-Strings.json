@@ -41,8 +41,17 @@
     "DESCRIPTION": "theedgeheg:Chaos_Control 5 *kills u*im not ur mome"
   },
   "theEdgeheg:SupersonicSpeed": {
-    "NAME": "RUNNING AROUND AT THE SPEED OF SOUND",
+    "NAME": "SPEED OF SOUND",
     "DESCRIPTION": "dodge faster than sonic with theedgeheg:chaos_control"
+  },
+  "theEdgeheg:ChaosBlast": {
+    "NAME": "Blast of Chaotic Energy",
+    "DESCRIPTION": "Use the concentrated power of a well placed Blast of Chaotic Enegy spell to deal damage equal to the amount of Chaos Energy you have accumulated up to this point. This card also spends 2 Chaos Energy after calculating the amount of damage dealt.",
+    "UPGRADE_DESCRIPTION": "As an improved form of the Blast of Chaotic Energy, this altered concentration of high power will optimize the threads of chaotic weave, allowing more power to be drawn from a lesser amount of energy. It adds +3 damage and keeps the cost of 2 Chaos Energy intact."
+  },
+  "theEdgeheg:BetterDodge": {
+    "NAME": "*cool dodger*",
+    "DESCRIPTION": "theedgeheg:dodge more and gain !M! chaos energy too"
   },
   "theEdgeheg:DefaultUncommonAttack": {
     "NAME": "Big slap",

@@ -412,6 +412,8 @@ public class DefaultMod implements
         BaseMod.addCard(new RocketLauncher());
         BaseMod.addCard(new BadassArsenal());
         BaseMod.addCard(new SupersonicSpeed());
+        BaseMod.addCard(new ChaosBlast());
+        BaseMod.addCard(new BetterDodge());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
