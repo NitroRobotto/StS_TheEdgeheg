@@ -68,5 +68,13 @@
   "theEdgeheg:UseAndThrow": {
     "NAME": "Use and Throw",
     "DESCRIPTION": "*grabs !M! guns* *shoots* *smirks* heh *throws guns to ground*"
+  },
+  "theEdgeheg:DrawGun": {
+    "NAME": "*draws gun*",
+    "DESCRIPTION": "yu dont' nede to draw the gunXD"
+  },
+  "theEdgeheg:RocketLauncher": {
+    "NAME": "ROCKE TLAUNCHER",
+    "DESCRIPTION": "BLOW UP WITH THE ROCKET LAUNCHER deals !D! [#ff0000]damage[] to all enemies"
   }
 }
