@@ -30,5 +30,9 @@
 "theEdgeheg:LoseGunsPower": {
         "NAME": "Lose Guns",
         "DESCRIPTIONS": ["At the end of turn, lose ", " gun.", " guns."]
+},
+"theEdgeheg:PerfectAimPower": {
+        "NAME": "Critical Hits",
+        "DESCRIPTIONS": ["5% of dealing double damage per Dexterity stack."]
 }
 }

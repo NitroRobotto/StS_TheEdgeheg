@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseDexterityPower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
@@ -13,6 +12,13 @@ import theEdgeheg.powers.GunFuPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (2): Gain 1(2) Guns after using a Katana card. Gain 1(2) Dexterity after using a Guns card.
+ * Both are lost at the end of the turn.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-12
+ */
 public class GunFu extends AbstractChaosControlCard {
 
     /*

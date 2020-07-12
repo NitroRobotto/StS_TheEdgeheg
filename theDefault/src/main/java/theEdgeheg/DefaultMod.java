@@ -421,7 +421,10 @@ public class DefaultMod implements
         BaseMod.addCard(new DrawGun());
         BaseMod.addCard(new BlackKatana());
         BaseMod.addCard(new GunFu());
-        
+        BaseMod.addCard(new Reload());
+        BaseMod.addCard(new PerfectAim());
+        BaseMod.addCard(new Sniper());
+
         logger.info("Done adding cards!");
     }
     

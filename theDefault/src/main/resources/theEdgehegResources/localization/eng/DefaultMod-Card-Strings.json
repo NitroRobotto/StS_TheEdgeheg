@@ -85,5 +85,17 @@
   "theEdgeheg:GunFu": {
     "NAME": "GUNFU",
     "DESCRIPTION": "gun fu is like in the movies where they shoot a gun and then punch"
+  },
+  "theEdgeheg:Reload": {
+    "NAME": "*reloads",
+    "DESCRIPTION": "[#ff0000]find same guns[] ( !M! guns"
+  },
+  "theEdgeheg:PerfectAim": {
+    "NAME": "\"i never miss\" - dusk the HEDEHEG",
+    "DESCRIPTION": "gain dexterity and critical hits"
+  },
+  "theEdgeheg:Sniper": {
+    "NAME": "Sniper Rifle",
+    "DESCRIPTION": "precision shot weith sniper rifle to make deal 30 dadmage (30 damage)"
   }
 }
