@@ -24,6 +24,7 @@ import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.powers.BadassArsenal;
 import theEdgeheg.cards.powers.BulletStorm;
 import theEdgeheg.cards.skills.ChaosControlSkill;
+import theEdgeheg.cards.skills.DrawGun;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
 import theEdgeheg.relics.GreenEmeraldRelic;
@@ -172,6 +173,8 @@ public class TheEdgeheg extends CustomPlayer {
         retVal.add(BloodyKatana.ID);
         retVal.add(ChaosControlSkill.ID);
         retVal.add(GatherChaos.ID);
+
+        retVal.add(DrawGun.ID);
 
         return retVal;
     }
