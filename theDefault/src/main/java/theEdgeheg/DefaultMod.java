@@ -21,10 +21,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.cards.*;
 import theEdgeheg.cards.attacks.*;
-import theEdgeheg.cards.powers.BadassArsenal;
-import theEdgeheg.cards.powers.BulletStorm;
-import theEdgeheg.cards.powers.MasterEmerald;
-import theEdgeheg.cards.powers.RuleOfCool;
+import theEdgeheg.cards.powers.*;
 import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.relics.*;
@@ -422,6 +419,8 @@ public class DefaultMod implements
         BaseMod.addCard(new BulletStorm());
         BaseMod.addCard(new UseAndThrow());
         BaseMod.addCard(new DrawGun());
+        BaseMod.addCard(new BlackKatana());
+        BaseMod.addCard(new GunFu());
         
         logger.info("Done adding cards!");
     }

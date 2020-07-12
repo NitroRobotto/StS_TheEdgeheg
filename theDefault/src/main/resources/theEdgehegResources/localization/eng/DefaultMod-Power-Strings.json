@@ -21,6 +21,14 @@
 },
 "theEdgeheg:BulletStormPower": {
         "NAME": "Bullet Storm",
-        "DESCRIPTIONS": ["Gain 1 Guns after playing a GUNS card until you play a non-GUN."]
+        "DESCRIPTIONS": ["Gain #b Guns after playing a GUNS card until you play a non-GUN."]
+},
+"theEdgeheg:GunFuPower": {
+        "NAME": "Gun Fu",
+        "DESCRIPTIONS": ["Gain #b Guns after playing a KATANA card. NL Gain #b Dexterity after playing a GUNS card. NL Both go away at the start of your turn."]
+},
+"theEdgeheg:LoseGunsPower": {
+        "NAME": "Lose Guns",
+        "DESCRIPTIONS": ["At the end of turn, lose ", " gun.", " guns."]
 }
 }

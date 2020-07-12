@@ -76,5 +76,14 @@
   "theEdgeheg:RocketLauncher": {
     "NAME": "ROCKE TLAUNCHER",
     "DESCRIPTION": "BLOW UP WITH THE ROCKET LAUNCHER deals !D! [#ff0000]damage[] to all enemies"
+  },
+  "theEdgeheg:BlackKatana": {
+    "NAME": "黒刀",
+    "DESCRIPTION": "it says kuroi katana its a katana that deals damage and gives yo uanother katana from your deck (PS: kuroi means black)",
+    "UPGRADE_DESCRIPTION": " (new katana costs 0 this turn)"
+  },
+  "theEdgeheg:GunFu": {
+    "NAME": "GUNFU",
+    "DESCRIPTION": "gun fu is like in the movies where they shoot a gun and then punch"
   }
 }
