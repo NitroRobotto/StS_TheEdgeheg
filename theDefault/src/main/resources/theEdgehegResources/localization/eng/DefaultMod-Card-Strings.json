@@ -64,5 +64,9 @@
   "theEdgeheg:BulletStorm": {
     "NAME": "Ballet Storm",
     "DESCRIPTION": "chaos power 3 your guns give your more guns"
+  },
+  "theEdgeheg:UseAndThrow": {
+    "NAME": "Use and Throw",
+    "DESCRIPTION": "*grabs !M! guns* *shoots* *smirks* heh *throws guns to ground*"
   }
 }

@@ -19,8 +19,9 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
  * (1->0): Select 1+X Gun cards from your hand. Play it, and then Exhaust it. Lose X Guns. Exhaust.
+ * X is any number between 0 and the current amount of the GUNS buff
  *  @author NITRO
- *  @version 1.0
+ *  @version 1.1
  *  @since 2020-07-12
  */
 public class UseAndThrow extends AbstractDynamicCard {
@@ -53,15 +54,15 @@ public class UseAndThrow extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         tags.add(EdgehegCardTags.GUN);
         exhaust = true;
-        magicNumber = baseMagicNumber = 0;
+        magicNumber = baseMagicNumber = 1;
         CardModifierManager.addModifier(this, new MagicGunScalingModifier(1,true));
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(1 + magicNumber, "", new CardTagPredicate(EdgehegCardTags.GUN), (cards) -> {
-            int extraBurn = cards.size() - 1;
+        addToBot(new SelectCardsInHandAction(magicNumber, "", new CardTagPredicate(EdgehegCardTags.GUN), (cards) -> {
+            int extraBurn = cards.size() - baseMagicNumber;
             for (AbstractCard card : cards) {
                 card.exhaust = true;
                 card.exhaustOnFire = true;
