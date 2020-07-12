@@ -10,5 +10,9 @@
 "theEdgeheg:GunsPower": {
         "NAME": "Placeholder Power",
         "DESCRIPTIONS": ["You have #b", "gun", " guns"]
+},
+"theEdgeheg:RuleOfCoolPower": {
+        "NAME": "Rule of Cool",
+        "DESCRIPTIONS": ["Gain 1 Dodge after killing ", "a non-minion.", " any enemy."]
 }
 }

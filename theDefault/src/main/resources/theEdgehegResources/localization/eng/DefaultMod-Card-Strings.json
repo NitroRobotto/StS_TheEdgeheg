@@ -53,42 +53,8 @@
     "NAME": "*cool dodger*",
     "DESCRIPTION": "theedgeheg:dodge more and gain !M! chaos energy too"
   },
-  "theEdgeheg:DefaultUncommonAttack": {
-    "NAME": "Big slap",
-    "DESCRIPTION": "Deal !D! Damage."
-  },
-  "theEdgeheg:DefaultUncommonSkill": {
-    "NAME": "A Better Defend",
-    "DESCRIPTION": "Gain !B! Plated Armor. Affected by Dexterity."
-  },
-  "theEdgeheg:DefaultUncommonPower": {
-    "NAME": "Weirdness",
-    "DESCRIPTION": "Gain X theEdgeheg:Keywords.",
-    "UPGRADE_DESCRIPTION": "Gain X +1 theEdgeheg:Keywords."
-  },
-  "theEdgeheg:RocketLauncher": {
-    "NAME": "Fire Rocket Launcher",
-    "DESCRIPTION": "Deal !D! [#ff0000]Damage[] to all enemies."
-  },
-  "theEdgeheg:DefaultRareSkill": {
-    "NAME": "For Each Loop x2",
-    "DESCRIPTION": "Apply !M! vulnerable to all enemies, 2 times.",
-    "UPGRADE_DESCRIPTION": "Apply !M! vulnerable to all enemies, 3 times."
-  },
-  "theEdgeheg:DefaultRarePower": {
-    "NAME": "In-Progress Form",
-    "DESCRIPTION": "At the start of your turn, play a TOUCH."
-  },
-  "theEdgeheg:DefaultAttackWithVariable": {
-    "NAME": "Special Strike",
-    "DESCRIPTION": "Deal !D! Damage [E] times. NL (Deal !theEdgeheg:ENERGY_DAMAGE! damage total.)"
-  },
-  "theEdgeheg:DefaultSecondMagicNumberSkill": {
-    "NAME": "Cool 2 Number Card",
-    "DESCRIPTION": "Apply !M! vulnerable and !theEdgeheg:SecondMagic! poison to an enemy."
-  },
-  "theEdgeheg:OrbSkill": {
-    "NAME": "Get Orb",
-    "DESCRIPTION": "Channel 1 Default Orb."
+  "theEdgeheg:RuleOfCool": {
+    "NAME": "Rule of Cool",
+    "DESCRIPTION": "Fatal: theedgeheg:dodge"
   }
 }

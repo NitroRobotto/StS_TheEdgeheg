@@ -22,6 +22,7 @@ import org.apache.logging.log4j.Logger;
 import theEdgeheg.cards.*;
 import theEdgeheg.cards.attacks.*;
 import theEdgeheg.cards.powers.BadassArsenal;
+import theEdgeheg.cards.powers.RuleOfCool;
 import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.relics.*;
@@ -414,34 +415,14 @@ public class DefaultMod implements
         BaseMod.addCard(new SupersonicSpeed());
         BaseMod.addCard(new ChaosBlast());
         BaseMod.addCard(new BetterDodge());
+        BaseMod.addCard(new RuleOfCool());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
-        //BaseMod.addCard(new OrbSkill());
-        //BaseMod.addCard(new DefaultSecondMagicNumberSkill());
-        //BaseMod.addCard(new DefaultAttackWithVariable());
 
         BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
         BaseMod.addCard(new DefaultUncommonPower());
-
-        BaseMod.addCard(new DefaultRarePower());
-        
-        logger.info("Making sure the cards are unlocked.");
-        // Unlock the cards
-        // This is so that they are all "seen" in the library, for people who like to look at the card list
-        // before playing your mod.
-        UnlockTracker.unlockCard(OrbSkill.ID);
-        UnlockTracker.unlockCard(DefaultSecondMagicNumberSkill.ID);
-        UnlockTracker.unlockCard(StarterShootAttack.ID);
-        UnlockTracker.unlockCard(DefaultAttackWithVariable.ID);
-        UnlockTracker.unlockCard(StarterDodgeSkill.ID);
-        UnlockTracker.unlockCard(BadassArsenal.ID);
-        UnlockTracker.unlockCard(DefaultUncommonSkill.ID);
-        UnlockTracker.unlockCard(DefaultUncommonAttack.ID);
-        UnlockTracker.unlockCard(DefaultUncommonPower.ID);
-        UnlockTracker.unlockCard(RocketLauncher.ID);
-        UnlockTracker.unlockCard(DefaultRarePower.ID);
         
         logger.info("Done adding cards!");
     }
