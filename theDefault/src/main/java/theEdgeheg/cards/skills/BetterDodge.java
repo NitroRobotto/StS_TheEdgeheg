@@ -51,8 +51,6 @@ public class BetterDodge extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         magicNumber = baseMagicNumber = BONUS_CHAOS;
-
-        this.tags.add(CardTags.STARTER_DEFEND); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
     }
 
     // Actions the card should do.

@@ -64,9 +64,7 @@ public class BloodyKatana extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new BloodyKatanaAction(m, new DamageInfo(p, damage, damageTypeForTurn), 1)
-        );
+        addToBot(new BloodyKatanaAction(m, new DamageInfo(p, damage, damageTypeForTurn), 1));
     }
 
     // Upgraded stats.

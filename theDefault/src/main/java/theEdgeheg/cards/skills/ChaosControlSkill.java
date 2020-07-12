@@ -2,7 +2,6 @@ package theEdgeheg.cards.skills;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -10,7 +9,6 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -63,7 +61,7 @@ public class ChaosControlSkill extends AbstractChaosControlCard {
         for (final AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             addToBot(new ApplyPowerAction(mo, p, new StunMonsterPower(mo, 1)));
         }
-        addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
+        spendChaosEnergy(p);
     }
 
     //Upgraded stats.

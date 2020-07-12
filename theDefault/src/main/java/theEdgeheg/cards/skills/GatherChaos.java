@@ -2,7 +2,6 @@ package theEdgeheg.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
@@ -62,10 +61,7 @@ public class GatherChaos extends AbstractDynamicCard {
         int chaosEnergyCount = TheEdgeheg.CountEmeralds(p) * magicNumber;
 
         if (chaosEnergyCount > 0) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p,
-                    new ChaosEnergyPower(p, chaosEnergyCount)
-                    , chaosEnergyCount)
-            );
+            addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p, chaosEnergyCount)));
         }
     }
 

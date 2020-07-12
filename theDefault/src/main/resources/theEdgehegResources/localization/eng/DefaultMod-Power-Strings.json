@@ -14,5 +14,13 @@
 "theEdgeheg:RuleOfCoolPower": {
         "NAME": "Rule of Cool",
         "DESCRIPTIONS": ["Gain 1 Dodge after killing ", "a non-minion.", " any enemy."]
+},
+"theEdgeheg:MasterEmeraldPower": {
+        "NAME": "Master Emerald",
+        "DESCRIPTIONS": ["Gain 1 Chaos Energy every time you play a Chaos card."]
+},
+"theEdgeheg:BulletStormPower": {
+        "NAME": "Bullet Storm",
+        "DESCRIPTIONS": ["Gain 1 Guns after playing a GUNS card until you play a non-GUN."]
 }
 }

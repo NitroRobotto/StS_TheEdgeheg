@@ -2,23 +2,25 @@ package theEdgeheg.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
  * (3->2) Chaos Control 4.
  * Instakill target (boss = 20% chance, elite = 40%, everyone else 100%).
+ * Only spends Chaos Energy if it triggers the instakill.
  * Heal user for 1.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2020-07-12
  */
-public class NothingPersonal extends AbstractDynamicCard {
+public class NothingPersonal extends AbstractChaosControlCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Card
@@ -62,15 +64,21 @@ public class NothingPersonal extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.type == AbstractMonster.EnemyType.BOSS)  {
-            if (Math.random() < BOSS_INSTAKILL_CHANCE) addToBot(new InstantKillAction(m));
+            if (Math.random() < BOSS_INSTAKILL_CHANCE) {
+                addToBot(new InstantKillAction(m));
+                spendChaosEnergy(p);
+            }
         } else if (m.type == AbstractMonster.EnemyType.ELITE) {
-            if (Math.random() < ELITE_INSTAKILL_CHANCE) addToBot(new InstantKillAction(m));
+            if (Math.random() < ELITE_INSTAKILL_CHANCE) {
+                addToBot(new InstantKillAction(m));
+                spendChaosEnergy(p);
+            }
         } else {
             addToBot(new InstantKillAction(m));
+            spendChaosEnergy(p);
         }
 
         addToBot(new HealAction(p,p,1));
-        addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
     }
 
     //Upgraded stats.

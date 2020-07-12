@@ -22,6 +22,7 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.attacks.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.powers.BadassArsenal;
+import theEdgeheg.cards.powers.BulletStorm;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
@@ -181,7 +182,7 @@ public class TheEdgeheg extends CustomPlayer {
 
         //retVal.add(SoulDevourerRelic.ID);
         retVal.add(UltimateLifeformRelic.ID);
-        //retVal.add(GreenEmeraldRelic.ID);
+        retVal.add(GreenEmeraldRelic.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
         //UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);

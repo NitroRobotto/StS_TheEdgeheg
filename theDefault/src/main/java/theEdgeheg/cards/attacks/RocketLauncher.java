@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -53,6 +54,7 @@ public class RocketLauncher extends AbstractDynamicCard {
     public RocketLauncher() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
+        tags.add(EdgehegCardTags.GUN);
     }
 
 

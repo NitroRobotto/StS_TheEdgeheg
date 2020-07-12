@@ -1,18 +1,22 @@
 package theEdgeheg.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.ChaosEnergyPower;
 import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (1->0): Chaos Control 1. Gain Dodge 2.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-12
+ */
 public class SupersonicSpeed extends AbstractChaosControlCard {
 
     /*
@@ -52,8 +56,8 @@ public class SupersonicSpeed extends AbstractChaosControlCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 1)));
-        addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 2)));
+        spendChaosEnergy(p);
     }
 
     //Upgraded stats.

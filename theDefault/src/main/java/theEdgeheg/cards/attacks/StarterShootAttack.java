@@ -1,6 +1,7 @@
 package theEdgeheg.cards.attacks;
 
 import basemod.abstracts.CustomCard;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,7 +11,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.modifiers.DamageGunScalingModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 // "How come this card extends CustomCard and not DynamicCard like all the rest?"
@@ -85,6 +88,8 @@ public class StarterShootAttack extends CustomCard {
 
         this.tags.add(CardTags.STARTER_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STRIKE);
+        this.tags.add(EdgehegCardTags.GUN);
+        CardModifierManager.addModifier(this, new DamageGunScalingModifier(1,true));
     }
 
     // Actions the card should do.

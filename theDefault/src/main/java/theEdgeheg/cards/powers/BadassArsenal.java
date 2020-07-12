@@ -2,14 +2,12 @@ package theEdgeheg.cards.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.CommonPower;
 import theEdgeheg.powers.GunsPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -55,6 +53,7 @@ public class BadassArsenal extends AbstractDynamicCard {
     public BadassArsenal() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = GUNS;
+        this.tags.add(EdgehegCardTags.GUN);
     }
 
 

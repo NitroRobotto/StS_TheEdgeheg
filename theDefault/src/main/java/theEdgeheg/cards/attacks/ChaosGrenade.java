@@ -52,6 +52,7 @@ public class ChaosGrenade extends AbstractDynamicCard {
 
         damage = baseDamage = DAMAGE;
         tags.add(EdgehegCardTags.GUN);
+        tags.add(EdgehegCardTags.CHAOS);
         this.exhaust = true;
 
         CardModifierManager.addModifier(this, new DamageGunScalingModifier( true));

@@ -22,6 +22,8 @@ import org.apache.logging.log4j.Logger;
 import theEdgeheg.cards.*;
 import theEdgeheg.cards.attacks.*;
 import theEdgeheg.cards.powers.BadassArsenal;
+import theEdgeheg.cards.powers.BulletStorm;
+import theEdgeheg.cards.powers.MasterEmerald;
 import theEdgeheg.cards.powers.RuleOfCool;
 import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
@@ -416,13 +418,15 @@ public class DefaultMod implements
         BaseMod.addCard(new ChaosBlast());
         BaseMod.addCard(new BetterDodge());
         BaseMod.addCard(new RuleOfCool());
+        BaseMod.addCard(new MasterEmerald());
+        BaseMod.addCard(new BulletStorm());
+        BaseMod.addCard(new UseAndThrow());
 
         // Don't comment out/delete these cards (yet). You need 1 of each type and rarity (technically) for your game not to crash
         // when generating card rewards/shop screen items.
 
         BaseMod.addCard(new DefaultUncommonSkill());
         BaseMod.addCard(new DefaultUncommonAttack());
-        BaseMod.addCard(new DefaultUncommonPower());
         
         logger.info("Done adding cards!");
     }

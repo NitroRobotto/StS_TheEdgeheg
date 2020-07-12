@@ -2,7 +2,6 @@ package theEdgeheg.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
@@ -54,7 +53,7 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DodgePower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 1)));
     }
 
     //Upgraded stats.

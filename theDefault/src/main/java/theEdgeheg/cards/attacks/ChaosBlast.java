@@ -2,7 +2,6 @@ package theEdgeheg.cards.attacks;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -63,7 +62,7 @@ public class ChaosBlast extends AbstractChaosControlCard {
         addToBot(new DamageAction(m, new DamageInfo(p, ChaosEnergyPower.GetChaosStrength(p) + (upgraded ? 3 : 0),
                 damageTypeForTurn), AbstractGameAction.AttackEffect.LIGHTNING));
 
-        addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
+        spendChaosEnergy(p);
     }
 
     //Upgraded stats.

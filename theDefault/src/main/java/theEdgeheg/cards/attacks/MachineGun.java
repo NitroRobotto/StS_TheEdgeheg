@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
@@ -66,7 +65,7 @@ public class MachineGun extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         int shotCount = magicNumber;
         for (int i = 0; i < shotCount; ++i)  {
-            AbstractDungeon.actionManager.addToBottom(
+            addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT)
             );

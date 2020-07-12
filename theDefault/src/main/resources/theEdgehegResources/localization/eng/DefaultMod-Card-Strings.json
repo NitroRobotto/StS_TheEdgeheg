@@ -56,5 +56,13 @@
   "theEdgeheg:RuleOfCool": {
     "NAME": "Rule of Cool",
     "DESCRIPTION": "Fatal: theedgeheg:dodge"
+  },
+  "theEdgeheg:MasterEmerald": {
+    "NAME": "the MASTER EMERALD",
+    "DESCRIPTION": "he Master Emerald contains special powers that neutralize the energy of the Chaos Emeralds. That makes it very powerful! Quotation2— Knuckles the Echidna, Sonic Adventure 2"
+  },
+  "theEdgeheg:BulletStorm": {
+    "NAME": "Ballet Storm",
+    "DESCRIPTION": "chaos power 3 your guns give your more guns"
   }
 }
