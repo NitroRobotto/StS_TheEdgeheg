@@ -15,8 +15,10 @@ public class DrawCardWithTagAction extends AbstractGameAction {
     private final boolean zeroCost;
 
     public DrawCardWithTagAction(AbstractCard.CardTags targetTag, boolean zeroCost) {
+        super();
         this.targetTag = targetTag;
         this.zeroCost = zeroCost;
+        this.duration = 0.1f;
     }
 
     public DrawCardWithTagAction(AbstractCard.CardTags targetTag) {
@@ -26,16 +28,20 @@ public class DrawCardWithTagAction extends AbstractGameAction {
     @Override
     public void update() {
         CardGroup drawPile = AbstractDungeon.player.drawPile;
-        if (drawPile.size() == 0 || AbstractDungeon.player.hand.size() >= BaseMod.MAX_HAND_SIZE) { isDone = true; return; }
+        CardGroup hand = AbstractDungeon.player.hand;
+        // Do nothing if there's nothing to draw/the hand is full
+        if (drawPile.size() == 0 || hand.size() >= BaseMod.MAX_HAND_SIZE) { isDone = true; return; }
 
         if (this.duration == 0.1f) {
-            CardGroup hand = AbstractDungeon.player.hand;
+            Object[] cards = drawPile.group.stream().filter(new CardTagPredicate(targetTag)).toArray();
 
-            AbstractCard[] cards = (AbstractCard[]) drawPile.group.stream().filter(new CardTagPredicate(targetTag)).toArray();
+            // Do nothing if there aren't any cards with the specified tag.
             if (cards.length == 0) { isDone = true; return; }
 
-            AbstractCard targetCard = cards[new Random().nextInt(cards.length)];
+            // Select a random card
+            AbstractCard targetCard = (AbstractCard)cards[new Random().nextInt(cards.length)];
 
+            // Add the card to the hand (code copied from "add random card from discard action" in the base game)
             hand.addToHand(targetCard);
 
             targetCard.unhover();

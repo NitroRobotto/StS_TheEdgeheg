@@ -174,8 +174,6 @@ public class TheEdgeheg extends CustomPlayer {
         retVal.add(ChaosControlSkill.ID);
         retVal.add(GatherChaos.ID);
 
-        retVal.add(DrawGun.ID);
-
         return retVal;
     }
 
