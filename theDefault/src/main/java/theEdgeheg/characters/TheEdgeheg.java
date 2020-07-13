@@ -19,7 +19,7 @@ import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.cards.attacks.BloodyKatana;
+import theEdgeheg.cards.attacks.katanas.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;

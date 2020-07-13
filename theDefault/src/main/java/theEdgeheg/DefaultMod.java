@@ -19,8 +19,9 @@ import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import theEdgeheg.cards.*;
 import theEdgeheg.cards.attacks.*;
+import theEdgeheg.cards.attacks.guns.*;
+import theEdgeheg.cards.attacks.katanas.*;
 import theEdgeheg.cards.powers.*;
 import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
@@ -429,6 +430,8 @@ public class DefaultMod implements
         BaseMod.addCard(new QuickKatana());
         BaseMod.addCard(new DashKatana());
         BaseMod.addCard(new ChaosKatana());
+        BaseMod.addCard(new Shotgun());
+        BaseMod.addCard(new Knives());
 
         logger.info("Done adding cards!");
     }

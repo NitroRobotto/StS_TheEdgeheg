@@ -1,4 +1,4 @@
-package theEdgeheg.cards.attacks;
+package theEdgeheg.cards.attacks.guns;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;

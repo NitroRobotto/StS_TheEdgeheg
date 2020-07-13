@@ -118,5 +118,17 @@
   "theEdgeheg:DashKatana": {
     "NAME": "dash KATANA",
     "DESCRIPTION": "attack and deal damage and draw cards draw more if it Fatal a bad guy"
+  },
+  "theEdgeheg:Shotgun": {
+    "NAME": "Shogun",
+    "DESCRIPTION": "theedgeheg:Precise. Deals a lot of damage to enemy in front but less to the others because the one in front is shielding them ofc"
+  },
+  "theEdgeheg:BloodyNodachi": {
+    "NAME": "Bloody Big Katana",
+    "DESCRIPTION": "1"
+  },
+  "theEdgeheg:Knives": {
+    "NAME": "Knifes",
+    "DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card )"
   }
 }

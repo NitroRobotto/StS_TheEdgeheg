@@ -1,20 +1,29 @@
-package theEdgeheg.cards.attacks;
+package theEdgeheg.cards.attacks.katanas;
 
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.actions.FatalAttackAction;
+import theEdgeheg.actions.DrawCardWithTagAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.PreciseModifier;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
-public class DashKatana extends AbstractDynamicCard {
+/**
+ * (1): Deal 6 precise damage. Draw a Katana from the draw pile and put it in your hand.
+ * Upgraded: The drawn card costs 0 less this turn.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-12
+ */
+public class BlackKatana extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -22,7 +31,7 @@ public class DashKatana extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(DashKatana.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(BlackKatana.class.getSimpleName());
     public static final String IMG = makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
@@ -30,36 +39,29 @@ public class DashKatana extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
     private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int CARD_DRAW = 1;
-    private static final int CARD_DRAW_UPGRADE = 1;
 
     // /STAT DECLARATION/
 
-    public DashKatana() {
+    public BlackKatana() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         damage = baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = CARD_DRAW;
-
         tags.add(EdgehegCardTags.KATANA);
-
         CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new FatalAttackAction(m, new DamageInfo(p,
-                damage,
-                damageTypeForTurn), () -> addToBot(new DrawCardAction(p, magicNumber))));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+        addToBot(new DrawCardWithTagAction(EdgehegCardTags.KATANA,upgraded));
     }
 
     // Upgraded stats.
@@ -67,8 +69,7 @@ public class DashKatana extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(CARD_DRAW_UPGRADE);
+            rawDescription = rawDescription + languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }
