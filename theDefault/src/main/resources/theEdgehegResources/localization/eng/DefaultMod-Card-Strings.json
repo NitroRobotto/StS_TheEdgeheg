@@ -67,7 +67,8 @@
   },
   "theEdgeheg:UseAndThrow": {
     "NAME": "Use and Throw",
-    "DESCRIPTION": "*grabs !M! guns* *shoots* *smirks* heh *throws guns to ground*"
+    "DESCRIPTION": "*grabs !M! guns* *shoots* *smirks* heh *throws guns to ground*",
+    "UPGRADE_DESCRIPTION": "guns"
   },
   "theEdgeheg:DrawGun": {
     "NAME": "*draws gun*",
@@ -97,5 +98,25 @@
   "theEdgeheg:Sniper": {
     "NAME": "Sniper Rifle",
     "DESCRIPTION": "precision shot weith sniper rifle to make deal 30 dadmage (30 damage)"
+  },
+  "theEdgeheg:TeleportsBehind": {
+    "NAME": "*teleports behind u*",
+    "DESCRIPTION": "theedgeheg:chaos_control 2 repeat card (upgrade: three times)"
+  },
+  "theEdgeheg:DodgeKatana": {
+    "NAME": "katana(purple)",
+    "DESCRIPTION": "Doge and then attack with katana and do a backflip if you killed"
+  },
+  "theEdgeheg:ChaosKatana": {
+    "NAME": "CHAOS katana",
+    "DESCRIPTION": "folded 100000000 times by a master swordsmith to make the STRONGEST steel precise cut to deal DAMAGE ( !D! damage and kills enemys to gain energy"
+  },
+  "theEdgeheg:Quic kslash": {
+    "NAME": "Quic kslash",
+    "DESCRIPTION": "you slash all enemies with a katana and then if fatal you use this card another time"
+  },
+  "theEdgeheg:DashKatana": {
+    "NAME": "dash KATANA",
+    "DESCRIPTION": "attack and deal damage and draw cards draw more if it Fatal a bad guy"
   }
 }

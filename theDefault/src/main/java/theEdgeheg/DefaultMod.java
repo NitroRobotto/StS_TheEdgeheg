@@ -424,6 +424,11 @@ public class DefaultMod implements
         BaseMod.addCard(new Reload());
         BaseMod.addCard(new PerfectAim());
         BaseMod.addCard(new Sniper());
+        BaseMod.addCard(new TeleportsBehind());
+        BaseMod.addCard(new DodgeKatana());
+        BaseMod.addCard(new QuickKatana());
+        BaseMod.addCard(new DashKatana());
+        BaseMod.addCard(new ChaosKatana());
 
         logger.info("Done adding cards!");
     }

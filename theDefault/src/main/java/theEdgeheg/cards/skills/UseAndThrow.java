@@ -15,6 +15,7 @@ import theEdgeheg.modifiers.MagicGunScalingModifier;
 import theEdgeheg.powers.GunsPower;
 import theEdgeheg.util.CardTagPredicate;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
@@ -34,6 +35,7 @@ public class UseAndThrow extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(UseAndThrow.class.getSimpleName());
     public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String PROMPT = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -61,7 +63,7 @@ public class UseAndThrow extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(magicNumber, "", new CardTagPredicate(EdgehegCardTags.GUN), (cards) -> {
+        addToBot(new SelectCardsInHandAction(magicNumber, PROMPT, new CardTagPredicate(EdgehegCardTags.GUN), (cards) -> {
             int extraBurn = cards.size() - baseMagicNumber;
             for (AbstractCard card : cards) {
                 card.exhaust = true;

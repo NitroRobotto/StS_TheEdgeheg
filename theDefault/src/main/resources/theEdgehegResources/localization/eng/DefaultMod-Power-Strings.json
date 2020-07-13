@@ -34,5 +34,9 @@
 "theEdgeheg:PerfectAimPower": {
         "NAME": "Critical Hits",
         "DESCRIPTIONS": ["5% of dealing double damage per Dexterity stack."]
+},
+"theEdgeheg:TeleportBehindPower": {
+        "NAME": "*teleports behind u*",
+        "DESCRIPTIONS": ["Play your next card #b more times"]
 }
 }
