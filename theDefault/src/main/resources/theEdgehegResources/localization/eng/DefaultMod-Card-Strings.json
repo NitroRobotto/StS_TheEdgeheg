@@ -111,7 +111,7 @@
     "NAME": "CHAOS katana",
     "DESCRIPTION": "folded 100000000 times by a master swordsmith to make the STRONGEST steel precise cut to deal DAMAGE ( !D! damage and kills enemys to gain energy"
   },
-  "theEdgeheg:Quic kslash": {
+  "theEdgeheg:QuickKatana": {
     "NAME": "Quic kslash",
     "DESCRIPTION": "you slash all enemies with a katana and then if fatal you use this card another time"
   },
@@ -130,5 +130,9 @@
   "theEdgeheg:Knives": {
     "NAME": "Knifes",
     "DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card )"
+  },
+  "theEdgeheg:EndlessKatanas": {
+    "NAME": "Endless   Katana's",
+    "DESCRIPTION": "Dexterity 1 and use katana to replace with another katana. their tools of war so dusk feels nothin personnel"
   }
 }

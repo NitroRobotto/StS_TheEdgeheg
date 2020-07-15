@@ -432,6 +432,7 @@ public class DefaultMod implements
         BaseMod.addCard(new ChaosKatana());
         BaseMod.addCard(new Shotgun());
         BaseMod.addCard(new Knives());
+        BaseMod.addCard(new EndlessKatanas());
 
         logger.info("Done adding cards!");
     }
