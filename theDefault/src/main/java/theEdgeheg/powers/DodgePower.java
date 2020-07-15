@@ -31,6 +31,10 @@ public class DodgePower extends AbstractPower {
         this.priority = 75;
     }
 
+    public DodgePower(AbstractCreature owner) {
+        this(owner, 1);
+    }
+
     public void playApplyPowerSfx() {
         CardCrawlGame.sound.play("POWER_INTANGIBLE", 0.05F);
     }

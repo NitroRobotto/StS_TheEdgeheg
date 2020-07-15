@@ -435,7 +435,9 @@ public class DefaultMod implements
                 new Knives(),
                 new EndlessKatanas(),
                 new CoolExplosion(),
-                new PlayRandomCard()
+                new PlayRandomCard(),
+                new Butt(),
+                new Girlfriend()
         };
 
         for (CustomCard card : cards) {
