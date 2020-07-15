@@ -134,5 +134,13 @@
   "theEdgeheg:EndlessKatanas": {
     "NAME": "Endless   Katana's",
     "DESCRIPTION": "Dexterity 1 and use katana to replace with another katana. their tools of war so dusk feels nothin personnel"
+  },
+  "theEdgeheg:CoolExplosion": {
+    "NAME": "COOL Explosion",
+    "DESCRIPTION": "chaos control !M! !D! damage nice NL Exhaust"
+  },
+  "theEdgeheg:PlayRandomCard": {
+    "NAME": "RANDOM",
+    "DESCRIPTION": "its random XD ( Discard )"
   }
 }

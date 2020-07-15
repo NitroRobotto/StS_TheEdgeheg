@@ -3,6 +3,8 @@ package theEdgeheg;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
+import basemod.abstracts.CustomCard;
+import basemod.devcommands.draw.Draw;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -28,7 +30,6 @@ import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.relics.*;
 import theEdgeheg.util.IDCheckDontTouchPls;
 import theEdgeheg.util.TextureLoader;
-import theEdgeheg.variables.DefaultCustomVariable;
 import theEdgeheg.variables.DefaultSecondMagicNumber;
 
 import java.io.InputStream;
@@ -395,44 +396,51 @@ public class DefaultMod implements
         // Add the Custom Dynamic Variables
         logger.info("Add variables");
         // Add the Custom Dynamic variables
-        BaseMod.addDynamicVariable(new DefaultCustomVariable());
+        //BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         
         logger.info("Adding cards");
-        // Add the cards
 
-        BaseMod.addCard(new StarterDodgeSkill());
-        BaseMod.addCard(new StarterShootAttack());
-        BaseMod.addCard(new BloodyKatana());
-        BaseMod.addCard(new ChaosControlSkill());
-        BaseMod.addCard(new MachineGun());
-        BaseMod.addCard(new GatherChaos());
-        BaseMod.addCard(new RegularGun());
-        BaseMod.addCard(new ChaosGrenade());
-        BaseMod.addCard(new NothingPersonal());
-        BaseMod.addCard(new RocketLauncher());
-        BaseMod.addCard(new BadassArsenal());
-        BaseMod.addCard(new SupersonicSpeed());
-        BaseMod.addCard(new ChaosBlast());
-        BaseMod.addCard(new BetterDodge());
-        BaseMod.addCard(new RuleOfCool());
-        BaseMod.addCard(new MasterEmerald());
-        BaseMod.addCard(new BulletStorm());
-        BaseMod.addCard(new UseAndThrow());
-        BaseMod.addCard(new DrawGun());
-        BaseMod.addCard(new BlackKatana());
-        BaseMod.addCard(new GunFu());
-        BaseMod.addCard(new Reload());
-        BaseMod.addCard(new PerfectAim());
-        BaseMod.addCard(new Sniper());
-        BaseMod.addCard(new TeleportsBehind());
-        BaseMod.addCard(new DodgeKatana());
-        BaseMod.addCard(new QuickKatana());
-        BaseMod.addCard(new DashKatana());
-        BaseMod.addCard(new ChaosKatana());
-        BaseMod.addCard(new Shotgun());
-        BaseMod.addCard(new Knives());
-        BaseMod.addCard(new EndlessKatanas());
+        CustomCard[] cards = {
+                new StarterDodgeSkill(),
+                new StarterShootAttack(),
+                new BloodyKatana(),
+                new ChaosControlSkill(),
+                new MachineGun(),
+                new GatherChaos(),
+                new RegularGun(),
+                new ChaosGrenade(),
+                new NothingPersonal(),
+                new RocketLauncher(),
+                new BadassArsenal(),
+                new SupersonicSpeed(),
+                new ChaosBlast(),
+                new BetterDodge(),
+                new RuleOfCool(),
+                new MasterEmerald(),
+                new BulletStorm(),
+                new UseAndThrow(),
+                new DrawGun(),
+                new BlackKatana(),
+                new GunFu(),
+                new Reload(),
+                new PerfectAim(),
+                new Sniper(),
+                new TeleportsBehind(),
+                new DodgeKatana(),
+                new QuickKatana(),
+                new DashKatana(),
+                new ChaosKatana(),
+                new Shotgun(),
+                new Knives(),
+                new EndlessKatanas(),
+                new CoolExplosion(),
+                new PlayRandomCard()
+        };
+
+        for (CustomCard card : cards) {
+            BaseMod.addCard(card);
+        }
 
         logger.info("Done adding cards!");
     }

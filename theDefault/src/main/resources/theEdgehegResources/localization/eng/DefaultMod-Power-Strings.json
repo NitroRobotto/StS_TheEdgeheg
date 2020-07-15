@@ -37,6 +37,10 @@
 },
 "theEdgeheg:TeleportBehindPower": {
         "NAME": "*teleports behind u*",
-        "DESCRIPTIONS": ["Play your next card #b more times"]
+        "DESCRIPTIONS": ["Play your next card #b more time(s)"]
+},
+"theEdgeheg:EndlessKatanasPower": {
+        "NAME": "Endless Katanas",
+        "DESCRIPTIONS": ["Replaces Katana cards played with another of the same type"]
 }
 }
