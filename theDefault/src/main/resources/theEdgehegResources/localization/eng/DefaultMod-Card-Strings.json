@@ -175,5 +175,17 @@
     "NAME": "heh",
     "DESCRIPTION": "\"heh\" - dusk the edghehog (Precise) Exhaust",
     "UPGRADE_DESCRIPTION": "\"heh\" - dusk the edghehog (Precise)"
+  },
+  "theEdgeheg:BlankCard": {
+    "NAME": "",
+    "DESCRIPTION": "your cards give you dexterity to dodge more enemys.and make u cool (my mom told me it was too strong so i made it so its really bad but when you upgrade its strong again)"
+  },
+  "theEdgeheg:HappyTimmy": {
+    "NAME": "ok so",
+    "DESCRIPTION": "im really happy that you guys are playing my mod i put a lot of effort in it so this card is for u its really good and you gain Dodge and Guns for free i hope u like it"
+  },
+  "theEdgeheg:HappierTimmy": {
+    "NAME": "ok so (part 2)",
+    "DESCRIPTION": "also i thought maybe u dont have guns in your deck bcous you can amke your own deck however you like, guns katana or chaos, so this card is a gun and deals dmg"
   }
 }

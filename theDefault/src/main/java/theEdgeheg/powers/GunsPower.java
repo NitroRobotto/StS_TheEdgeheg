@@ -47,6 +47,10 @@ public class GunsPower extends AbstractPower implements CloneablePowerInterface 
         updateDescription();
     }
 
+    public GunsPower(AbstractCreature owner) {
+        this(owner, 1);
+    }
+
     public static int GetGunStrength(AbstractCreature owner)
     {
         if (owner == null) return 0;

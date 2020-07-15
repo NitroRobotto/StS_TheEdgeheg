@@ -440,7 +440,10 @@ public class DefaultMod implements
                 new SuperDodge(),
                 new SpireCrasher(),
                 new DoubleStun(),
-                new CSGun()
+                new CSGun(),
+                new BlankCard(),
+                new HappyTimmy(),
+                new HappierTimmy()
         };
 
         for (CustomCard card : cards) {

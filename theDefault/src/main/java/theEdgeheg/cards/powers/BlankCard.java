@@ -8,7 +8,7 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.GunFuPower;
+import theEdgeheg.powers.BlankCardPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -17,9 +17,9 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * Both are lost at the end of the turn.
  *  @author NITRO
  *  @version 1.0
- *  @since 2020-07-12
+ *  @since 2020-07-15
  */
-public class GunFu extends AbstractDynamicCard {
+public class BlankCard extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -28,35 +28,32 @@ public class GunFu extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(GunFu.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(BlankCard.class.getSimpleName());
     public static final String IMG = makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
 
     // STAT DECLARATION
 
-    private static final AbstractCard.CardRarity RARITY = AbstractCard.CardRarity.RARE;
+    private static final AbstractCard.CardRarity RARITY = CardRarity.UNCOMMON;
     private static final AbstractCard.CardTarget TARGET = AbstractCard.CardTarget.SELF;
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.POWER;
     public static final AbstractCard.CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 2;
-    private static final int STACKS_PER_USE = 1;
-    private static final int STACKS_PER_USE_UPGRADE = 1;
+    private static final int COST = 3;
+    private static final int UPGRADED_COST = 0;
 
     // /STAT DECLARATION/
 
-    public GunFu() {
+    public BlankCard() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(EdgehegCardTags.GUN);
         this.tags.add(EdgehegCardTags.KATANA);
-        magicNumber = baseMagicNumber = STACKS_PER_USE;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new GunFuPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new BlankCardPower(p)));
     }
 
     //Upgraded stats.
@@ -64,7 +61,7 @@ public class GunFu extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(STACKS_PER_USE_UPGRADE);
+            updateCost(UPGRADED_COST);
             initializeDescription();
         }
     }
