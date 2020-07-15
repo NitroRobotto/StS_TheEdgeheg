@@ -42,5 +42,9 @@
 "theEdgeheg:EndlessKatanasPower": {
         "NAME": "Endless Katanas",
         "DESCRIPTIONS": ["Replaces Katana cards played with another of the same type"]
+},
+"theEdgeheg:Superspeed": {
+        "NAME": "Super Speed",
+        "DESCRIPTIONS": ["Don't lose Dodge this turn"]
 }
 }

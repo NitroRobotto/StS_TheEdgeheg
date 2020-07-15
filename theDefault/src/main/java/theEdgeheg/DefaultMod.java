@@ -4,7 +4,6 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomCard;
-import basemod.devcommands.draw.Draw;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -437,7 +436,12 @@ public class DefaultMod implements
                 new CoolExplosion(),
                 new PlayRandomCard(),
                 new Butt(),
-                new Girlfriend()
+                new Girlfriend(),
+                new SuperDodge(),
+                new BetterShoot(),
+                new SuperDodge(),
+                new SpireCrasher(),
+                new DoubleStun()
         };
 
         for (CustomCard card : cards) {

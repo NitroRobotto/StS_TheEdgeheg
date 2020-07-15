@@ -11,9 +11,10 @@ import theEdgeheg.DefaultMod;
 
 /**
  * Reduces the damage from the next attack to 0. Removed at the end of turn.
+ * Not removed if the player has the "Superspeed" power.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-08
+ *  @version 1.1
+ *  @since 2020-07-15
  */
 public class DodgePower extends AbstractPower {
     public static final String POWER_ID = DefaultMod.makeID(DodgePower.class.getSimpleName());
@@ -62,7 +63,9 @@ public class DodgePower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        if (!owner.hasPower(Superspeed.POWER_ID)) {
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
+        }
     }
 
     static {
