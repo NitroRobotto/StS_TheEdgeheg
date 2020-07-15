@@ -370,15 +370,13 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new SoulDevourerRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new UltimateLifeformRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new GreenEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
-        //BaseMod.addRelicToCustomPool(new Green, TheEdgeheg.Enums.COLOR_PURPLE);
-        //BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheEdgeheg.Enums.COLOR_GRAY);
-        //BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheEdgeheg.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new CSGunRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new UltimateLifeformRelic(), RelicType.SHARED);
         
         // Mark relics as seen (the others are all starters so they're marked as seen in the character file
-        UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);
+        //UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);
         logger.info("Done adding relics!");
     }
     
@@ -441,7 +439,8 @@ public class DefaultMod implements
                 new BetterShoot(),
                 new SuperDodge(),
                 new SpireCrasher(),
-                new DoubleStun()
+                new DoubleStun(),
+                new CSGun()
         };
 
         for (CustomCard card : cards) {

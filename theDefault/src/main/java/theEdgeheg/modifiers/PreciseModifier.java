@@ -18,15 +18,25 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 public class PreciseModifier extends AbstractCardModifier {
 
     private final boolean isInherent;
+    private final int multiplier;
+
+    public PreciseModifier(int multiplier, boolean isInherent) {
+        this.isInherent = isInherent;
+        this.multiplier = multiplier;
+    }
 
     public PreciseModifier(boolean isInherent) {
-        this.isInherent = isInherent;
+        this(1, isInherent);
+    }
+
+    public PreciseModifier(int multiplier) {
+        this(multiplier, false);
     }
 
     @Override
     public float modifyDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
         AbstractPower dexterityPower = AbstractDungeon.player.getPower(DexterityPower.POWER_ID);
-        return damage + (dexterityPower == null ? 0 : dexterityPower.amount);
+        return damage + (dexterityPower == null ? 0 : (dexterityPower.amount*multiplier));
     }
 
     @Override
@@ -36,6 +46,6 @@ public class PreciseModifier extends AbstractCardModifier {
 
     @Override
     public AbstractCardModifier makeCopy() {
-        return new PreciseModifier(isInherent);
+        return new PreciseModifier(multiplier, isInherent);
     }
 }

@@ -10,10 +10,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.RelicLibrary;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
@@ -24,6 +27,7 @@ import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
+import theEdgeheg.relics.CSGunRelic;
 import theEdgeheg.relics.GreenEmeraldRelic;
 import theEdgeheg.relics.UltimateLifeformRelic;
 import theEdgeheg.util.NullAnimation;
@@ -140,6 +144,14 @@ public class TheEdgeheg extends CustomPlayer {
 
     }
 
+    @Override
+    protected void initializeStarterRelics(PlayerClass chosenClass) {
+        super.initializeStarterRelics(chosenClass);
+        String relic = new Random().randomBoolean(0.75f) ? GreenEmeraldRelic.ID : CSGunRelic.ID;
+        RelicLibrary.getRelic(relic).makeCopy().instantObtain(this, getStartingRelics().size(), false);
+        AbstractDungeon.relicsToRemoveOnStart.add(relic);
+    }
+
     // =============== /CHARACTER CLASS END/ =================
 
     // Starting description and loadout
@@ -180,13 +192,12 @@ public class TheEdgeheg extends CustomPlayer {
 
         //retVal.add(SoulDevourerRelic.ID);
         retVal.add(UltimateLifeformRelic.ID);
-        retVal.add(GreenEmeraldRelic.ID);
+
+        //retVal.add(GreenEmeraldRelic.ID);
         //retVal.add(DefaultClickableRelic.ID);
 
-        //UnlockTracker.markRelicAsSeen(SoulDevourerRelic.ID);
         UnlockTracker.markRelicAsSeen(UltimateLifeformRelic.ID);
         UnlockTracker.markRelicAsSeen(GreenEmeraldRelic.ID);
-        //UnlockTracker.markRelicAsSeen(DefaultClickableRelic.ID);
 
         return retVal;
     }

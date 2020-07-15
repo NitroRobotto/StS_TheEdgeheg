@@ -13,7 +13,9 @@
       "As the ultimate lifeform, attacks merely scratch you. NL Take a maximum of 1 Damage from all sources.",
       "heh",
       "nuthinn personnel",
-      "die"
+      "die",
+      "just a scratch",
+      "i will kill u"
     ]
   },
   "theEdgeheg:GreenEmeraldRelic": {
@@ -23,12 +25,12 @@
       "Gain #b1 Chaos Energy at the start of each turn."
     ]
   },
-  "theEdgeheg:DefaultClickableRelic": {
-    "NAME": "Right-Clicky Relic",
-    "FLAVOR": "The more you right-click it, the more orbs you've evoked in your lifetime.",
+  "theEdgeheg:CSGunRelic": {
+    "NAME": "IMI/Magnum Research Desert Eagle Mark XIX chambered in .50AE",
+    "FLAVOR": "the best gun",
     "DESCRIPTIONS": [
-      "[#2aecd7]Usable [#2aecd7]once [#2aecd7]per [#2aecd7]turn.[] NL #yEvoke your rightmost Orb.",
-      "YOU ARE MINE!"
+      "ITS SO STRONG",
+      "heh"
     ]
   },
   "theEdgeheg:BottledPlaceholderRelic": {

@@ -166,5 +166,9 @@
   "theEdgeheg:DoubleStun": {
     "NAME": "GOTTA GO FAST",
     "DESCRIPTION": "chaos control !M! and stuns all and gives you and also skips enemy turn . . exhaust"
+  },
+  "theEdgeheg:CSGun": {
+    "NAME": "IMI/Magnum Research Desert Eagle Mark XIX chambered in .50AE",
+    "DESCRIPTION": "DEALS A LOT OF [#ff0000]DAMAGE[] 100 DAMAGE"
   }
 }

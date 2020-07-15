@@ -14,6 +14,12 @@ import theEdgeheg.modifiers.DamageGunScalingModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (2): Chaos Control 4(2). Deal 20(22) damage. Scales with Guns x2. Exhausts.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-15
+ */
 public class CoolExplosion extends AbstractChaosControlCard {
 
     /*
