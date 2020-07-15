@@ -170,5 +170,10 @@
   "theEdgeheg:CSGun": {
     "NAME": "IMI/Magnum Research Desert Eagle Mark XIX chambered in .50AE",
     "DESCRIPTION": "DEALS A LOT OF [#ff0000]DAMAGE[] 100 DAMAGE"
+  },
+  "theEdgeheg:Heh": {
+    "NAME": "heh",
+    "DESCRIPTION": "\"heh\" - dusk the edghehog (Precise) Exhaust",
+    "UPGRADE_DESCRIPTION": "\"heh\" - dusk the edghehog (Precise)"
   }
 }
