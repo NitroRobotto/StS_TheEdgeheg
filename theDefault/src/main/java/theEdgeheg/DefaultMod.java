@@ -454,7 +454,8 @@ public class DefaultMod implements
                 new Tsk(),
                 new OkSo8(),
                 new TurboChaos(),
-                new Birthday()
+                new Birthday(),
+                new GoldKatana()
         };
 
         for (CustomCard card : cards) {
