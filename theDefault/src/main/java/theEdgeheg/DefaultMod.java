@@ -453,7 +453,8 @@ public class DefaultMod implements
                 new ChaosEnergyKatana(),
                 new Tsk(),
                 new OkSo8(),
-                new TurboChaos()
+                new TurboChaos(),
+                new Birthday()
         };
 
         for (CustomCard card : cards) {
