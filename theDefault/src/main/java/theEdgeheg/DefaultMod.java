@@ -455,7 +455,9 @@ public class DefaultMod implements
                 new OkSo8(),
                 new TurboChaos(),
                 new Birthday(),
-                new GoldKatana()
+                new GoldKatana(),
+                new UnplayableBomb(),
+                new RedGun()
         };
 
         for (CustomCard card : cards) {

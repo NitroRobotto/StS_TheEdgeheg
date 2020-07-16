@@ -228,5 +228,13 @@
   "theEdgeheg:GoldKatana": {
     "NAME": "Gold Katana",
     "DESCRIPTION": "you kill your enemy ( !D! ) with a katana and get money ( !M! ) because your awesome"
+  },
+  "theEdgeheg:UnplayableBomb": {
+    "NAME": "NUCLEARBOM",
+    "DESCRIPTION": "KILL ALL ENEMYS IN ALL COMBAT'S WITH NUCULAR BOMB ( theedgeheg:Precise )"
+  },
+  "theEdgeheg:RedGun": {
+    "NAME": "gun(red bullets)",
+    "DESCRIPTION": "deals [#ff0000]1more[] damage and gains energys (not now)"
   }
 }
