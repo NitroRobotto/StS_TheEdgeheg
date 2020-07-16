@@ -3,6 +3,7 @@ package theEdgeheg.cards.skills;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractChaosControlCard;
@@ -17,8 +18,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * Only spends Chaos Energy if it triggers the instakill.
  * Heal user for 1.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-12
+ *  @version 1.2
+ *  @since 2020-07-16
  */
 public class NothingPersonal extends AbstractChaosControlCard {
 
@@ -64,12 +65,12 @@ public class NothingPersonal extends AbstractChaosControlCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.type == AbstractMonster.EnemyType.BOSS)  {
-            if (Math.random() < BOSS_INSTAKILL_CHANCE) {
+            if (AbstractDungeon.cardRandomRng.randomBoolean(BOSS_INSTAKILL_CHANCE)) {
                 addToBot(new InstantKillAction(m));
                 spendChaosEnergy(p);
             }
         } else if (m.type == AbstractMonster.EnemyType.ELITE) {
-            if (Math.random() < ELITE_INSTAKILL_CHANCE) {
+            if (AbstractDungeon.cardRandomRng.randomBoolean(ELITE_INSTAKILL_CHANCE)) {
                 addToBot(new InstantKillAction(m));
                 spendChaosEnergy(p);
             }

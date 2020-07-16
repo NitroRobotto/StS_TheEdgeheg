@@ -236,5 +236,34 @@
   "theEdgeheg:RedGun": {
     "NAME": "gun(red bullets)",
     "DESCRIPTION": "deals [#ff0000]1more[] damage and gains energys (not now)"
+  },
+  "theEdgeheg:QuickDraw": {
+    "NAME": "gun(red bullets)",
+    "DESCRIPTION": "cut people down to become stronger ( !D! damage )"
+  },
+  "theEdgeheg:GunSteal": {
+    "NAME": "*steals gun*",
+    "DESCRIPTION": "\"heh whatchagonna do now huh?\" - dusk the edhehog deals !D! damage and steals a gun ( gain !M! theedgeheg:guns)"
+  },
+  "theEdgeheg:TeleportsAbove": {
+    "NAME": "*teleports above u*",
+    "DESCRIPTION": "*falls really fast and cuts u in half* theedgeheg:Chaos_Control 1. !D! theedgeheg:Precise"
+  },
+  "theEdgeheg:ChaosCards": {
+    "NAME": "Chaos Control Draw Cards",
+    "DESCRIPTION": "Use teedgeheg:Chaos_Control 2 to get more cards."
+  },
+  "theEdgeheg:Glare": {
+    "NAME": "*glare*",
+    "DESCRIPTION": "Vulnerable 1 and enemy loses !D! HP and Stuns but thats op so it might fail against strong enemys (also teedgeheg:Chaos_Control 2 )",
+    "UPGRADE_DESCRIPTION": "(its stuns more often)"
+  },
+  "theEdgeheg:Parry": {
+    "NAME": "*parry*",
+    "DESCRIPTION": "parry is when you are like *dodge* but with a COOL sword so its better (Draw !M! cards)"
+  },
+  "theEdgeheg:Disrobe": {
+    "NAME": "cut armoire with katan**",
+    "DESCRIPTION": "naked people take more damage"
   }
 }

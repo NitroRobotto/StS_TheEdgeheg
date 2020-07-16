@@ -1,6 +1,7 @@
 package theEdgeheg.util;
 
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.Collection;
 import java.util.Optional;
@@ -16,7 +17,7 @@ public class HelperFunctions {
 
     public static <E> Optional<E> getRandom (Collection<E> e) {
         return e.stream()
-                .skip((int) (e.size() * Math.random()))
+                .skip((int) (e.size() * AbstractDungeon.cardRandomRng.random()))
                 .findFirst();
     }
 }

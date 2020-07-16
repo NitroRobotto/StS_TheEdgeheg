@@ -457,7 +457,13 @@ public class DefaultMod implements
                 new Birthday(),
                 new GoldKatana(),
                 new UnplayableBomb(),
-                new RedGun()
+                new RedGun(),
+                new QuickDraw(),
+                new GunSteal(),
+                new TeleportsAbove(),
+                new ChaosCards(),
+                new Glare(),
+                new Parry()
         };
 
         for (CustomCard card : cards) {
