@@ -17,12 +17,12 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theEdgeheg.cards.attacks.*;
 import theEdgeheg.cards.attacks.guns.*;
 import theEdgeheg.cards.attacks.katanas.*;
+import theEdgeheg.cards.colorless.*;
 import theEdgeheg.cards.powers.*;
 import theEdgeheg.cards.skills.*;
 import theEdgeheg.characters.TheEdgeheg;
@@ -443,7 +443,17 @@ public class DefaultMod implements
                 new CSGun(),
                 new BlankCard(),
                 new HappyTimmy(),
-                new HappierTimmy()
+                new HappierTimmy(),
+                new HappiestTimmy(),
+                new GameDesignerTimmy(),
+                new TimmyBackflip(),
+                new ArtOfTheBlade(),
+                new DrawBlade(),
+                new DieDieDie(),
+                new ChaosEnergyKatana(),
+                new Tsk(),
+                new OkSo8(),
+                new TurboChaos()
         };
 
         for (CustomCard card : cards) {

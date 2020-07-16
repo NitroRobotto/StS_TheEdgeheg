@@ -19,7 +19,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * (0): Gain 1 Dodge. Gain 1 GUNS. Add "Happier Timmy" to hand. Exhaust.
  *  @author NITRO
  *  @version 1.0
- *  @since 2020-07-15
+ *  @since 2020-07-16
  */
 public class HappyTimmy extends AbstractDynamicCard {
 

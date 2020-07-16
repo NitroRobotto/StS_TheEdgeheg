@@ -187,5 +187,42 @@
   "theEdgeheg:HappierTimmy": {
     "NAME": "ok so (part 2)",
     "DESCRIPTION": "also i thought maybe u dont have guns in your deck bcous you can amke your own deck however you like, guns katana or chaos, so this card is a gun and deals dmg"
+  },
+  "theEdgeheg:HappiestTimmy": {
+    "NAME": "ok so(part 4",
+    "DESCRIPTION": "so thank you it was really hard to write all this specially part 3. idk what to do with this card so it gives 1 dodge"
+  },
+  "theEdgeheg:GameDesignerTimmy": {
+    "NAME": "ok so(part 4",
+    "DESCRIPTION": "hi guy's i gave this card 1 cost because if it weas 0 cost it would be overpowered i am really trying to balance ther mod like u guise told me"
+  },
+  "theEdgeheg:ArtOfTheBlade": {
+    "NAME": "the ART of the blade",
+    "DESCRIPTION": "when your study the ART of the blade like me u become very good with a sword (katana's are swords) its what it means so now u make deal more damage(2 damage"
+  },
+  "theEdgeheg:DrawBlade": {
+    "NAME": "*unsheathes katana*",
+    "DESCRIPTION": "\"ill kill you\"-dusk the hedg hog (get a random katana)",
+    "UPGRADE_DESCRIPTION": "(free katana)"
+  },
+  "theEdgeheg:DieDieDie": {
+    "NAME": "DIE DIE DIE",
+    "DESCRIPTION": "\"die die die\" - reaper, overwatch2(with yourGUNS)"
+  },
+  "theEdgeheg:ChaosEnergyKatana": {
+    "NAME": "CHAOS katana1",
+    "DESCRIPTION": "theedgeheg:Chaos_Control with katana"
+  },
+  "theEdgeheg:Tsk": {
+    "NAME": "tsk",
+    "DESCRIPTION": "\"tsk\""
+  },
+  "theEdgeheg:OkSo8": {
+    "NAME": "ok so (part8)",
+    "DESCRIPTION": "so tl;dr i really love u guys ^^ (card gives chaos energy every turn!)"
+  },
+  "theEdgeheg:TurboChaos": {
+    "NAME": "Turbo",
+    "DESCRIPTION": "i never understood this card it dosent make u go fast so i made it better and now it makes u go fast because i created this new animation to mkae u go fast because dusk is the fastest he is faster than sonic the hgedehog"
   }
 }

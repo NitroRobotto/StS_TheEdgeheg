@@ -9,6 +9,13 @@ import theEdgeheg.util.CardTagPredicate;
 
 import java.util.Random;
 
+/**
+ * Draws a card with the specified Tag from the draw pile.
+ * If zeroCost = true, the card will cost 0 this turn.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2020-07-16
+ */
 public class DrawCardWithTagAction extends AbstractGameAction {
 
     private final AbstractCard.CardTags targetTag;
@@ -40,7 +47,7 @@ public class DrawCardWithTagAction extends AbstractGameAction {
 
             // Select a random card
             AbstractCard targetCard = (AbstractCard)cards[new Random().nextInt(cards.length)];
-
+            if (zeroCost) targetCard.setCostForTurn(0);
             // Add the card to the hand (code copied from "add random card from discard action" in the base game)
             hand.addToHand(targetCard);
 

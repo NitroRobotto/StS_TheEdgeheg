@@ -1,23 +1,25 @@
 package theEdgeheg.cards.skills;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.actions.DrawCardWithTagAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Draw a random Gun from your draw pile. Exhaust.
- * Upgraded: The drawn card costs 0 this turn.
+ * (0): Create a random Katana in your hand. Exhaust.
+ * Upgraded: It costs 0 this turn.
  *  @author NITRO
  *  @version 1.0
- *  @since 2020-07-12
+ *  @since 2020-07-16
  */
-public class DrawGun extends AbstractDynamicCard {
+public class DrawBlade extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +28,7 @@ public class DrawGun extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(DrawGun.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(DrawBlade.class.getSimpleName());
     public static final String IMG = makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
@@ -44,7 +46,7 @@ public class DrawGun extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public DrawGun() {
+    public DrawBlade() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
     }
@@ -52,7 +54,9 @@ public class DrawGun extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardWithTagAction(EdgehegCardTags.GUN, upgraded));
+        AbstractCard c = EdgehegCardTags.createRandomCardWithTag(EdgehegCardTags.KATANA, CardType.ATTACK).makeCopy();
+        if (upgraded) c.setCostForTurn(0);
+        addToBot(new MakeTempCardInHandAction(c, true));
     }
 
     //Upgraded stats.
@@ -60,6 +64,7 @@ public class DrawGun extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            rawDescription += languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

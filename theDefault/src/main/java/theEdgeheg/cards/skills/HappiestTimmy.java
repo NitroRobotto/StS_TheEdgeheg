@@ -1,23 +1,25 @@
 package theEdgeheg.cards.skills;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.actions.DrawCardWithTagAction;
 import theEdgeheg.cards.AbstractDynamicCard;
-import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Draw a random Gun from your draw pile. Exhaust.
- * Upgraded: The drawn card costs 0 this turn.
+ * (0): Gain 1 Dodge. Get a "GameDesignerTimmy" copy.
  *  @author NITRO
  *  @version 1.0
- *  @since 2020-07-12
+ *  @since 2020-07-16
  */
-public class DrawGun extends AbstractDynamicCard {
+public class HappiestTimmy extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,7 +28,7 @@ public class DrawGun extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(DrawGun.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(HappiestTimmy.class.getSimpleName());
     public static final String IMG = makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
@@ -44,15 +46,22 @@ public class DrawGun extends AbstractDynamicCard {
     // /STAT DECLARATION/
 
 
-    public DrawGun() {
+    public HappiestTimmy() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
+        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardWithTagAction(EdgehegCardTags.GUN, upgraded));
+        addToBot(new ApplyPowerAction(p, p, new DodgePower(p)));
+        AbstractCard c = CardLibrary.getCard(GameDesignerTimmy.ID).makeCopy();
+        addToBot(new MakeTempCardInHandAction(c, true));
+    }
+
+    @Override
+    public boolean canUpgrade() {
+        return false;
     }
 
     //Upgraded stats.

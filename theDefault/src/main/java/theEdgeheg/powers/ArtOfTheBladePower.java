@@ -2,7 +2,6 @@ package theEdgeheg.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -19,11 +18,14 @@ import theEdgeheg.util.TextureLoader;
 import static theEdgeheg.DefaultMod.makePowerPath;
 
 /**
- * The next card played is repeated N times.
+ * Your first X Katana Attacks each turn are played twice.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-16
  */
-public class TeleportBehindPower extends AbstractPower {
+public class ArtOfTheBladePower extends AbstractPower {
 
-    public static final String POWER_ID = DefaultMod.makeID(TeleportBehindPower.class.getSimpleName());
+    public static final String POWER_ID = DefaultMod.makeID(ArtOfTheBladePower.class.getSimpleName());
     public static final PowerStrings STRINGS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = STRINGS.NAME;
     public static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
@@ -31,12 +33,16 @@ public class TeleportBehindPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
 
-    public TeleportBehindPower(AbstractCreature owner, int cardCount) {
+    private int charges;
+
+    public ArtOfTheBladePower(AbstractCreature owner, int cardCount) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = cardCount;
+        amount = cardCount;
+
+        charges = 0;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -49,34 +55,31 @@ public class TeleportBehindPower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!card.purgeOnUse && amount > 0) {
+        if (!card.purgeOnUse && charges > 0) {
             flash();
+            --charges;
             AbstractMonster m = null;
             if (action.target != null) {
                 m = (AbstractMonster)action.target;
             }
 
-            while(amount-- > 0) {
-                AbstractCard tmp = card.makeSameInstanceOf();
-                AbstractDungeon.player.limbo.addToBottom(tmp);
-                tmp.current_x = card.current_x;
-                tmp.current_y = card.current_y;
-                tmp.target_x = (float)Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
-                tmp.target_y = (float)Settings.HEIGHT / 2.0F;
-                if (m != null) {
-                    tmp.calculateCardDamage(m);
-                }
-
-                tmp.purgeOnUse = true;
-                AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+            AbstractCard tmp = card.makeSameInstanceOf();
+            AbstractDungeon.player.limbo.addToBottom(tmp);
+            tmp.current_x = card.current_x;
+            tmp.current_y = card.current_y;
+            tmp.target_x = (float)Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+            tmp.target_y = (float)Settings.HEIGHT / 2.0F;
+            if (m != null) {
+                tmp.calculateCardDamage(m);
             }
 
-            if (amount <= 0) addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
+            tmp.purgeOnUse = true;
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
         }
     }
 
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) addToBot(new RemoveSpecificPowerAction(owner, owner, POWER_ID));
+    public void atStartOfTurnPostDraw() {
+        charges = amount;
     }
 }

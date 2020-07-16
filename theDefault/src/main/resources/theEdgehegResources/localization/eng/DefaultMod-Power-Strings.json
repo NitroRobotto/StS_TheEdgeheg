@@ -46,5 +46,13 @@
 "theEdgeheg:Superspeed": {
         "NAME": "Super Speed",
         "DESCRIPTIONS": ["Don't lose Dodge this turn"]
+},
+"theEdgeheg:ArtOfTheBladePower": {
+        "NAME": "art of the BLADE",
+        "DESCRIPTIONS": ["the first #b katana attacks are played twice"]
+},
+"theEdgeheg:GainChaosEnergyEachTurnPower": {
+        "NAME": "Gain Chaos Energy",
+        "DESCRIPTIONS": ["gain #b chaos energy each turn"]
 }
 }
