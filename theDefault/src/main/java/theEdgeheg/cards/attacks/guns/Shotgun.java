@@ -13,14 +13,18 @@ import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.MagicGunScalingModifier;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.stream.Collectors;
+
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
  * (2): Deal 2(3)x5* damage to the first enemy, 2(3)x3* to the second, 2(3)x1* to the third, and so on.
  *  Stops if the multiplier is 0 or below. The multiplier is increased by "GUNS".
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-13
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class Shotgun extends AbstractDynamicCard {
 
@@ -65,13 +69,23 @@ public class Shotgun extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int shotCount = magicNumber;
-        for (AbstractMonster target : AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster target : AbstractDungeon.getMonsters().monsters.stream().sorted(new PositionSorter()).collect(Collectors
+                .toList())) {
             if (shotCount <= 0) break;
             addToBot(
                     new DamageAction(target, new DamageInfo(p, damage*shotCount, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_HEAVY)
             );
             shotCount -= 2;
+        }
+    }
+
+    public class PositionSorter implements Comparator<AbstractMonster>
+    {
+        @Override
+        public int compare(AbstractMonster o1, AbstractMonster o2) {
+            if (o2.hb_x == o1.hb_x) return 0;
+            return o2.hb_x > o1.hb_x ? 1 : -1;
         }
     }
 

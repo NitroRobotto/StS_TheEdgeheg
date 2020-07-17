@@ -11,16 +11,21 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 
+import static theEdgeheg.DefaultMod.makeCardPath;
+
 /**
  * (1): Gain 5(8) Block. Draw 2 Cards.
  * yes, it's literally just copy/pasted Backflip.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2020-07-16
  */
 public class TimmyBackflip extends CustomCard {
     public static final String ID = DefaultMod.makeID(TimmyBackflip.class.getSimpleName());
     private static final CardStrings cardStrings;
 
     public TimmyBackflip() {
-        super(ID, cardStrings.NAME, "green/skill/backflip", 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, makeCardPath("shadow.jpg"), 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 5;
     }
 

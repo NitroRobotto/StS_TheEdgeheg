@@ -15,7 +15,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (2): Deal 10(12) damage. If it kills, heal 1.
  *  @author NITRO
- *  @version 1.2
+ *  @version 1.3
  *  @since 2020-07-17
  */
 public class BloodyKatana extends AbstractDynamicCard {
@@ -40,10 +40,9 @@ public class BloodyKatana extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 10;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int DAMAGE = 9;
+    private static final int UPGRADE_PLUS_DMG = 4;
     private static final int HEAL = 1;
-    private static final int UPGRADE_PLUS_HEAL = 1;
 
     // /STAT DECLARATION/
 
@@ -71,7 +70,6 @@ public class BloodyKatana extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(UPGRADE_PLUS_HEAL);
             initializeDescription();
         }
     }

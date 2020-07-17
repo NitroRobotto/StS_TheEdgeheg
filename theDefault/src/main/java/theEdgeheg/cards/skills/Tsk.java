@@ -15,8 +15,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (3->2): Gain 1 Dexterity. Gain 1 Dodge.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-16
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class Tsk extends AbstractDynamicCard {
 
@@ -66,7 +66,7 @@ public class Tsk extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

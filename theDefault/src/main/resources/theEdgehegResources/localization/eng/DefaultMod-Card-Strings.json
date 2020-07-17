@@ -79,8 +79,8 @@
     "DESCRIPTION": "BLOW UP WITH THE ROCKET LAUNCHER deals !D! [#ff0000]damage[] to all enemies"
   },
   "theEdgeheg:BlackKatana": {
-    "NAME": "黒刀",
-    "DESCRIPTION": "it says kuroi katana its a katana that deals damage and gives yo uanother katana from your deck (PS: kuroi means black)",
+    "NAME": "katana no kuroi",
+    "DESCRIPTION": "its a katana that deals damage and gives yo uanother katana from your deck (PS: kuroi means black)",
     "UPGRADE_DESCRIPTION": " (new katana costs 0 this turn)"
   },
   "theEdgeheg:GunFu": {
@@ -157,7 +157,7 @@
   },
   "theEdgeheg:BetterShoot": {
     "NAME": "*shoots*",
-    "DESCRIPTION": "*SHOTs GUN* !D!X damge"
+    "DESCRIPTION": "*SHOTs GUN* !D! X damge"
   },
   "theEdgeheg:SpireCrasher": {
     "NAME": "it thebspire",
@@ -251,7 +251,7 @@
   },
   "theEdgeheg:ChaosCards": {
     "NAME": "Chaos Control Draw Cards",
-    "DESCRIPTION": "Use teedgeheg:Chaos_Control 2 to get more cards."
+    "DESCRIPTION": "Use theedgeheg:Chaos_Control 2 to get more cards."
   },
   "theEdgeheg:Glare": {
     "NAME": "*glare*",
@@ -320,5 +320,9 @@
   "theEdgeheg:SuperEdgeheg": {
     "NAME": "SUPER HEDGEHEg",
     "DESCRIPTION": "theedgeheg:Chaos_Control !M! become super dusk the Hegdehog and gain 666 strengt dexterity and guns respectevellly"
+  },
+  "theEdgeheg:Birthday": {
+    "NAME": "birthday",
+    "DESCRIPTION": "dusk doesnt' like his birthday because he dosent like gay things like girls or birthdays so he kills everyone.               but he still gets present's"
   }
 }

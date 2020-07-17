@@ -44,6 +44,11 @@ public class PerfectAimPower extends AbstractPower {
     }
 
     @Override
+    public void onRemove() {
+        addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner,-amount)));
+    }
+
+    @Override
     public int onAttackToChangeDamage(DamageInfo info, int damageAmount) {
         AbstractPower dexterity = owner.getPower(DexterityPower.POWER_ID);
         if (dexterity != null) {

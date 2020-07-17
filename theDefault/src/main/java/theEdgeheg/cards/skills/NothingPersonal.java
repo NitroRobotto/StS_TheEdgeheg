@@ -18,8 +18,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * Only spends Chaos Energy if it triggers the instakill.
  * Heal user for 1.
  *  @author NITRO
- *  @version 1.2
- *  @since 2020-07-16
+ *  @version 1.3
+ *  @since 2020-07-17
  */
 public class NothingPersonal extends AbstractChaosControlCard {
 
@@ -87,7 +87,7 @@ public class NothingPersonal extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

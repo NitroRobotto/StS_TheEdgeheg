@@ -16,7 +16,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (1->0): Gain 1 Chaos Energy per Vulnerable enemy. Apply 1 Vulnerable to all enemies.
  *  @author NITRO
- *  @version 1.0
+ *  @version 1.1
  *  @since 2020-07-17
  */
 public class Grr extends AbstractDynamicCard {
@@ -37,7 +37,7 @@ public class Grr extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.COMMON;
-    private static final CardTarget TARGET = CardTarget.ENEMY;
+    private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
@@ -66,7 +66,7 @@ public class Grr extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(0);
+            upgradeBaseCost(0);
             initializeDescription();
         }
     }

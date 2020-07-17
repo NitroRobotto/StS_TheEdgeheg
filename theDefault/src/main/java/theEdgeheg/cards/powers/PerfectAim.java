@@ -10,6 +10,12 @@ import theEdgeheg.powers.PerfectAimPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (2->1): Gain 2 Dexterity. May get critical hits based on Dexterity.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2020-07-17
+ */
 public class PerfectAim extends AbstractDynamicCard {
 
     /*
@@ -55,7 +61,7 @@ public class PerfectAim extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

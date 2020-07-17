@@ -18,8 +18,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (X): Deal 6X(9X) Damage. Has Precise & scales with Guns.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-15
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class BetterShoot extends AbstractDynamicCard {
 
@@ -61,9 +61,13 @@ public class BetterShoot extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.energyOnUse > 0)
+        if (energyOnUse > 0)
             addToBot(new DamageAction(m, new DamageInfo(p, damage * this.energyOnUse, damageTypeForTurn),
                 AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+
+        if (!freeToPlayOnce) {
+            p.energy.use(energyOnUse);
+        }
     }
 
     // Upgraded stats.

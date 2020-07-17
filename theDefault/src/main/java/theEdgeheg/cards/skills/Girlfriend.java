@@ -16,8 +16,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (2->1): Heal 1. Exhaust.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-09
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class Girlfriend extends AbstractDynamicCard {
 
@@ -63,7 +63,7 @@ public class Girlfriend extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

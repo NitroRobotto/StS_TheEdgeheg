@@ -20,7 +20,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (2): Deal 4(2) Damage 6(12) times. Precise. Damage increases with GUNS.
  *  @author NITRO
- *  @version 1.0
+ *  @version 1.1
  *  @since 2020-07-17
  */
 public class RevolverOcelot extends AbstractDynamicCard {
@@ -46,8 +46,8 @@ public class RevolverOcelot extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 2;
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = -4;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = -1;
 
     // /STAT DECLARATION/
 

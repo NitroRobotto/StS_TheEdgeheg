@@ -14,8 +14,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (1->0): Chaos Control 1. Gain Dodge 2.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-12
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class SupersonicSpeed extends AbstractChaosControlCard {
 
@@ -65,7 +65,7 @@ public class SupersonicSpeed extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

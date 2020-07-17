@@ -22,7 +22,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * (1->0): Select 1+X Gun cards from your hand. Play it, and then Exhaust it. Lose X Guns. Exhaust.
  * X is any number between 0 and the current amount of the GUNS buff
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.2
  *  @since 2020-07-12
  */
 public class UseAndThrow extends AbstractDynamicCard {
@@ -81,7 +81,7 @@ public class UseAndThrow extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

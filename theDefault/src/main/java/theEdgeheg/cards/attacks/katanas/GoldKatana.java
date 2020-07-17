@@ -11,20 +11,22 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.EdgehegCardTags;
 
+import static theEdgeheg.DefaultMod.makeCardPath;
+
 
 /**
  * (1): Deal 8(12) damage. If it kills, gain 10(13) gold.
  * (weaker hand of greed)
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-12
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class GoldKatana extends CustomCard {
     public static final String ID = DefaultMod.makeID(GoldKatana.class.getSimpleName());
     private static final CardStrings cardStrings;
 
     public GoldKatana() {
-        super(ID, cardStrings.NAME, "colorless/attack/hand_of_greed", 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, cardStrings.NAME,  makeCardPath("shadow.jpg"), 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.baseMagicNumber = 10;
         this.magicNumber = this.baseMagicNumber;

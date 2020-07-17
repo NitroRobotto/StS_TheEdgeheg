@@ -16,8 +16,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * (2): Gain 1(2) Guns after using a Katana card. Gain 1(2) Dexterity after using a Guns card.
  * Both are lost at the end of the turn.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-15
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class BlankCard extends AbstractDynamicCard {
 
@@ -61,7 +61,7 @@ public class BlankCard extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

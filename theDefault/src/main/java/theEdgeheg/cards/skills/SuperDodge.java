@@ -15,8 +15,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (3->2): Gain 5 Dodge. Don't lose Dodge at the start of your next turn.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-15
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class SuperDodge extends AbstractDynamicCard {
 
@@ -62,7 +62,7 @@ public class SuperDodge extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

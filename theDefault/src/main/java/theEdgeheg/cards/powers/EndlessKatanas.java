@@ -16,8 +16,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (1->0): Gain 1 Dexterity. After playing a katana card, exhaust it and add a random katana card of the same type to your hand.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-15
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class EndlessKatanas extends AbstractDynamicCard {
 
@@ -62,7 +62,7 @@ public class EndlessKatanas extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            updateCost(UPGRADED_COST);
+            upgradeBaseCost(UPGRADED_COST);
             initializeDescription();
         }
     }

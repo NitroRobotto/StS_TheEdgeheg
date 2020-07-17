@@ -8,12 +8,14 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.powers.ChaosEnergyPower;
 
+import static theEdgeheg.DefaultMod.makeCardPath;
+
 /**
  * (0): Gain 2(5) Chaos Energy. Exhaust.
  * (Shop Only)
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-16
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class TurboChaos extends AbstractDynamicCard {
 
@@ -24,7 +26,7 @@ public class TurboChaos extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(TurboChaos.class.getSimpleName());
-    public static final String IMG = "blue/skill/turbo";
+    public static final String IMG =  makeCardPath("shadow.jpg");
 
     // /TEXT DECLARATION/
 
