@@ -11,31 +11,34 @@ import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
 /**
- * Gain 1 Chaos Energy at the start of each turn.
+ * Gain 1 Chaos Energy whenever you take Damage.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.0
  *  @since 2020-07-17
  */
-public class GreenEmeraldRelic extends BaseEmeraldRelic {
+public class SilverEmeraldRelic extends BaseEmeraldRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID(GreenEmeraldRelic.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(SilverEmeraldRelic.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("greenEmerald.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("silverEmerald.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("emeraldOutline.png"));
 
-    public GreenEmeraldRelic() {
+    public SilverEmeraldRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
-    public void atTurnStart() {
-        addToBot(new ApplyPowerAction(
-                        AbstractDungeon.player, AbstractDungeon.player,
-                        new ChaosEnergyPower(AbstractDungeon.player, 1)));
+    public void onLoseHp(int damageAmount) {
+        if (damageAmount > 0) {
+            flash();
+            addToBot(new ApplyPowerAction(
+                    AbstractDungeon.player, AbstractDungeon.player,
+                    new ChaosEnergyPower(AbstractDungeon.player, 1)));
+        }
     }
 
     // Description

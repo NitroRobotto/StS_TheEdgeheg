@@ -41,7 +41,7 @@
     "DESCRIPTION": "theedgeheg:Chaos_Control 5 *kills u*im not ur mome"
   },
   "theEdgeheg:SupersonicSpeed": {
-    "NAME": "SPEED OF SOUND",
+    "NAME": "ROLLING AROUND AT THE SPEED OF SOUND",
     "DESCRIPTION": "dodge faster than sonic with theedgeheg:chaos_control"
   },
   "theEdgeheg:ChaosBlast": {
@@ -97,7 +97,7 @@
   },
   "theEdgeheg:Sniper": {
     "NAME": "Sniper Rifle",
-    "DESCRIPTION": "precision shot weith sniper rifle to make deal 30 dadmage (30 damage)"
+    "DESCRIPTION": "precision shot weith sniper rifle to make deal 30 dadmage ( !D! [#ff0000]damage)[]"
   },
   "theEdgeheg:TeleportsBehind": {
     "NAME": "*teleports behind u*",
@@ -128,8 +128,9 @@
     "DESCRIPTION": "1"
   },
   "theEdgeheg:Knives": {
-    "NAME": "Knifes",
-    "DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card )"
+    "NAME": "Knife's",
+    "DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card ). Exhaust",
+    "UPGRADE_DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card )."
   },
   "theEdgeheg:EndlessKatanas": {
     "NAME": "Endless   Katana's",
@@ -238,7 +239,7 @@
     "DESCRIPTION": "deals [#ff0000]1more[] damage and gains energys (not now)"
   },
   "theEdgeheg:QuickDraw": {
-    "NAME": "gun(red bullets)",
+    "NAME": "*quick draws katana*",
     "DESCRIPTION": "cut people down to become stronger ( !D! damage )"
   },
   "theEdgeheg:GunSteal": {
@@ -311,7 +312,7 @@
   },
   "theEdgeheg:Fastness": {
     "NAME": "Fastness",
-    "DESCRIPTION": "heh *gains armoire*"
+    "DESCRIPTION": "heh * gains armoire*"
   },
   "theEdgeheg:Grr": {
     "NAME": "Grr",

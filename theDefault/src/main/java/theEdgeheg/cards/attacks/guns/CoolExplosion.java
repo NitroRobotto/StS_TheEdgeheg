@@ -45,7 +45,6 @@ public class CoolExplosion extends AbstractChaosControlCard {
     private static final int DAMAGE = 20;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int CHAOS_COST = 4;
-    private static final int CHAOS_COST_UPGRADE = -2;
 
     // /STAT DECLARATION/
 
@@ -75,7 +74,7 @@ public class CoolExplosion extends AbstractChaosControlCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(CHAOS_COST_UPGRADE);
+            upgradeBaseCost(1);
             initializeDescription();
         }
     }

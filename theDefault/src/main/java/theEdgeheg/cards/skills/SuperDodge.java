@@ -13,9 +13,9 @@ import theEdgeheg.powers.Superspeed;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (3->2): Gain 5 Dodge. Don't lose Dodge at the start of your next turn.
+ * (3->2): Gain 4 Dodge. Don't lose Dodge at the start of your next turn.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.2
  *  @since 2020-07-17
  */
 public class SuperDodge extends AbstractDynamicCard {
@@ -53,7 +53,7 @@ public class SuperDodge extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 5)));
+        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 4)));
         addToBot(new ApplyPowerAction(p, p, new Superspeed(p, 1)));
     }
 

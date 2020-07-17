@@ -16,9 +16,9 @@ import theEdgeheg.modifiers.PreciseModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (X): Deal 6X(9X) Damage. Has Precise & scales with Guns.
+ * (X): Deal 6X(9X) Damage. Scales with Guns.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.2
  *  @since 2020-07-17
  */
 public class BetterShoot extends AbstractDynamicCard {
@@ -54,7 +54,6 @@ public class BetterShoot extends AbstractDynamicCard {
         tags.add(EdgehegCardTags.GUN);
 
         CardModifierManager.addModifier(this, new DamageGunScalingModifier( true));
-        CardModifierManager.addModifier(this, new PreciseModifier( true));
         // We don't call "initializeDescription" here because addModifier already does it
     }
 

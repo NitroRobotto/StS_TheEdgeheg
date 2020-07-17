@@ -368,10 +368,19 @@ public class DefaultMod implements
         
         // This adds a character specific relic. Only when you play with the mentioned color, will you get this relic.
         BaseMod.addRelicToCustomPool(new SoulDevourerRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+
         BaseMod.addRelicToCustomPool(new UltimateLifeformRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+
         BaseMod.addRelicToCustomPool(new GreenEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new CyanEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new SilverEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new BlueEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new PurpleEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new RedEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new YellowEmeraldRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+
         BaseMod.addRelicToCustomPool(new CSGunRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
-        
+
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new UltimateLifeformRelic(), RelicType.SHARED);
         

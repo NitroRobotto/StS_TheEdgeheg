@@ -48,7 +48,7 @@ public class Sniper extends AbstractDynamicCard {
         tags.add(EdgehegCardTags.GUN);
 
         CardModifierManager.addModifier(this, new DamageGunScalingModifier(2, true));
-        CardModifierManager.addModifier(this, new PreciseModifier( true));
+        CardModifierManager.addModifier(this, new PreciseModifier(2, true));
         // We don't call "initializeDescription" here because addModifier already does it
     }
 

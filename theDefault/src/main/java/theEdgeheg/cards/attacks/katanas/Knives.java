@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.actions.FatalAttackAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
@@ -18,9 +17,10 @@ import theEdgeheg.powers.ChaosEnergyPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Deal 2(4) Damage. Gain 1(2) Chaos Energy. Draw 1 Card.
+ * (0): Deal 2 Damage. Gain 2 Chaos Energy. Draw 1 Card. Exhaust.
+ * Upgrade: Don't exhaust.
  *  @author NITRO
- *  @version 1.0
+ *  @version 1.1
  *  @since 2020-07-17
  */
 public class Knives extends AbstractDynamicCard {
@@ -46,9 +46,7 @@ public class Knives extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 2;
-    private static final int UPGRADE_PLUS_DMG = 2;
-    private static final int CHAOS_ENERGY = 1;
-    private static final int CHAOS_ENERGY_UPGRADE = 1;
+    private static final int CHAOS_ENERGY = 2;
 
     // /STAT DECLARATION/
 
@@ -57,6 +55,7 @@ public class Knives extends AbstractDynamicCard {
 
         damage = baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = CHAOS_ENERGY;
+        exhaust = true;
 
         tags.add(EdgehegCardTags.KATANA);
         tags.add(EdgehegCardTags.CHAOS);
@@ -77,8 +76,7 @@ public class Knives extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(CHAOS_ENERGY_UPGRADE);
+            exhaust = false;
             initializeDescription();
         }
     }

@@ -24,6 +24,7 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(Torii.ID); // Also has this, but better.
                 AbstractDungeon.relicsToRemoveOnStart.add(TungstenRod.ID); // Would break the character
                 AbstractDungeon.relicsToRemoveOnStart.add(SingingBowl.ID); // this one can't be reconciled with
+                AbstractDungeon.relicsToRemoveOnStart.add(FaceOfCleric.ID); // this one can't be reconciled with
                 // TODO: Replace the Red Mask, it's useless
 
                 // The Edgeheg doesn't use Block (dexterity will be used in other ways so it's allowed).

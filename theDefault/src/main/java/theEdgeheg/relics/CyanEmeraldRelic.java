@@ -11,31 +11,32 @@ import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
 /**
- * Gain 1 Chaos Energy at the start of each turn.
+ * Start combat with 5 Chaos Energy.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.0
  *  @since 2020-07-17
  */
-public class GreenEmeraldRelic extends BaseEmeraldRelic {
+public class CyanEmeraldRelic extends BaseEmeraldRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      */
 
     // ID, images, text.
-    public static final String ID = DefaultMod.makeID(GreenEmeraldRelic.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(CyanEmeraldRelic.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("greenEmerald.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("cyanEmerald.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("emeraldOutline.png"));
 
-    public GreenEmeraldRelic() {
+    public CyanEmeraldRelic() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
-    public void atTurnStart() {
+    public void atBattleStart() {
+        flash();
         addToBot(new ApplyPowerAction(
                         AbstractDungeon.player, AbstractDungeon.player,
-                        new ChaosEnergyPower(AbstractDungeon.player, 1)));
+                        new ChaosEnergyPower(AbstractDungeon.player, 5)));
     }
 
     // Description

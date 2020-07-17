@@ -27,9 +27,7 @@ import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
-import theEdgeheg.relics.CSGunRelic;
-import theEdgeheg.relics.GreenEmeraldRelic;
-import theEdgeheg.relics.UltimateLifeformRelic;
+import theEdgeheg.relics.*;
 import theEdgeheg.util.NullAnimation;
 
 import java.util.ArrayList;
@@ -304,12 +302,6 @@ public class TheEdgeheg extends CustomPlayer {
     @Override
     public String getVampireText() {
         return TEXT[2];
-    }
-
-    public static int CountEmeralds(AbstractPlayer p)
-    {
-        // repeat the above for each of the other 6 emeralds Emerald as they're added
-        return p.hasRelic(GreenEmeraldRelic.ID) ? 1 : 0;
     }
 
 }

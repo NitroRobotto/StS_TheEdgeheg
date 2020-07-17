@@ -1,0 +1,49 @@
+package theEdgeheg.relics;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.EdgehegCardTags;
+import theEdgeheg.util.TextureLoader;
+
+import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
+import static theEdgeheg.DefaultMod.makeRelicPath;
+
+public class YellowEmeraldRelic extends BaseEmeraldRelic {
+    /*
+     * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
+     */
+
+    // ID, images, text.
+    public static final String ID = DefaultMod.makeID(YellowEmeraldRelic.class.getSimpleName());
+
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("yellowEmerald.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("emeraldOutline.png"));
+
+    public YellowEmeraldRelic() {
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        if (c.hasTag(EdgehegCardTags.CHAOS_CONTROL)) {
+            flash();
+            addToBot(new DamageAllEnemiesAction(
+                    AbstractDungeon.player,c.magicNumber, DamageInfo.DamageType.HP_LOSS,
+                    AbstractGameAction.AttackEffect.LIGHTNING)
+            );
+        }
+    }
+
+    // Description
+    @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+}

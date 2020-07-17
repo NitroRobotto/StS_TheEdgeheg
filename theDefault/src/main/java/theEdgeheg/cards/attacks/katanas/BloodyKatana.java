@@ -1,5 +1,6 @@
 package theEdgeheg.cards.attacks.katanas;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,13 +10,14 @@ import theEdgeheg.actions.FatalAttackAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.cards.EdgehegCardTags;
+import theEdgeheg.modifiers.PreciseModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
  * (2): Deal 10(12) damage. If it kills, heal 1.
  *  @author NITRO
- *  @version 1.3
+ *  @version 1.4
  *  @since 2020-07-17
  */
 public class BloodyKatana extends AbstractDynamicCard {
@@ -54,6 +56,8 @@ public class BloodyKatana extends AbstractDynamicCard {
         magicNumber = baseMagicNumber;
 
         tags.add(EdgehegCardTags.KATANA);
+
+        CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.

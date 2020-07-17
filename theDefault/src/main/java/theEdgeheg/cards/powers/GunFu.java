@@ -4,20 +4,22 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.DexterityPower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.GunFuPower;
+import theEdgeheg.powers.GunsPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Gain 1(2) Guns after using a Katana card. Gain 1(2) Dexterity after using a Guns card.
- * Both are lost at the end of the turn.
+ * (2): Gain 1 Dexterity and 1 GUNS.
+ * After playing a Katana or GUN card, gain 1 GUNs and 1 Dexterity respectively until the start of your next turn.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-12
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class GunFu extends AbstractDynamicCard {
 
@@ -56,6 +58,8 @@ public class GunFu extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p,p,new DexterityPower(p,1)));
+        addToBot(new ApplyPowerAction(p,p,new GunsPower(p)));
         addToBot(new ApplyPowerAction(p, p, new GunFuPower(p, magicNumber)));
     }
 

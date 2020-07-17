@@ -25,6 +25,48 @@
       "Gain #b1 Chaos Energy at the start of each turn."
     ]
   },
+  "theEdgeheg:CyanEmeraldRelic": {
+    "NAME": "Cyan Chaos Emerald",
+    "FLAVOR": "THE BEST EMERALD the cyan one",
+    "DESCRIPTIONS": [
+      "Gives Chaos Energy. (#b),"
+    ]
+  },
+  "theEdgeheg:SilverEmeraldRelic": {
+    "NAME": "Silver Chaos Emerald",
+    "FLAVOR": "the bestest emerald: silver",
+    "DESCRIPTIONS": [
+      "\"The pain makes me STRONGER\" - dusk the edgeheg"
+    ]
+  },
+  "theEdgeheg:BlueEmeraldRelic": {
+    "NAME": "Blue Chaos Emerald",
+    "FLAVOR": "an awesome emerald: blue",
+    "DESCRIPTIONS": [
+      "when you kill people you gain chaos energy"
+    ]
+  },
+  "theEdgeheg:PurpleEmeraldRelic": {
+    "NAME": "Purple Chaos Emerald",
+    "FLAVOR": "the best emerald is purple its the cest color",
+    "DESCRIPTIONS": [
+      "Dodge Chaos Ccontrol"
+    ]
+  },
+  "theEdgeheg:RedEmeraldRelic": {
+    "NAME": "Red Chaos Emerald",
+    "FLAVOR": "red: the final emerald, so its the best",
+    "DESCRIPTIONS": [
+      "you have 7 and can becom SUPER HEDGEHEG"
+    ]
+  },
+  "theEdgeheg:YellowEmeraldRelic": {
+    "NAME": "Yellow Chaos Emerald",
+    "FLAVOR": "the most amazing, yellow, emerald",
+    "DESCRIPTIONS": [
+      "chaos control hurts enemies"
+    ]
+  },
   "theEdgeheg:CSGunRelic": {
     "NAME": "IMI/Magnum Research Desert Eagle Mark XIX chambered in .50AE",
     "FLAVOR": "the best gun",

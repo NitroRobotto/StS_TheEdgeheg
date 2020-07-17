@@ -54,9 +54,6 @@ public class UnplayableBomb extends AbstractDynamicCard {
         return false;
     }
 
-    @Override
-    public boolean canUpgrade() { return false; }
-
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -69,6 +66,7 @@ public class UnplayableBomb extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             initializeDescription();
+            retain = true;
         }
     }
 }

@@ -15,7 +15,7 @@ import theEdgeheg.modifiers.PreciseModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Deal (Max HP) Damage to all enemies. Scales with GUNS.
+ * (0): Deal (HP+GUNS) Damage to all enemies.
  * Upgrade: Gains Precise.
  * @author NITRO
  * @version 1.1
@@ -58,7 +58,7 @@ public class Birthday extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, damage+p.maxHealth, damageTypeForTurn,
+        addToBot(new DamageAllEnemiesAction(p, damage+p.currentHealth, damageTypeForTurn,
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY));
     }
 

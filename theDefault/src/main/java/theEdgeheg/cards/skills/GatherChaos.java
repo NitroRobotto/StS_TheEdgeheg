@@ -8,6 +8,7 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
+import theEdgeheg.relics.BaseEmeraldRelic;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -58,7 +59,7 @@ public class GatherChaos extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int chaosEnergyCount = TheEdgeheg.CountEmeralds(p) * magicNumber;
+        int chaosEnergyCount = BaseEmeraldRelic.CountEmeralds() * magicNumber;
 
         if (chaosEnergyCount > 0) {
             addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p, chaosEnergyCount)));
