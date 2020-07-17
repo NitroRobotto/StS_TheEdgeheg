@@ -11,6 +11,7 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.PreciseModifier;
+import theEdgeheg.util.HelperFunctions;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -62,7 +63,8 @@ public class SephirotKatana extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new FatalAttackAction(m,
+            if (!HelperFunctions.IsBasicallyDead(mo))
+                addToBot(new FatalAttackAction(m,
                     new DamageInfo(mo, damage, damageTypeForTurn),
                     () -> { upgradeDamage(magicNumber); initializeDescription(); }));
         }

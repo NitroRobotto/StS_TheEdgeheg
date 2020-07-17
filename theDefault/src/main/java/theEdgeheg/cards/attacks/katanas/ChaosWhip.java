@@ -1,6 +1,5 @@
 package theEdgeheg.cards.attacks.katanas;
 
-import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -9,15 +8,19 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.actions.FatalAttackAction;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.modifiers.PreciseModifier;
 import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (1): Deal 5(7) damage to 2 random enemies. Gain 1(2) Chaos Energy.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2020-07-17
+ */
 public class ChaosWhip extends AbstractDynamicCard {
 
     /*
@@ -46,7 +49,7 @@ public class ChaosWhip extends AbstractDynamicCard {
     public ChaosWhip() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        damage = baseDamage = 4;
+        damage = baseDamage = 5;
         magicNumber = baseMagicNumber = 1;
 
         tags.add(EdgehegCardTags.KATANA);
@@ -70,7 +73,7 @@ public class ChaosWhip extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeDamage(2);
             upgradeMagicNumber(1);
             initializeDescription();
         }

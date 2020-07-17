@@ -21,7 +21,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (1): Deal 5(7) Precise damage to all enemies. For each enemy killed, play this card again.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.2
  *  @since 2020-07-17
  */
 public class QuickKatana extends AbstractDynamicCard {
@@ -65,11 +65,9 @@ public class QuickKatana extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster target : AbstractDungeon.getMonsters().monsters) {
-            if (!HelperFunctions.IsBasicallyDead(target))
-                addToBot(new FatalAttackAction(target, new DamageInfo(p, damage, damageTypeForTurn), () -> {
-                    AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this,target,cost,true,true),true);
-                    addToTop(new ApplyPowerAction(p,p, new DodgePower(p,1)));
-                }));
+            if (!HelperFunctions.IsBasicallyDead(target) || AbstractDungeon.cardRandomRng.randomBoolean(0.1f)) {
+                addToBot(new FatalAttackAction(target, new DamageInfo(p, damage, damageTypeForTurn), () -> AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this,target,cost,true,true),true)));
+            }
         }
     }
 

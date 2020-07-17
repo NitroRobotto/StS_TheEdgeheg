@@ -17,6 +17,12 @@ import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (0): Deal 2(4) Damage. Gain 1(2) Chaos Energy. Draw 1 Card.
+ *  @author NITRO
+ *  @version 1.0
+ *  @since 2020-07-17
+ */
 public class Knives extends AbstractDynamicCard {
 
     /*

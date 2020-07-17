@@ -14,6 +14,12 @@ import theEdgeheg.modifiers.PreciseModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
+/**
+ * (1): Deal 6(8) Precise Damage. Draw 1(2) card. If it kills, draw another card.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2020-07-17
+ */
 public class DashKatana extends AbstractDynamicCard {
 
     /*
@@ -39,7 +45,6 @@ public class DashKatana extends AbstractDynamicCard {
     private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int CARD_DRAW = 1;
-    private static final int CARD_DRAW_UPGRADE = 1;
 
     // /STAT DECLARATION/
 
@@ -59,7 +64,8 @@ public class DashKatana extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new FatalAttackAction(m, new DamageInfo(p,
                 damage,
-                damageTypeForTurn), () -> addToBot(new DrawCardAction(p, magicNumber))));
+                damageTypeForTurn), () -> addToBot(new DrawCardAction(p, 1))));
+        addToBot(new DrawCardAction(p, magicNumber));
     }
 
     // Upgraded stats.
@@ -68,7 +74,7 @@ public class DashKatana extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
-            upgradeMagicNumber(CARD_DRAW_UPGRADE);
+            upgradeMagicNumber(CARD_DRAW);
             initializeDescription();
         }
     }
