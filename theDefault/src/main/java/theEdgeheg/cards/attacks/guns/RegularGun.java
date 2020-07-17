@@ -32,7 +32,7 @@ public class RegularGun extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(RegularGun.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/gun.jpg");
 
     // /TEXT DECLARATION/
 

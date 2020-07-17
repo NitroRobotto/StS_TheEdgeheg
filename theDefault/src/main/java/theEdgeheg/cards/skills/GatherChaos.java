@@ -30,7 +30,7 @@ public class GatherChaos extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(GatherChaos.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/chaos_emeralds.jpg");
 
     // /TEXT DECLARATION/
 

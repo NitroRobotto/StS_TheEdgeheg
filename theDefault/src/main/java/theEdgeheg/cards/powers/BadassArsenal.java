@@ -13,10 +13,10 @@ import theEdgeheg.powers.GunsPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1->2): Gain (2->5) GUNS.
+ * (1->2): Gain (1->3) GUNS.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-09
+ *  @version 1.1
+ *  @since 2020-07-17
  */
 public class BadassArsenal extends AbstractDynamicCard {
 
@@ -44,7 +44,7 @@ public class BadassArsenal extends AbstractDynamicCard {
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 2;
-    private static final int GUNS = 2;
+    private static final int GUNS = 1;
     private static final int GUNS_UPGRADE = 3;
 
     // /STAT DECLARATION/

@@ -34,7 +34,7 @@ public class CSGun extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(CSGun.class.getSimpleName());
-    public static final String IMG = makeCardPath("attacks/csgun.jpg");
+    public static final String IMG = makeCardPath("Attacks/deserteagle.jpg");
 
     // /TEXT DECLARATION/
 

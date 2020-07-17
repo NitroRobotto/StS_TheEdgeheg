@@ -14,7 +14,7 @@ public class RemoveUnwantedEdgehegRelicsPatch {
     {
         @SpirePrefixPatch
         public static void patch(AbstractDungeon __instance) {
-            boolean isPlayingEdgeheg = __instance.player instanceof TheEdgeheg;
+            @SuppressWarnings("AccessStaticViaInstance") boolean isPlayingEdgeheg = __instance.player instanceof TheEdgeheg;
 
             if (isPlayingEdgeheg) {
                 LogManager.getLogger(DefaultMod.class.getName()).info("Removing Edgeheg Relics");
@@ -53,6 +53,7 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(Pantograph.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MeatOnTheBone.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BirdFacedUrn.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(MealTicket.ID);
                 // TODO: Patch the Bloody Idol, too
 
             }

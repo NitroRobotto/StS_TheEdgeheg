@@ -29,7 +29,7 @@ public class GunFu extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(GunFu.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Powers/dynamic_pose.jpg");
 
     // /TEXT DECLARATION/
 

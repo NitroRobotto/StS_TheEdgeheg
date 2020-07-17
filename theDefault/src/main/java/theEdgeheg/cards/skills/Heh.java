@@ -30,7 +30,7 @@ public class Heh extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Heh.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/bad_palette.jpg");
 
     // /TEXT DECLARATION/
 
