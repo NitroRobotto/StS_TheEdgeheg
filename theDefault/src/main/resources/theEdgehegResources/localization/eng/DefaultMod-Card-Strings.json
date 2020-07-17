@@ -265,5 +265,60 @@
   "theEdgeheg:Disrobe": {
     "NAME": "cut armoire with katan**",
     "DESCRIPTION": "naked people take more damage"
+  },
+  "theEdgeheg:RandomChaosCard": {
+    "NAME": "chaaaos CONTROL!",
+    "DESCRIPTION": "*pulls out emerald* CHAOS CONTROL (exhaust)",
+    "UPGRADE_DESCRIPTION": "*pulls out emerald* CHAOS CONTROL"
+  },
+  "theEdgeheg:SkateboardTrick": {
+    "NAME": "Skateb Trick",
+    "DESCRIPTION": "do a sick trick. Draw !M! cards."
+  },
+  "theEdgeheg:DualPistols": {
+    "NAME": "Dual Wield Pistols",
+    "DESCRIPTION": "Shoot twice ( !D! damage) and then draw sword and gun. Exile."
+  },
+  "theEdgeheg:RevolverOcelot": {
+    "NAME": "Revolver Ocelot",
+    "DESCRIPTION": "the revolver from ocelot fires six times idk. upgrade for two guns",
+    "UPGRADE_DESCRIPTION": "Revolvers Ocelots"
+  },
+  "theEdgeheg:SephirotKatana": {
+    "NAME": "Sephirots Katana",
+    "DESCRIPTION": "katana of sephirot (bad guy in ff7). hits everyone because its really big, and becomes stronher by killing"
+  },
+  "theEdgeheg:SoulSiphon": {
+    "NAME": "sSuck Soul",
+    "DESCRIPTION": "eat the soul of your enemy's and become stronger (IAM TRIED FORTHE LAST TIME THIS CARD IS NOT GAY OK HES BECOMING MORE POWERFUL WITH THE SOULS OF HIS ENEMY'S ITS NOT A GAY THINK OKAY DUSK IS NOT GAY FOR THE LAST TIME"
+  },
+  "theEdgeheg:SelfHarmIsNotCool": {
+    "NAME": "cut veins",
+    "DESCRIPTION": "ok so i tried it and mom had to take me to the hospital so plz dont try it. dusk is immortal tho so he can take 1 damage to gain 5 chaos energy no biggie",
+    "UPGRADE_DESCRIPTION": " (also theedgeheg:Dodge)"
+  },
+  "theEdgeheg:RollAndShoot": {
+    "NAME": "Roll and Shoot",
+    "DESCRIPTION": "roll to theedgeheg:Dodge, then shoot lots of times ( !D! x !M! ) and leave ppl Vulnerable"
+  },
+  "theEdgeheg:BlowCover": {
+    "NAME": "Blow Cover",
+    "DESCRIPTION": "throw grenade that hurts everyone and leaves them without cover"
+  },
+  "theEdgeheg:FastRevolver": {
+    "NAME": "Fast Trigger Revolver",
+    "DESCRIPTION": "theedgeheg:Precise Shoot gun ( !D! damage) so other guns shoot faster (exile only if not ugpraded)"
+  },
+  "theEdgeheg:Fastness": {
+    "NAME": "Fastness",
+    "DESCRIPTION": "heh *gains armoire*"
+  },
+  "theEdgeheg:Grr": {
+    "NAME": "Grr",
+    "DESCRIPTION": "grr *enemy becomes vulnerable* LB GRR *if they were vulnerable, gain energys*"
+  },
+  "theEdgeheg:SuperEdgeheg": {
+    "NAME": "SUPER HEDGEHEg",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M! become super dusk the Hegdehog and gain 666 strengt dexterity and guns respectevellly"
   }
 }

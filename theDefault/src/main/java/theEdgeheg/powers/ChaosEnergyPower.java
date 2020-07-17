@@ -46,6 +46,10 @@ public class ChaosEnergyPower extends AbstractPower implements CloneablePowerInt
         this.description = DESCRIPTIONS[0];
     }
 
+    public ChaosEnergyPower(AbstractCreature owner) {
+        this(owner, 1);
+    }
+
     public static int GetChaosStrength(AbstractCreature owner)
     {
         if (owner == null) return 0;

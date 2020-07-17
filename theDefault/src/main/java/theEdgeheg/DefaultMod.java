@@ -463,7 +463,20 @@ public class DefaultMod implements
                 new TeleportsAbove(),
                 new ChaosCards(),
                 new Glare(),
-                new Parry()
+                new Parry(),
+                new RandomChaosCard(),
+                new SkateboardTrick(),
+                new DualPistols(),
+                new RevolverOcelot(),
+                new SephirotKatana(),
+                new SoulSiphon(),
+                new SelfHarmIsNotCool(),
+                new RollAndShoot(),
+                new BlowCover(),
+                new FastRevolver(),
+                new Fastness(),
+                new Grr(),
+                new SuperEdgeheg()
         };
 
         for (CustomCard card : cards) {
