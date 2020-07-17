@@ -56,7 +56,7 @@ public class Grr extends AbstractDynamicCard {
         int chaosEnergyGain = 0;
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
             if (mo.hasPower(VulnerablePower.POWER_ID)) ++chaosEnergyGain;
-            addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo,magicNumber,false)));
+            addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo,1,false)));
         }
         if (chaosEnergyGain > 0) addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p,chaosEnergyGain)));
     }

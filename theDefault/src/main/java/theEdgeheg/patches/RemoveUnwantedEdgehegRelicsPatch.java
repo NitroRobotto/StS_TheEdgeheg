@@ -55,6 +55,7 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(MeatOnTheBone.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BirdFacedUrn.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MealTicket.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(BloodVial.ID);
                 // TODO: Patch the Bloody Idol, too
 
             }
