@@ -7,15 +7,16 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.powers.ChaosEnergyPower;
+import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Gain 2(5) Chaos Energy. Exhaust.
+ * (0): Gain 2(5) Chaos Energy. Gain 1 Dodge. Exhaust.
  * (Shop Only)
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-18
  */
 public class TurboChaos extends AbstractDynamicCard {
 
@@ -34,7 +35,7 @@ public class TurboChaos extends AbstractDynamicCard {
 
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = CardColor.COLORLESS;
 
     private static final int COST = 0;
@@ -53,6 +54,7 @@ public class TurboChaos extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new DodgePower(p)));
         addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p,magicNumber)));
     }
 

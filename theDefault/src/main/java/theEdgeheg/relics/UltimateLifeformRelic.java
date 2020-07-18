@@ -31,8 +31,8 @@ public class UltimateLifeformRelic extends CustomRelic {
     public static final String ID = DefaultMod.makeID(UltimateLifeformRelic.class.getSimpleName());
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getRelicStrings(ID).DESCRIPTIONS;
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("placeholder_relic2.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic2.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("dusk.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("dusk.png"));
 
     public UltimateLifeformRelic() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);
