@@ -29,7 +29,7 @@ public class CoolExplosion extends AbstractChaosControlCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(CoolExplosion.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attacks/grenade.jpg");
+    public static final String IMG = makeCardPath("Attacks/coolexplosion.jpg");
 
     // /TEXT DECLARATION/
 

@@ -12,10 +12,10 @@ import theEdgeheg.powers.DodgePower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Gain 2 Dodge. Gain 1(3) Chaos Energy.
+ * (2): Gain 2 Dodge. Gain 2(4) Chaos Energy.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-12
+ *  @version 1.1
+ *  @since 2020-07-18
  */
 public class BetterDodge extends AbstractDynamicCard {
 
@@ -41,7 +41,7 @@ public class BetterDodge extends AbstractDynamicCard {
 
     private static final int COST = 2;
     private static final int BONUS_CHAOS = 2;
-    private static final int BONUS_CHAOS_UPGRADE = 4;
+    private static final int BONUS_CHAOS_UPGRADE = 2;
 
 
     // /STAT DECLARATION/

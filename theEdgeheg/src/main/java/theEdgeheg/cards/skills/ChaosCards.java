@@ -23,7 +23,7 @@ public class ChaosCards extends AbstractChaosControlCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(ChaosCards.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/chaoscards.jpg");
 
     // /TEXT DECLARATION/
 

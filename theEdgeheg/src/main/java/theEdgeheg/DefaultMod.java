@@ -494,7 +494,8 @@ public class DefaultMod implements
                 new Heh(),
                 new BloodyNodachi(),
                 new SexyGirlfriend(),
-                new EmeraldGirlfriend()
+                new EmeraldGirlfriend(),
+                new CrazyGirlfriend()
         };
 
         for (CustomCard card : cards) {

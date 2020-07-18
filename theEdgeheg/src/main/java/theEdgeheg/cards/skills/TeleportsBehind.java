@@ -13,10 +13,10 @@ import theEdgeheg.powers.TeleportBehindPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Chaos Control 3. The next card is played 2(3) times.
+ * (1): Chaos Control 2. The next card is played 2(3) times.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-13
+ *  @version 1.2
+ *  @since 2020-07-18
  */
 public class TeleportsBehind extends AbstractChaosControlCard {
 
@@ -40,7 +40,7 @@ public class TeleportsBehind extends AbstractChaosControlCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int CHAOS_ENERGY_COST = 2;
+    private static final int CHAOS_ENERGY_COST = 3;
 
     // /STAT DECLARATION/
 
@@ -56,7 +56,6 @@ public class TeleportsBehind extends AbstractChaosControlCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new DodgePower(p,1)));
         addToBot(new ApplyPowerAction(p,p,new TeleportBehindPower(p,upgraded ? 2 : 1)));
         spendChaosEnergy(p);
     }

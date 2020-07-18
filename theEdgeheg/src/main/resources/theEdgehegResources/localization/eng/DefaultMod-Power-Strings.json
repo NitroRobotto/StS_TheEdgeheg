@@ -54,5 +54,9 @@
 "theEdgeheg:GainChaosEnergyEachTurnPower": {
         "NAME": "Gain Chaos Energy",
         "DESCRIPTIONS": ["gain #b chaos energy each turn"]
+},
+"theEdgeheg:CrazyGirlfriend": {
+        "NAME": "Krazi Grrrfrend",
+        "DESCRIPTION": "when use gerlfrend cards cream does a random attack of #b."
 }
 }

@@ -18,8 +18,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  * (0): Apply 2 Vulnerable (scales with GUNS). Exhaust.
  * When upgraded, doesn't exhaust.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-12
+ *  @version 1.2
+ *  @since 2020-07-18
  */
 public class Heh extends AbstractDynamicCard {
 
@@ -49,7 +49,7 @@ public class Heh extends AbstractDynamicCard {
     public Heh() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         tags.add(EdgehegCardTags.GUN);
-        exhaust = upgraded;
+        exhaust = true;
         magicNumber = baseMagicNumber = 2;
         CardModifierManager.addModifier(this, new MagicGunScalingModifier(true));
     }

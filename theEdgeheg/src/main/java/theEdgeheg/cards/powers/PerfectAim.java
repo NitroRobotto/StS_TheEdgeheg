@@ -28,7 +28,7 @@ public class PerfectAim extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(PerfectAim.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Powers/perfectaim.jpg");
 
     // /TEXT DECLARATION/
 
