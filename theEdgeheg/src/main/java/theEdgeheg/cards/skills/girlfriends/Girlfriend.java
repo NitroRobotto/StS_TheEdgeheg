@@ -1,4 +1,4 @@
-package theEdgeheg.cards.skills;
+package theEdgeheg.cards.skills.girlfriends;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -8,7 +8,6 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.ChaosEnergyPower;
 import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;

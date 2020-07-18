@@ -4,7 +4,6 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomCard;
-import basemod.eventUtil.AddEventParams;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -26,6 +25,8 @@ import theEdgeheg.cards.attacks.katanas.*;
 import theEdgeheg.cards.colorless.*;
 import theEdgeheg.cards.powers.*;
 import theEdgeheg.cards.skills.*;
+import theEdgeheg.cards.skills.girlfriends.Girlfriend;
+import theEdgeheg.cards.skills.girlfriends.SexyGirlfriend;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.relics.*;
 import theEdgeheg.util.IDCheckDontTouchPls;
@@ -490,7 +491,8 @@ public class DefaultMod implements
                 new Disrobe(),
                 new ChaosWhip(),
                 new Heh(),
-                new BloodyNodachi()
+                new BloodyNodachi(),
+                new SexyGirlfriend()
         };
 
         for (CustomCard card : cards) {
