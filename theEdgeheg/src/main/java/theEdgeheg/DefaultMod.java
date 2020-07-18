@@ -401,12 +401,12 @@ public class DefaultMod implements
         //Ignore this
         pathCheck();
         // Add the Custom Dynamic Variables
-        logger.info("Add variables");
+        //logger.info("Add variables");
         // Add the Custom Dynamic variables
         //BaseMod.addDynamicVariable(new DefaultCustomVariable());
         BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
         
-        logger.info("Adding cards");
+        logger.info("Adding cards for Edgeheg");
 
         CustomCard[] cards = {
                 new StarterDodgeSkill(),
@@ -486,14 +486,18 @@ public class DefaultMod implements
                 new FastRevolver(),
                 new Fastness(),
                 new Grr(),
-                new SuperEdgeheg()
+                new SuperEdgeheg(),
+                new Disrobe(),
+                new ChaosWhip(),
+                new Heh(),
+                new BloodyNodachi()
         };
 
         for (CustomCard card : cards) {
             BaseMod.addCard(card);
         }
 
-        logger.info("Done adding cards!");
+        logger.info("Added " + cards.length + " Edgeheg cards");
     }
     
     // There are better ways to do this than listing every single individual card, but I do not want to complicate things

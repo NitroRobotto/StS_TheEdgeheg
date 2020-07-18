@@ -16,7 +16,7 @@ import theEdgeheg.util.HelperFunctions;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Deal 7(9) damage to all enemies. For each kill, permanently increase damage by 2(3).
+ * (1): Deal 7(9) damage to all enemies. For each kill, permanently increase damage by 2(3).
  *  @author NITRO
  *  @version 1.0
  *  @since 2020-07-17
@@ -42,7 +42,7 @@ public class SephirotKatana extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.ATTACK;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 2;
 

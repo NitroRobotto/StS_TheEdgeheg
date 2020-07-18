@@ -17,10 +17,10 @@ import theEdgeheg.powers.GunsPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): If the enemy intends to attack, gain 1(2) GUNS. Deal 5(7) Damage. Scales with GUNS.
+ * (1): If the enemy intends to attack, gain 1(2) GUNS. Deal 5 Damage. Scales with GUNS.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-16
+ *  @version 1.1
+ *  @since 2020-07-18
  */
 public class GunSteal extends AbstractDynamicCard {
 
@@ -45,7 +45,6 @@ public class GunSteal extends AbstractDynamicCard {
     private static final int COST = 1;
     private static final int DAMAGE = 5;
     private static final int SCALING = 1;
-    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 
@@ -84,7 +83,6 @@ public class GunSteal extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
             upgradeMagicNumber(SCALING);
             initializeDescription();
         }

@@ -20,11 +20,11 @@ import java.util.stream.Collectors;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Deal 2(3)x5* damage to the first enemy, 2(3)x3* to the second, 2(3)x1* to the third, and so on.
+ * (2): Deal 2(3)x5* damage to the first enemy, 2(3)x4* to the second, 2(3)x3* to the third, and so on.
  *  Stops if the multiplier is 0 or below. The multiplier is increased by "GUNS".
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-18
  */
 public class Shotgun extends AbstractDynamicCard {
 
@@ -76,7 +76,7 @@ public class Shotgun extends AbstractDynamicCard {
                     new DamageAction(target, new DamageInfo(p, damage*shotCount, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_HEAVY)
             );
-            shotCount -= 2;
+            shotCount -= 1;
         }
     }
 
