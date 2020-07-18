@@ -4,9 +4,11 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.powers.GunsPower;
 import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
@@ -45,12 +47,18 @@ public class CSGunRelic extends CustomRelic implements ClickableRelic {
             // If it has been used this turn, the player doesn't actually have the relic (i.e. it's on display in the shop room), or it's the enemy's turn
             return; // Don't do anything.
         }
-        AbstractDungeon.actionManager.addToBottom(new TalkAction(true, DESCRIPTIONS[1], 2.0f, 2.0f));
+        addToBot(new TalkAction(true, DESCRIPTIONS[1], 2.0f, 2.0f));
+        usedThisTurn = true;
     }
 
     @Override
     public void atPreBattle() {
         usedThisTurn = false; // Make sure usedThisTurn is set to false at the start of each combat.
+    }
+
+    @Override
+    public void atBattleStart() {
+        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new GunsPower(AbstractDungeon.player)));
     }
 
     public void atTurnStart() {

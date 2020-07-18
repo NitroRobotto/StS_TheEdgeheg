@@ -2,6 +2,7 @@ package theEdgeheg.cards.attacks.katanas;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -66,7 +67,15 @@ public class QuickKatana extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster target : AbstractDungeon.getMonsters().monsters) {
             if (!HelperFunctions.IsBasicallyDead(target) || AbstractDungeon.cardRandomRng.randomBoolean(0.1f)) {
-                addToBot(new FatalAttackAction(target, new DamageInfo(p, damage, damageTypeForTurn), () -> AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(this,target,cost,true,true),true)));
+                addToBot(new FatalAttackAction(target, new DamageInfo(p, damage, damageTypeForTurn),
+                        () -> {
+                        AbstractCard c = this.makeStatEquivalentCopy();
+                        c.freeToPlayOnce = true;
+                        c.exhaust = true;
+                        AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(c,true,energyOnUse,
+                                true,true),true);
+                            })
+                );
             }
         }
     }
