@@ -43,7 +43,7 @@ public class SexyGirlfriend extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     // /STAT DECLARATION/
 

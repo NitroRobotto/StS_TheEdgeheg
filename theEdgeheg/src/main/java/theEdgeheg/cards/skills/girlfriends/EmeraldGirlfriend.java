@@ -1,23 +1,25 @@
-package theEdgeheg.cards.powers;
+package theEdgeheg.cards.skills.girlfriends;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.MasterEmeraldPower;
+import theEdgeheg.powers.ChaosEnergyPower;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (3->2): Every time you play a Chaos card, gain 1 Chaos energy.
+ * (0): Gain 2(4) Chaos Energy. Exhaust.
  *  @author NITRO
  *  @version 1.0
- *  @since 2020-07-09
+ *  @since 2020-07-18
  */
-public class MasterEmerald extends AbstractDynamicCard {
+public class EmeraldGirlfriend extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -26,32 +28,38 @@ public class MasterEmerald extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(MasterEmerald.class.getSimpleName());
-    public static final String IMG = makeCardPath("Powers/masterEmerald.jpg");
+    public static final String ID = DefaultMod.makeID(EmeraldGirlfriend.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skills/chaosgirlfriend.jpg");
+    public static final CardStrings STRINGS = languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/
+
 
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final CardType TYPE = CardType.POWER;
+    private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 3;
-    private static final int UPGRADED_COST = 2;
+    private static final int COST = 0;
 
     // /STAT DECLARATION/
 
-    public MasterEmerald() {
+
+    public EmeraldGirlfriend() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        this.tags.add(EdgehegCardTags.CHAOS);
+
+        tags.add(EdgehegCardTags.CHAOS);
+        tags.add(EdgehegCardTags.GIRLFRIEND);
+        magicNumber = baseMagicNumber = 2;
+        exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new MasterEmeraldPower(p)));
+        addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p,magicNumber)));
     }
 
     //Upgraded stats.
@@ -59,7 +67,7 @@ public class MasterEmerald extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            upgradeMagicNumber(2);
             initializeDescription();
         }
     }

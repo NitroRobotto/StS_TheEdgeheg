@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.actions.FatalAttackAction;
+import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
@@ -20,7 +21,7 @@ import static theEdgeheg.DefaultMod.makeCardPath;
  *  @version 1.2
  *  @since 2020-07-17
  */
-public class SoulSiphon extends AbstractDynamicCard {
+public class SoulSiphon extends AbstractChaosControlCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -44,7 +45,6 @@ public class SoulSiphon extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int DAMAGE = 10;
     private static final int UPGRADE_PLUS_DMG = 5;
-    private static final int HEAL = 1;
 
     // /STAT DECLARATION/
 
@@ -52,7 +52,7 @@ public class SoulSiphon extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         damage = baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = HEAL;
+        magicNumber = baseMagicNumber = 2;
 
         tags.add(EdgehegCardTags.CHAOS);
         tags.add(EdgehegCardTags.CHAOS_CONTROL);
@@ -64,9 +64,10 @@ public class SoulSiphon extends AbstractDynamicCard {
         addToBot(new FatalAttackAction(m,
                 new DamageInfo(p, damage, damageTypeForTurn),
                 () -> {
-                addToTop(new HealAction(p,p,magicNumber));
-                addToTop(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,magicNumber)));
+                addToTop(new HealAction(p,p,1));
+                addToTop(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,1)));
                 }));
+        spendChaosEnergy(p);
     }
 
     // Upgraded stats.

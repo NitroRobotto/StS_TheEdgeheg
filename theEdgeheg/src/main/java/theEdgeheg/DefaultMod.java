@@ -25,6 +25,7 @@ import theEdgeheg.cards.attacks.katanas.*;
 import theEdgeheg.cards.colorless.*;
 import theEdgeheg.cards.powers.*;
 import theEdgeheg.cards.skills.*;
+import theEdgeheg.cards.skills.girlfriends.EmeraldGirlfriend;
 import theEdgeheg.cards.skills.girlfriends.Girlfriend;
 import theEdgeheg.cards.skills.girlfriends.SexyGirlfriend;
 import theEdgeheg.characters.TheEdgeheg;
@@ -492,7 +493,8 @@ public class DefaultMod implements
                 new ChaosWhip(),
                 new Heh(),
                 new BloodyNodachi(),
-                new SexyGirlfriend()
+                new SexyGirlfriend(),
+                new EmeraldGirlfriend()
         };
 
         for (CustomCard card : cards) {
