@@ -36,7 +36,7 @@ public class Sniper extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 3;
-    private static final int DAMAGE = 25;
+    private static final int DAMAGE = 27;
     private static final int UPGRADE_PLUS_DMG = 5;
 
     // /STAT DECLARATION/

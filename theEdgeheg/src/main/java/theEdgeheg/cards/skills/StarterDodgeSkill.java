@@ -26,7 +26,7 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(StarterDodgeSkill.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attacks/wrong_colours.jpg");
+    public static final String IMG = makeCardPath("Skills/basicdodge.jpg");
 
     // /TEXT DECLARATION/
 

@@ -18,6 +18,7 @@ public class EdgehegCardTags {
     @SpireEnum public static AbstractCard.CardTags KATANA;
     @SpireEnum public static AbstractCard.CardTags CHAOS;
     @SpireEnum public static AbstractCard.CardTags CHAOS_CONTROL;
+    @SpireEnum public static AbstractCard.CardTags GIRLFRIEND;
 
     public static AbstractCard createRandomCardWithTag(AbstractCard.CardTags tag, AbstractCard.CardType type)
     {

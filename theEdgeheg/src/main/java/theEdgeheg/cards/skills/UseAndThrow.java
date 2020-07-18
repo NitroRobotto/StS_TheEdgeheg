@@ -63,7 +63,7 @@ public class UseAndThrow extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(magicNumber, PROMPT, true, false, new CardTagPredicate(EdgehegCardTags.GUN), (cards) -> {
+        addToBot(new SelectCardsInHandAction(magicNumber, PROMPT, true, true, new CardTagPredicate(EdgehegCardTags.GUN), (cards) -> {
             int extraBurn = cards.size() - baseMagicNumber;
             for (AbstractCard card : cards) {
                 card.exhaust = true;

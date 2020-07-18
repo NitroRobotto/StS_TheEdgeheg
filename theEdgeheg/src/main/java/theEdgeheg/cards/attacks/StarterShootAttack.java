@@ -46,7 +46,7 @@ public class StarterShootAttack extends CustomCard {
     public static final String ID = DefaultMod.makeID(StarterShootAttack.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/basicshoot.jpg");
     // Setting the image as as easy as can possibly be now. You just need to provide the image name
     // and make sure it's in the correct folder. That's all.
     // There's makeCardPath, makeRelicPath, power, orb, event, etc..

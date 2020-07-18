@@ -29,7 +29,7 @@ public class Girlfriend extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Girlfriend.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/amy.jpg");
 
     // /TEXT DECLARATION/
 
@@ -49,6 +49,7 @@ public class Girlfriend extends AbstractDynamicCard {
     public Girlfriend() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.exhaust = true;
+        tags.add(EdgehegCardTags.GIRLFRIEND);
     }
 
     // Actions the card should do.

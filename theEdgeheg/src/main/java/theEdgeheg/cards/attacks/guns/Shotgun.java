@@ -12,6 +12,7 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.MagicGunScalingModifier;
+import theEdgeheg.util.HelperFunctions;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -20,7 +21,7 @@ import java.util.stream.Collectors;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Deal 2(3)x5* damage to the first enemy, 2(3)x4* to the second, 2(3)x3* to the third, and so on.
+ * (2): Deal 2(3)x7* damage to the first enemy, 2(3)x5* to the second, 2(3)x3* to the third, and so on.
  *  Stops if the multiplier is 0 or below. The multiplier is increased by "GUNS".
  *  @author NITRO
  *  @version 1.2
@@ -50,7 +51,7 @@ public class Shotgun extends AbstractDynamicCard {
     private static final int COST = 2;
     private static final int DAMAGE = 2;
     private static final int UPGRADE_PLUS_DMG = 1;
-    private static final int SHOTS = 5;
+    private static final int SHOTS = 7;
 
     // /STAT DECLARATION/
 
@@ -72,11 +73,13 @@ public class Shotgun extends AbstractDynamicCard {
         for (AbstractMonster target : AbstractDungeon.getMonsters().monsters.stream().sorted(new PositionSorter()).collect(Collectors
                 .toList())) {
             if (shotCount <= 0) break;
+            if (HelperFunctions.IsBasicallyDead(target)) continue;
+
             addToBot(
                     new DamageAction(target, new DamageInfo(p, damage*shotCount, damageTypeForTurn),
                             AbstractGameAction.AttackEffect.BLUNT_HEAVY)
             );
-            shotCount -= 1;
+            shotCount -= 2;
         }
     }
 
