@@ -44,7 +44,7 @@ public class DieDieDie extends AbstractDynamicCard {
 
     private static final int COST = 3;
     private static final int DAMAGE = 20;
-    private static final int UPGRADE_PLUS_DMG = 5;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
 

@@ -171,7 +171,6 @@ public class TheEdgeheg extends CustomPlayer {
         retVal.add(StarterShootAttack.ID);
         retVal.add(StarterShootAttack.ID);
         retVal.add(StarterShootAttack.ID);
-        retVal.add(StarterShootAttack.ID);
 
         retVal.add(StarterDodgeSkill.ID);
         retVal.add(StarterDodgeSkill.ID);
