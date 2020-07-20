@@ -27,7 +27,7 @@ public class TeleportsBehind extends AbstractChaosControlCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(TeleportsBehind.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/teleportsbehind.jpg");
 
     // /TEXT DECLARATION/
 

@@ -34,7 +34,7 @@ public class QuickKatana extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(QuickKatana.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/quickkatana.jpg");
 
     // /TEXT DECLARATION/
 

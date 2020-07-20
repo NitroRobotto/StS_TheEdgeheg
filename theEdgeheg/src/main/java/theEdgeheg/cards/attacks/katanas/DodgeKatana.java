@@ -30,7 +30,7 @@ public class DodgeKatana extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(DodgeKatana.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/dodge_katana.jpg");
 
     // /TEXT DECLARATION/
 

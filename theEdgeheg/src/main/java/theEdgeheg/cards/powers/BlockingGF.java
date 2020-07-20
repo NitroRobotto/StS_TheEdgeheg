@@ -14,7 +14,7 @@ import theEdgeheg.powers.BlockGFPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Gain 2(4) Metalicize. A random enemy loses 2(4) HP at the start of each turn.
+ * (1): Gain 2(4) Armor at the start of your turn. A random enemy loses 2(4) HP at the start of each turn.
  *  @author NITRO
  *  @version 1.0
  *  @since 2020-07-20
@@ -53,7 +53,6 @@ public class BlockingGF extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p, new MetallicizePower(p,magicNumber)));
         addToBot(new ApplyPowerAction(p,p, new BlockGFPower(p,magicNumber)));
     }
 

@@ -30,7 +30,7 @@ public class RuleOfCool extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(RuleOfCool.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Powers/better_than_sonic.jpg");
 
     // /TEXT DECLARATION/
 

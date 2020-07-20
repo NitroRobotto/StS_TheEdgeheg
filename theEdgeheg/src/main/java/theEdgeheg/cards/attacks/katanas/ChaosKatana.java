@@ -30,7 +30,7 @@ public class ChaosKatana extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(ChaosKatana.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/chaoskatana.jpg");
 
     // /TEXT DECLARATION/
 

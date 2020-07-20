@@ -28,7 +28,7 @@ public class Fastness extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Fastness.class.getSimpleName());
-    public static final String IMG = makeCardPath("Powers/better_than_sonic.jpg");
+    public static final String IMG = makeCardPath("Powers/fastness.jpg");
 
     // /TEXT DECLARATION/
 

@@ -5,6 +5,7 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -17,7 +18,7 @@ import static theEdgeheg.DefaultMod.makePowerPath;
 
 public class BlockGFPower extends AbstractPower {
 
-    public static final String POWER_ID = DefaultMod.makeID(GainChaosEachTurnPower.class.getSimpleName());
+    public static final String POWER_ID = DefaultMod.makeID(BlockGFPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -45,6 +46,7 @@ public class BlockGFPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         this.flash();
+        addToBot(new GainBlockAction(owner,amount));
         addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
     }
 
