@@ -45,7 +45,6 @@ public class GatherChaos extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int CHAOS_ENERGY = 1;
-    private static final int CHAOS_ENERGY_INCREASE = 1;
 
     // /STAT DECLARATION/
 
@@ -71,7 +70,7 @@ public class GatherChaos extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(CHAOS_ENERGY_INCREASE);
+            upgradeMagicNumber(CHAOS_ENERGY);
             initializeDescription();
         }
     }

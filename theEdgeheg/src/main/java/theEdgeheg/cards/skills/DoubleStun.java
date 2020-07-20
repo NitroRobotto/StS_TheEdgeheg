@@ -30,7 +30,7 @@ public class DoubleStun extends AbstractChaosControlCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(DoubleStun.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/doublestun.jpg");
 
     // /TEXT DECLARATION/
 

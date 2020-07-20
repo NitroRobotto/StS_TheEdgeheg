@@ -14,14 +14,15 @@ import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.PreciseModifier;
 import theEdgeheg.powers.ChaosEnergyPower;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Deal 2 Damage. Gain 2 Chaos Energy. Draw 1 Card. Exhaust.
+ * (0): Deal 2 Damage. Gain 1(2) Chaos Energy. Draw 1 Card. Exhaust.
  * Upgrade: Don't exhaust.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-20
  */
 public class Knives extends AbstractDynamicCard {
 
@@ -33,6 +34,7 @@ public class Knives extends AbstractDynamicCard {
 
     public static final String ID = DefaultMod.makeID(Knives.class.getSimpleName());
     public static final String IMG = makeCardPath("Attacks/knives.jpg");
+    public static final String UPGRADED_DESCRIPTION = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
 
@@ -46,7 +48,7 @@ public class Knives extends AbstractDynamicCard {
 
     private static final int COST = 0;
     private static final int DAMAGE = 2;
-    private static final int CHAOS_ENERGY = 2;
+    private static final int CHAOS_ENERGY = 1;
 
     // /STAT DECLARATION/
 
@@ -77,6 +79,7 @@ public class Knives extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             exhaust = false;
+            rawDescription = UPGRADED_DESCRIPTION;
             initializeDescription();
         }
     }

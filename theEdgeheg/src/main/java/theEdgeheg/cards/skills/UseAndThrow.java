@@ -34,7 +34,7 @@ public class UseAndThrow extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(UseAndThrow.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/useandthrow.jpg");
     public static final String PROMPT = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
