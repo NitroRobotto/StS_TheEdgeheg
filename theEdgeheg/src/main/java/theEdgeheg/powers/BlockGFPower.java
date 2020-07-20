@@ -2,7 +2,10 @@ package theEdgeheg.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -12,8 +15,7 @@ import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makePowerPath;
 
-/** Increase Chaos Energy by (amount) every turn **/
-public class GainChaosEachTurnPower extends AbstractPower {
+public class BlockGFPower extends AbstractPower {
 
     public static final String POWER_ID = DefaultMod.makeID(GainChaosEachTurnPower.class.getSimpleName());
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -23,7 +25,7 @@ public class GainChaosEachTurnPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
 
-    public GainChaosEachTurnPower(AbstractCreature owner, int amount)
+    public BlockGFPower(AbstractCreature owner, int amount)
     {
         name = NAME;
         ID = POWER_ID;
@@ -43,6 +45,11 @@ public class GainChaosEachTurnPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         this.flash();
-        addToBot(new ApplyPowerAction(owner, owner, new ChaosEnergyPower(owner, amount)));
+        addToBot(new DamageRandomEnemyAction(new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+    }
+
+    @Override
+    public void updateDescription() {
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

@@ -331,7 +331,7 @@
     "DESCRIPTION": "create a katana of chaos and attack twice. !D! damage. gain !M! theedgeheg:chaos_energy"
   },
   "theEdgeheg:SexyGirlfriend": {
-    "NAME": "Sex-y grrl uwu",
+    "NAME": "Sex-y GF uwu",
     "DESCRIPTION": "OMG shes so sexy why Wave is not real? BTW she givs u 1 theedgeheg:Dodge cause she distracts the enemi",
     "UPGRADE_DESCRIPTION": " (also theedgeheg:Chaos_Energy 1 because she makes u happy)"
   },
@@ -340,7 +340,19 @@
     "DESCRIPTION": "Charmy have a secret emerald!!! but its only for her because u give her as a gift and she say u were the best boyfrend ever. But when she holds it you gain !M! chaos power"
   },
   "theEdgeheg:CrazyGirlfriend": {
-    "NAME": "Krazi Grrrfrend",
+    "NAME": "yandere GF",
     "DESCRIPTION": "so Cream is my girlrend now. She will do everytin i want so when use gerlfrend cards she wil do a random attack of !M!."
+  },
+  "theEdgeheg:GirlWithGun": {
+    "NAME": "yandere GF",
+    "DESCRIPTION": "U givee Rouge one of ur guns so she can shoot for you but she does less damage because shes not Dust!!!"
+  },
+  "theEdgeheg:KatanaGF": {
+    "NAME": "Katana GF!",
+    "DESCRIPTION": "U give Blaze (u girlfrend) a katana! so she kicks enemies buts with her fist dealing !D! damages to !M! emenies she wants to attack I KNOW ITS A AXE I CANT FIND A PIC OF A KATANA OK"
+  },
+  "theEdgeheg:BlockingGF": {
+    "NAME": "Blocqueen GF",
+    "DESCRIPTION": "Amy takes a parking sign & uses it to block som ataks to u! But she is not that fast she cant dodge so she givs u 2 armor at the start of ur turn and deal 2 dmg to a random enemys"
   }
 }

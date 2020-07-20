@@ -495,7 +495,10 @@ public class DefaultMod implements
                 new BloodyNodachi(),
                 new SexyGirlfriend(),
                 new EmeraldGirlfriend(),
-                new CrazyGirlfriend()
+                new CrazyGirlfriend(),
+                new GirlWithGun(),
+                new KatanaGF(),
+                new BlockingGF()
         };
 
         for (CustomCard card : cards) {
