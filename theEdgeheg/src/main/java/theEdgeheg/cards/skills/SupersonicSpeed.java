@@ -12,10 +12,10 @@ import theEdgeheg.powers.DodgePower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1->0): Chaos Control 1. Gain Dodge 2.
+ * (1->0): Chaos Control 2. Gain Dodge 2.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-20
  */
 public class SupersonicSpeed extends AbstractChaosControlCard {
 
@@ -41,7 +41,7 @@ public class SupersonicSpeed extends AbstractChaosControlCard {
 
     private static final int COST = 1;
     private static final int UPGRADED_COST = 0;
-    private static final int CHAOS_ENERGY_COST = 1;
+    private static final int CHAOS_ENERGY_COST = 2;
 
     // /STAT DECLARATION/
 

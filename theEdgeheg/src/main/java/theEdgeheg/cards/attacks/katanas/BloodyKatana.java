@@ -15,7 +15,7 @@ import theEdgeheg.modifiers.PreciseModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Deal 10(12) damage. If it kills, heal 1.
+ * (2): Deal 9(13) damage. If it kills, heal 1.
  *  @author NITRO
  *  @version 1.4
  *  @since 2020-07-17

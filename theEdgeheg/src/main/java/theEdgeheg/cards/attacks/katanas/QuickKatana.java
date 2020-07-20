@@ -20,7 +20,7 @@ import theEdgeheg.util.HelperFunctions;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Deal 5(7) Precise damage to all enemies. For each enemy killed, play this card again.
+ * (1): Deal 6(8) Precise damage to all enemies. For each enemy killed, play this card again.
  *  @author NITRO
  *  @version 1.2
  *  @since 2020-07-17
@@ -47,7 +47,7 @@ public class QuickKatana extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 6;
     private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/

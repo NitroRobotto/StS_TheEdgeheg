@@ -15,10 +15,10 @@ import theEdgeheg.modifiers.PreciseModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Deal 10(15) damage to all enemies. Precise.
+ * (2): Deal 10(15) damage to all enemies. Precise(x2).
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-13
+ *  @version 1.1
+ *  @since 2020-07-20
  */
 public class BloodyNodachi extends AbstractDynamicCard {
 
@@ -54,7 +54,7 @@ public class BloodyNodachi extends AbstractDynamicCard {
 
         tags.add(EdgehegCardTags.KATANA);
 
-        CardModifierManager.addModifier(this, new PreciseModifier(true));
+        CardModifierManager.addModifier(this, new PreciseModifier(2,true));
     }
 
     // Actions the card should do.

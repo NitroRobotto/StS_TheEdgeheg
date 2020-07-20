@@ -17,7 +17,7 @@ import theEdgeheg.powers.DodgePower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Chaos Control 1. Dodge 1. Deal 9(12) Precise Damage.
+ * (1): Chaos Control 2. Dodge 1. Deal 9(12) Precise Damage.
  *  @author NITRO
  *  @version 1.0
  *  @since 2020-07-16
@@ -45,7 +45,7 @@ public class TeleportsAbove extends AbstractChaosControlCard {
 
     private static final int COST = 1;
     private static final int DAMAGE = 9;
-    private static final int UPGRADE_PLUS_DMG = 12;
+    private static final int UPGRADE_PLUS_DMG = 4;
 
     // /STAT DECLARATION/
 
@@ -53,7 +53,7 @@ public class TeleportsAbove extends AbstractChaosControlCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         damage = baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
 
         tags.add(EdgehegCardTags.KATANA);
 

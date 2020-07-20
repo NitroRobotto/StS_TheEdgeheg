@@ -1,5 +1,6 @@
 package theEdgeheg.cards.attacks.katanas;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -11,6 +12,7 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.modifiers.PreciseModifier;
 import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -18,8 +20,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (1): Deal 5(7) damage to 2 random enemies. Gain 1(2) Chaos Energy.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-20
  */
 public class ChaosWhip extends AbstractDynamicCard {
 
@@ -55,6 +57,8 @@ public class ChaosWhip extends AbstractDynamicCard {
         tags.add(EdgehegCardTags.KATANA);
         tags.add(EdgehegCardTags.CHAOS);
         isMultiDamage = true;
+
+        CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.

@@ -19,7 +19,7 @@ import theEdgeheg.modifiers.PreciseModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Deal 6(9) Damage. Gain 1 Strength and Dexterity this turn. Precise. If Fatal, gain 1 Strength and Dexterity.
+ * (1): Deal 6(9) Precise Damage. Gain 1 Strength and Dexterity this turn. Precise. If Fatal, gain 1 Strength and Dexterity.
  *  @author NITRO
  *  @version 1.0
  *  @since 2020-07-16

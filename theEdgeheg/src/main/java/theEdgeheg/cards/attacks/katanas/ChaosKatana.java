@@ -16,10 +16,10 @@ import theEdgeheg.powers.ChaosEnergyPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Gain 1 Chaos Energy. Deal 6(9) Damage. Precise. If Fatal, gain 1 Chaos Energy.
+ * (1): Gain 1 Chaos Energy. Deal 6(9) Damage. Precise(x2). If Fatal, gain 1 Chaos Energy.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-13
+ *  @version 1.1
+ *  @since 2020-07-20
  */
 public class ChaosKatana extends AbstractDynamicCard {
 
@@ -56,7 +56,7 @@ public class ChaosKatana extends AbstractDynamicCard {
         tags.add(EdgehegCardTags.KATANA);
         tags.add(EdgehegCardTags.CHAOS);
 
-        CardModifierManager.addModifier(this, new PreciseModifier(true));
+        CardModifierManager.addModifier(this, new PreciseModifier(2,true));
     }
 
     // Actions the card should do.

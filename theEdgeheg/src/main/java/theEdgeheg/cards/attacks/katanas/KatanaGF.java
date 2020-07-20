@@ -1,5 +1,6 @@
 package theEdgeheg.cards.attacks.katanas;
 
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -9,13 +10,14 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.modifiers.PreciseModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Deal 3 Damage to 2(3) random enemies.
+ * (0): Deal 3 Precise Damage to 2(3) random enemies.
  *  @author NITRO
- *  @version 1.0
+ *  @version 1.1
  *  @since 2020-07-20
  */
 public class KatanaGF extends AbstractDynamicCard {
@@ -52,6 +54,8 @@ public class KatanaGF extends AbstractDynamicCard {
         tags.add(EdgehegCardTags.KATANA);
         tags.add(EdgehegCardTags.GIRLFRIEND);
         isMultiDamage = true;
+
+        CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.

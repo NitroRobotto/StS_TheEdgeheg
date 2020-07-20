@@ -212,7 +212,7 @@
   },
   "theEdgeheg:ChaosEnergyKatana": {
     "NAME": "CHAOS katana1",
-    "DESCRIPTION": "theedgeheg:Chaos_Control with katana"
+    "DESCRIPTION": "theedgeheg:chaos_energy from katana (gain dex and then chaos)"
   },
   "theEdgeheg:Tsk": {
     "NAME": "tsk",
