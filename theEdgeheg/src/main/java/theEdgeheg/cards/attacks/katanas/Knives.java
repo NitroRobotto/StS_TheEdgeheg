@@ -18,7 +18,7 @@ import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Deal 2 Damage. Gain 1(2) Chaos Energy. Draw 1 Card. Exhaust.
+ * (0): Deal 2 Precise Damage. Gain 1 Chaos Energy. Draw 1 Card. Exhaust.
  * Upgrade: Don't exhaust.
  *  @author NITRO
  *  @version 1.2

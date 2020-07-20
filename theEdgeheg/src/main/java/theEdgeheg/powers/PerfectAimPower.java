@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.powers.PerfectAim;
 import theEdgeheg.util.TextureLoader;
 
 import java.util.Objects;
@@ -27,12 +28,12 @@ public class PerfectAimPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
 
-    public PerfectAimPower(AbstractCreature owner, int dexAmount) {
+    public PerfectAimPower(AbstractCreature owner, int stacks) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = dexAmount;
+        this.amount = stacks;
 
         type = PowerType.BUFF;
         isTurnBased = false;
@@ -43,16 +44,8 @@ public class PerfectAimPower extends AbstractPower {
         updateDescription();
     }
 
-    @Override
-    public void onInitialApplication() {
-        super.onInitialApplication();
-        addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner,amount)));
-    }
-
-    @Override
-    public void onRemove() {
-        super.onRemove();
-        addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner,-amount)));
+    public PerfectAimPower(AbstractCreature owner) {
+        this(owner, 1);
     }
 
     @Override
@@ -77,20 +70,20 @@ public class PerfectAimPower extends AbstractPower {
 
     public void newDescription(int extraDexterity) {
         AbstractPower dexterity = owner.getPower(DexterityPower.POWER_ID);
-        description = (extraDexterity+(dexterity != null ? dexterity.amount : 0))*3 + DESCRIPTIONS[0];
+        description = (extraDexterity+(dexterity != null ? dexterity.amount : 0))*3*amount + DESCRIPTIONS[0];
     }
 
     @Override
     public void updateDescription() {
         super.updateDescription();
         AbstractPower dexterity = owner.getPower(DexterityPower.POWER_ID);
-        description = (dexterity != null ? dexterity.amount : 0)*3 + DESCRIPTIONS[0];
+        description = (dexterity != null ? dexterity.amount : 0)*3*amount + DESCRIPTIONS[0];
     }
 
     @Override
     public int onAttackToChangeDamage(DamageInfo info, int damageAmount) {
         AbstractPower dexterity = owner.getPower(DexterityPower.POWER_ID);
-        if (dexterity == null || (Math.random() > dexterity.amount*0.03)) {
+        if (dexterity == null || (Math.random() > dexterity.amount*0.03*amount)) {
             return damageAmount;
         } else {
             addToTop(new TalkAction(true,DESCRIPTIONS[1], 1.f,2.f));

@@ -13,7 +13,7 @@ import theEdgeheg.powers.BlankCardPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2->1): Gain 1 Dexterity after playing a card. Removed at the end of the turn.
+ * (1->0): Gain 1 Dexterity after playing a card. Removed at the end of the turn.
  *  @author NITRO
  *  @version 1.2
  *  @since 2020-07-20
@@ -39,8 +39,8 @@ public class BlankCard extends AbstractDynamicCard {
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.POWER;
     public static final AbstractCard.CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 2;
-    private static final int UPGRADED_COST = 1;
+    private static final int COST = 1;
+    private static final int UPGRADED_COST = 0;
 
     // /STAT DECLARATION/
 

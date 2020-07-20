@@ -16,7 +16,7 @@ import theEdgeheg.util.HelperFunctions;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Deal 7(9) damage to all enemies. For each kill, permanently increase damage by 2(3).
+ * (1): Deal 7(9) precise damage to all enemies. For each kill, permanently increase damage by 2(3).
  *  @author NITRO
  *  @version 1.0
  *  @since 2020-07-17

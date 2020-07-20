@@ -16,9 +16,9 @@ import theEdgeheg.powers.ChaosEnergyPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Gain 1 Chaos Energy. Deal 6(9) Damage. Precise(x2). If Fatal, gain 1 Chaos Energy.
+ * (1): Gain 2 Chaos Energy. Deal 7(10) Damage. Precise. If Fatal, gain 2 Chaos Energy.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.2
  *  @since 2020-07-20
  */
 public class ChaosKatana extends AbstractDynamicCard {
@@ -43,7 +43,7 @@ public class ChaosKatana extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UPGRADE_PLUS_DMG = 3;
 
     // /STAT DECLARATION/
@@ -56,16 +56,16 @@ public class ChaosKatana extends AbstractDynamicCard {
         tags.add(EdgehegCardTags.KATANA);
         tags.add(EdgehegCardTags.CHAOS);
 
-        CardModifierManager.addModifier(this, new PreciseModifier(2,true));
+        CardModifierManager.addModifier(this, new PreciseModifier(true));
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,1)));
+        addToBot(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,2)));
         addToBot(new FatalAttackAction(m,
                 new DamageInfo(p, damage, damageTypeForTurn),
-                () -> addToTop(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,1)))));
+                () -> addToTop(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,2)))));
     }
 
     // Upgraded stats.

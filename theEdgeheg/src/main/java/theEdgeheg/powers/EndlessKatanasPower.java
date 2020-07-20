@@ -51,6 +51,7 @@ public class EndlessKatanasPower extends AbstractPower {
             flash();
             card.exhaustOnUseOnce = true;
             AbstractCard c = EdgehegCardTags.createRandomCardWithTag(EdgehegCardTags.KATANA, card.type).makeCopy();
+            if (card.upgraded && c.canUpgrade()) c.upgrade();
             addToBot(new MakeTempCardInHandAction(c, true));
         }
     }

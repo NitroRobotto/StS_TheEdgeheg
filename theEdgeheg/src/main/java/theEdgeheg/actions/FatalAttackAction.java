@@ -24,7 +24,7 @@ public class FatalAttackAction extends AbstractGameAction {
         if (duration == 0.1F && target != null) {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(target.hb.cX, target.hb.cY, AttackEffect.SLASH_VERTICAL));
             this.target.damage(this.info);
-            if ((((AbstractMonster)target).isDying || target.currentHealth <= 0) && !target.halfDead && !target.hasPower("Minion")) {
+            if ((((AbstractMonster)target).isDying || target.currentHealth <= 0) && !target.halfDead) {
                 callback.run();
             }
 

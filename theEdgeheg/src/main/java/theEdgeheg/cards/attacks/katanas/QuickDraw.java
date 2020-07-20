@@ -19,10 +19,10 @@ import theEdgeheg.modifiers.PreciseModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Deal 6(9) Precise Damage. Gain 1 Strength and Dexterity this turn. Precise. If Fatal, gain 1 Strength and Dexterity.
+ * (1): Deal 7(10) Precise Damage. Gain 2 Dexterity this turn. Precise. If Fatal, gain 1 Strength.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-16
+ *  @version 1.1
+ *  @since 2020-07-20
  */
 public class QuickDraw extends AbstractDynamicCard {
 
@@ -46,8 +46,8 @@ public class QuickDraw extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 6;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 7;
+    private static final int UPGRADE_PLUS_DMG = 3;
 
     // /STAT DECLARATION/
 
@@ -66,14 +66,9 @@ public class QuickDraw extends AbstractDynamicCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new FatalAttackAction(m,
                 new DamageInfo(p, damage, damageTypeForTurn),
-                () -> {
-                    addToBot(new ApplyPowerAction(p,p, new StrengthPower(p,1)));
-                    addToBot(new ApplyPowerAction(p,p, new DexterityPower(p,1)));
-                }));
-        addToBot(new ApplyPowerAction(p,p, new StrengthPower(p,1)));
-        addToBot(new ApplyPowerAction(p,p, new DexterityPower(p,1)));
-        addToBot(new ApplyPowerAction(p,p, new LoseStrengthPower(p,1)));
-        addToBot(new ApplyPowerAction(p,p, new LoseDexterityPower(p,1)));
+                () -> addToBot(new ApplyPowerAction(p,p, new StrengthPower(p,1)))));
+        addToBot(new ApplyPowerAction(p,p, new DexterityPower(p,2)));
+        addToBot(new ApplyPowerAction(p,p, new LoseDexterityPower(p,2)));
     }
 
     // Upgraded stats.

@@ -175,7 +175,7 @@
   "theEdgeheg:Heh": {
     "NAME": "heh",
     "DESCRIPTION": "\"heh\" - dusk the edghehog (Precise) Exhaust",
-    "UPGRADE_DESCRIPTION": "\"heh\" - dusk the edghehog (Precise)"
+    "UPGRADE_DESCRIPTION": "(also draw card)"
   },
   "theEdgeheg:BlankCard": {
     "NAME": "",

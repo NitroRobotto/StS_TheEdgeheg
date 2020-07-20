@@ -2,6 +2,7 @@ package theEdgeheg.cards.skills;
 
 import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
@@ -16,10 +17,10 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
  * (0): Apply 2 Vulnerable (scales with GUNS). Exhaust.
- * When upgraded, doesn't exhaust.
+ *  Upgrade: Draw 1 Card.
  *  @author NITRO
- *  @version 1.2
- *  @since 2020-07-18
+ *  @version 1.3
+ *  @since 2020-07-20
  */
 public class Heh extends AbstractDynamicCard {
 
@@ -58,6 +59,7 @@ public class Heh extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m,p,new VulnerablePower(m,magicNumber,false)));
+        if (upgraded) addToBot(new DrawCardAction(p,1));
     }
 
     //Upgraded stats.
@@ -65,8 +67,7 @@ public class Heh extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+            rawDescription += languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

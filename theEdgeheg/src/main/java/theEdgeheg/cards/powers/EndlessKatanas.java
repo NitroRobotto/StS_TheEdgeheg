@@ -14,10 +14,10 @@ import theEdgeheg.powers.EndlessKatanasPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1->0): Gain 1 Dexterity. After playing a katana card, exhaust it and add a random katana card of the same type to your hand.
+ * (2->1): Gain 1 Dexterity. After playing a katana card, exhaust it and add a random katana card of the same type to your hand.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-20
  */
 public class EndlessKatanas extends AbstractDynamicCard {
 
@@ -40,8 +40,8 @@ public class EndlessKatanas extends AbstractDynamicCard {
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.POWER;
     public static final AbstractCard.CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     // /STAT DECLARATION/
 

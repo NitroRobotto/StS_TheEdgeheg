@@ -18,7 +18,7 @@ import theEdgeheg.powers.ChaosEnergyPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Deal 5(7) damage to 2 random enemies. Gain 1(2) Chaos Energy.
+ * (1): Deal 5(7) precise damage to 2 random enemies. Gain 1(2) Chaos Energy.
  *  @author NITRO
  *  @version 1.2
  *  @since 2020-07-20
