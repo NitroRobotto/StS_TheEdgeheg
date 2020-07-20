@@ -1,9 +1,9 @@
 package theEdgeheg.powers;
 
+import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -28,6 +28,7 @@ public class BlockGFPower extends AbstractPower {
 
     public BlockGFPower(AbstractCreature owner, int amount)
     {
+        super();
         name = NAME;
         ID = POWER_ID;
 
@@ -40,6 +41,7 @@ public class BlockGFPower extends AbstractPower {
         region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
+        description = "";
         updateDescription();
     }
 

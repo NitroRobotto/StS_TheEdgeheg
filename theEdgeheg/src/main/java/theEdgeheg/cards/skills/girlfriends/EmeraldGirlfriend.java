@@ -1,6 +1,7 @@
 package theEdgeheg.cards.skills.girlfriends;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -14,10 +15,10 @@ import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Gain 2(4) Chaos Energy. Exhaust.
+ * (0): Draw 1 Card. Gain 1(2) Chaos Energy.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-18
+ *  @version 1.1
+ *  @since 2020-07-20
  */
 public class EmeraldGirlfriend extends AbstractDynamicCard {
 
@@ -52,13 +53,14 @@ public class EmeraldGirlfriend extends AbstractDynamicCard {
 
         tags.add(EdgehegCardTags.CHAOS);
         tags.add(EdgehegCardTags.GIRLFRIEND);
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 1;
         exhaust = true;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new DrawCardAction(p,1));
         addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p,magicNumber)));
     }
 
@@ -67,7 +69,7 @@ public class EmeraldGirlfriend extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(2);
+            upgradeMagicNumber(1);
             initializeDescription();
         }
     }

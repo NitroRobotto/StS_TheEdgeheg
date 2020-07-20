@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -25,7 +26,7 @@ public class TimmyBackflip extends CustomCard {
     private static final CardStrings cardStrings;
 
     public TimmyBackflip() {
-        super(ID, cardStrings.NAME, makeCardPath("shadow.jpg"), 1, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, makeCardPath("shadow.jpg"), 1, cardStrings.DESCRIPTION, CardType.SKILL, TheEdgeheg.Enums.COLOR_PURPLE, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 5;
     }
 
@@ -39,11 +40,6 @@ public class TimmyBackflip extends CustomCard {
             this.upgradeName();
             this.upgradeBlock(3);
         }
-
-    }
-
-    public AbstractCard makeCopy() {
-        return new Backflip();
     }
 
     static {
