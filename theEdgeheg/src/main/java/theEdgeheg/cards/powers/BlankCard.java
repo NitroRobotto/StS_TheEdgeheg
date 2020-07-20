@@ -13,11 +13,10 @@ import theEdgeheg.powers.BlankCardPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Gain 1(2) Guns after using a Katana card. Gain 1(2) Dexterity after using a Guns card.
- * Both are lost at the end of the turn.
+ * (2->1): Gain 1 Dexterity after playing a card. Removed at the end of the turn.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-17
+ *  @version 1.2
+ *  @since 2020-07-20
  */
 public class BlankCard extends AbstractDynamicCard {
 
@@ -40,8 +39,8 @@ public class BlankCard extends AbstractDynamicCard {
     private static final AbstractCard.CardType TYPE = AbstractCard.CardType.POWER;
     public static final AbstractCard.CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 3;
-    private static final int UPGRADED_COST = 0;
+    private static final int COST = 2;
+    private static final int UPGRADED_COST = 1;
 
     // /STAT DECLARATION/
 

@@ -33,7 +33,7 @@
 },
 "theEdgeheg:PerfectAimPower": {
         "NAME": "Critical Hits",
-        "DESCRIPTIONS": ["5% of dealing double damage per Dexterity stack."]
+        "DESCRIPTIONS": ["% of getting a CRITICAL HIT per Dexterity stack.", "*gets a critical hit*"]
 },
 "theEdgeheg:TeleportBehindPower": {
         "NAME": "*teleports behind u*",
@@ -62,5 +62,9 @@
 "theEdgeheg:BlockGFPower": {
         "NAME": "Amy with GUN",
         "DESCRIPTIONS": ["amy shoots her gun and deals ", " dadmages and also protects you"]
+},
+"theEdgeheg:BlankCardPower": {
+        "NAME": "Weapon Finesse",
+        "DESCRIPTIONS": ["Gain ", " dexterity evry time you use a card NL only for this turn"]
 }
 }
