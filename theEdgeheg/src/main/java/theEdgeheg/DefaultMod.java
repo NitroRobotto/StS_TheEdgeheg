@@ -4,6 +4,8 @@ import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomCard;
+import basemod.eventUtil.AddEventParams;
+import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -14,6 +16,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.Exordium;
+import com.megacrit.cardcrawl.dungeons.TheCity;
+import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -29,6 +34,9 @@ import theEdgeheg.cards.skills.girlfriends.EmeraldGirlfriend;
 import theEdgeheg.cards.skills.girlfriends.Girlfriend;
 import theEdgeheg.cards.skills.girlfriends.SexyGirlfriend;
 import theEdgeheg.characters.TheEdgeheg;
+import theEdgeheg.events.BetterScrapOoze;
+import theEdgeheg.events.DifferentFaceTrader;
+import theEdgeheg.events.NerfedBigFish;
 import theEdgeheg.relics.*;
 import theEdgeheg.util.IDCheckDontTouchPls;
 import theEdgeheg.util.TextureLoader;
@@ -338,8 +346,10 @@ public class DefaultMod implements
         // part of the game, simply don't include the dungeon ID
         // If you want to have a character-specific event, look at slimebound (CityRemoveEventPatch).
         // Essentially, you need to patch the game and say "if a player is not playing my character class, remove the event from the pool"
-        //BaseMod.addEvent(IdentityCrisisEvent.ID, IdentityCrisisEvent.class, TheCity.ID);
-        
+        BaseMod.addEvent(NerfedBigFish.ID, NerfedBigFish.class, Exordium.ID);
+        BaseMod.addEvent(BetterScrapOoze.ID, BetterScrapOoze.class, Exordium.ID);
+        BaseMod.addEvent(new AddEventParams.Builder(DifferentFaceTrader.ID, DifferentFaceTrader.class).dungeonIDs(Exordium.ID, TheCity.ID).create());
+
         // =============== /EVENTS/ =================
         logger.info("Done loading badge Image and mod options");
     }

@@ -47,7 +47,6 @@ public class SuperDodge extends AbstractDynamicCard {
 
     public SuperDodge() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        tags.add(EdgehegCardTags.KATANA);
     }
 
     // Actions the card should do.
