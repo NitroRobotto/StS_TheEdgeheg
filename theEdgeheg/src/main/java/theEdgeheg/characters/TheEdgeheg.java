@@ -65,7 +65,7 @@ public class TheEdgeheg extends CustomPlayer {
 
     public static final int ENERGY_PER_TURN = 3;
     public static final int STARTING_HP = 3;
-    public static final int MAX_HP = 3;
+    public static final int MAX_HP = 5;
     public static final int STARTING_GOLD = 69;
     public static final int CARD_DRAW = 5;
     public static final int ORB_SLOTS = 0;

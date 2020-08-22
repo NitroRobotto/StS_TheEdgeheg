@@ -28,7 +28,7 @@ public class GoldKatana extends CustomCard {
     private static final CardStrings cardStrings;
 
     public GoldKatana() {
-        super(ID, cardStrings.NAME,  makeCardPath("shadow.jpg"), 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, cardStrings.NAME,  makeCardPath("Attacks/goldkatana.jpg"), 1, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.COLORLESS, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 8;
         this.baseMagicNumber = 10;
         this.magicNumber = this.baseMagicNumber;

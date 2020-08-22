@@ -31,7 +31,7 @@ public class HappyTimmy extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(HappyTimmy.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("okso.jpg");
 
     // /TEXT DECLARATION/
 
