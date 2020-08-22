@@ -174,7 +174,7 @@
   },
   "theEdgeheg:Heh": {
     "NAME": "heh",
-    "DESCRIPTION": "\"heh\" - dusk the edghehog (Precise) Exhaust",
+    "DESCRIPTION": "\"heh\" - dusk the edghehog (Precise Vulnerable) Exhaust",
     "UPGRADE_DESCRIPTION": "(also draw card)"
   },
   "theEdgeheg:BlankCard": {
@@ -216,7 +216,7 @@
   },
   "theEdgeheg:Tsk": {
     "NAME": "tsk",
-    "DESCRIPTION": "\"tsk\""
+    "DESCRIPTION": "\"tsk\" NL dexterity and DODGE"
   },
   "theEdgeheg:OkSo8": {
     "NAME": "ok so (part8)",

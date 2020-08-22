@@ -27,7 +27,7 @@ public class OkSo8 extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(OkSo8.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("okso.jpg");
 
     // /TEXT DECLARATION/
 

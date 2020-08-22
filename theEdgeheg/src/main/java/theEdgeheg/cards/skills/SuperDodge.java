@@ -27,7 +27,7 @@ public class SuperDodge extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(SuperDodge.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/kevin.jpg");
 
     // /TEXT DECLARATION/
 

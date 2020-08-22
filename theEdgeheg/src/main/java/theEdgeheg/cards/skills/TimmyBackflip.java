@@ -26,7 +26,7 @@ public class TimmyBackflip extends CustomCard {
     private static final CardStrings cardStrings;
 
     public TimmyBackflip() {
-        super(ID, cardStrings.NAME, makeCardPath("shadow.jpg"), 1, cardStrings.DESCRIPTION, CardType.SKILL, TheEdgeheg.Enums.COLOR_PURPLE, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, cardStrings.NAME, makeCardPath("Skills/backflip.jpg"), 1, cardStrings.DESCRIPTION, CardType.SKILL, TheEdgeheg.Enums.COLOR_PURPLE, CardRarity.COMMON, CardTarget.SELF);
         this.baseBlock = 5;
     }
 

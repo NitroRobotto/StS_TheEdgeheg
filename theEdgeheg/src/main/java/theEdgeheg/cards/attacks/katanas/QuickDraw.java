@@ -33,7 +33,7 @@ public class QuickDraw extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(QuickDraw.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/quickdraw.jpg");
 
     // /TEXT DECLARATION/
 

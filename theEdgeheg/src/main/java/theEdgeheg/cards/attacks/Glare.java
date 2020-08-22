@@ -35,7 +35,7 @@ public class Glare extends AbstractChaosControlCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(Glare.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/glare.jpg");
     public static final String UPGRADE_TEXT = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
 
     // /TEXT DECLARATION/
