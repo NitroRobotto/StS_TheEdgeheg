@@ -27,16 +27,15 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(FaceOfCleric.ID); // this one can't be reconciled with
                 // TODO: Replace the Red Mask, it's useless
 
-                // The Edgeheg doesn't use Block (dexterity will be used in other ways so it's allowed).
-                // TODO: Patch or create replacements that grant 1 Dodge instead
-                AbstractDungeon.relicsToRemoveOnStart.add(Anchor.ID);
+                // All these Relics interact with Block. They're re-allowed, even though they're probably not optimal.
+                /*AbstractDungeon.relicsToRemoveOnStart.add(Anchor.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Orichalcum.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(HornCleat.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(OrnamentalFan.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Calipers.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(CaptainsWheel.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(ThreadAndNeedle.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(Abacus.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(Abacus.ID);*/
 
                 // The Edgeheg shouldn't gain this much max HP.
                 // TODO: Patch or create replacements that grant increase MaxHP by 1 instead

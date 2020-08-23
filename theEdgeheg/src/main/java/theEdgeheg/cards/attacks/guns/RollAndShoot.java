@@ -18,11 +18,11 @@ import theEdgeheg.powers.DodgePower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (3): Gain 1(2) Dodge. Deal 5(7) damage 3 times. Apply 2 Vulnerable.
- * Shots increase with GUNS.
+ * (3): Gain 1(2) Dodge. Deal 3(5) damage 3 times. Apply 2 Vulnerable.
+ * # of shots increase with GUNS.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-17
+ *  @version 1.1
+ *  @since 2020-08-23
  */
 public class RollAndShoot extends AbstractDynamicCard {
 
@@ -33,7 +33,7 @@ public class RollAndShoot extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(RollAndShoot.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/roll.jpg");
 
     // /TEXT DECLARATION/
 
@@ -46,7 +46,7 @@ public class RollAndShoot extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 3;
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 3;
     private static final int UPGRADE_PLUS_DMG = 2;
     private static final int SHOTS = 3;
 

@@ -32,7 +32,7 @@ public class RevolverOcelot extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(RevolverOcelot.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Attacks/ocelot.jpg");
     public static final CardStrings STRINGS = languagePack.getCardStrings(ID);
 
     // /TEXT DECLARATION/

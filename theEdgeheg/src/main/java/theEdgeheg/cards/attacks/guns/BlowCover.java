@@ -32,7 +32,7 @@ public class BlowCover extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(BlowCover.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attacks/grenade.jpg");
+    public static final String IMG = makeCardPath("Attacks/blowcover.jpg");
 
     // /TEXT DECLARATION/
 

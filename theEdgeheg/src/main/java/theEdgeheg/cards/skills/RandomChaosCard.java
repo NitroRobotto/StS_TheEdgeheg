@@ -29,7 +29,7 @@ public class RandomChaosCard extends AbstractChaosControlCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(RandomChaosCard.class.getSimpleName());
-    public static final String IMG = makeCardPath("shadow.jpg");
+    public static final String IMG = makeCardPath("Skills/anotherChaosControl.jpg");
 
     // /TEXT DECLARATION/
 
