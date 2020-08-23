@@ -1,7 +1,6 @@
 package theEdgeheg.cards.attacks.katanas;
 
 import basemod.helpers.CardModifierManager;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -14,7 +13,6 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.PreciseModifier;
-import theEdgeheg.powers.DodgePower;
 import theEdgeheg.util.HelperFunctions;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -66,7 +64,7 @@ public class QuickKatana extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster target : AbstractDungeon.getMonsters().monsters) {
-            if (!HelperFunctions.IsBasicallyDead(target) || AbstractDungeon.cardRandomRng.randomBoolean(0.1f)) {
+            if (!HelperFunctions.isBasicallyDead(target) || AbstractDungeon.cardRandomRng.randomBoolean(0.1f)) {
                 addToBot(new FatalAttackAction(target, new DamageInfo(p, damage, damageTypeForTurn),
                         () -> {
                         AbstractCard c = this.makeStatEquivalentCopy();

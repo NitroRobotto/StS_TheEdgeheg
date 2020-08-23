@@ -70,7 +70,7 @@ public class Glare extends AbstractChaosControlCard {
                 AbstractGameAction.AttackEffect.LIGHTNING));
         addToBot(new ApplyPowerAction(m,p, new VulnerablePower(m,1, false)));
 
-        if (HelperFunctions.IsMinion(m)) {
+        if (HelperFunctions.isMinion(m)) {
             addToBot(new ApplyPowerAction(m,p, new StunMonsterPower(m)));
         } else {
             float chance;

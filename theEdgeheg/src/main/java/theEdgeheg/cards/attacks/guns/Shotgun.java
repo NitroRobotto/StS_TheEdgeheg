@@ -14,7 +14,6 @@ import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.MagicGunScalingModifier;
 import theEdgeheg.util.HelperFunctions;
 
-import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
@@ -73,7 +72,7 @@ public class Shotgun extends AbstractDynamicCard {
         for (AbstractMonster target : AbstractDungeon.getMonsters().monsters.stream().sorted(new PositionSorter()).collect(Collectors
                 .toList())) {
             if (shotCount <= 0) break;
-            if (HelperFunctions.IsBasicallyDead(target)) continue;
+            if (HelperFunctions.isBasicallyDead(target)) continue;
 
             addToBot(
                     new DamageAction(target, new DamageInfo(p, damage*shotCount, damageTypeForTurn),

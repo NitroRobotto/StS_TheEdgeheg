@@ -33,7 +33,7 @@
 },
 "theEdgeheg:PerfectAimPower": {
         "NAME": "Critical Hits",
-        "DESCRIPTIONS": ["% of getting a CRITICAL HIT per Dexterity stack.", "*gets a critical hit*"]
+        "DESCRIPTIONS": ["% of getting a CRITICAL HIT.", "*gets a critical hit*"]
 },
 "theEdgeheg:TeleportBehindPower": {
         "NAME": "*teleports behind u*",
@@ -55,7 +55,7 @@
         "NAME": "Gain Chaos Energy",
         "DESCRIPTIONS": ["gain #b chaos energy each turn"]
 },
-"theEdgeheg:CrazyGirlfriend": {
+"theEdgeheg:CrazyGirlfriendPower": {
         "NAME": "Krazi Grrrfrend",
         "DESCRIPTION": ["when use gerlfrend cards cream does a random attack of #b."]
 },

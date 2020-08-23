@@ -24,6 +24,7 @@ import org.apache.logging.log4j.Logger;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.attacks.katanas.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
+import theEdgeheg.cards.powers.RuleOfCool;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
@@ -54,7 +55,7 @@ public class TheEdgeheg extends CustomPlayer {
         public static AbstractPlayer.PlayerClass THE_DEFAULT;
         @SpireEnum(name = "EDGEHEG_PURPLE_COLOR") // These two HAVE to have the same absolutely identical name.
         public static AbstractCard.CardColor COLOR_PURPLE;
-        @SpireEnum(name = "EDGEHEG_PURPLE_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "EDGEHEG_PURPLE_COLOR")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
 
@@ -183,7 +184,13 @@ public class TheEdgeheg extends CustomPlayer {
         return retVal;
     }
 
-    // Starting Relics	
+    @Override
+    public void heal(int healAmount, boolean showEffect) {
+        // Edgeheg can only be healed for 1 HP
+        super.heal(1, showEffect);
+    }
+
+    // Starting Relics
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
 

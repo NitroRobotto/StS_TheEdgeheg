@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.util.HelperFunctions;
 import theEdgeheg.util.TextureLoader;
-import theEdgeheg.util.subscribers.EdgehegEvents;
-import theEdgeheg.util.subscribers.IOnEnemyDiedSubscriber;
+import theEdgeheg.util.subscribers.IOnEnemyDiedListener;
 
 import static theEdgeheg.DefaultMod.makePowerPath;
 
@@ -22,7 +21,7 @@ import static theEdgeheg.DefaultMod.makePowerPath;
  *  @version 1.0
  *  @since 2020-07-12
  */
-public class RuleOfCoolPower extends AbstractPower implements IOnEnemyDiedSubscriber {
+public class RuleOfCoolPower extends AbstractPower implements IOnEnemyDiedListener {
 
     public static final String POWER_ID = DefaultMod.makeID(RuleOfCoolPower.class.getSimpleName());
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
@@ -52,25 +51,13 @@ public class RuleOfCoolPower extends AbstractPower implements IOnEnemyDiedSubscr
     }
 
     @Override
-    public void onInitialApplication() {
-        super.onInitialApplication();
-        EdgehegEvents.subscribe(this);
-    }
-
-    @Override
-    public void onRemove() {
-        super.onRemove();
-        EdgehegEvents.unsubscribe(this);
-    }
-
-    @Override
     public void updateDescription() {
         this.description = DESCRIPTIONS[0] + DESCRIPTIONS[upgraded ? 2 : 1];
     }
 
     @Override
-    public void OnEnemyDied(AbstractMonster enemy, boolean triggerRelics) {
-        if (HelperFunctions.IsBasicallyDead(enemy) && (upgraded || !HelperFunctions.IsMinion(enemy))) {
+    public void onEnemyDied(AbstractMonster enemy, boolean triggerRelics) {
+        if (HelperFunctions.isBasicallyDead(enemy) && (upgraded || !HelperFunctions.isMinion(enemy))) {
             addToBot(new ApplyPowerAction(owner, owner, new DodgePower(owner, 1)));
         }
     }

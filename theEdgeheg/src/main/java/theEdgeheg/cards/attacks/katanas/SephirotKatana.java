@@ -63,7 +63,7 @@ public class SephirotKatana extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mo : AbstractDungeon.getMonsters().monsters) {
-            if (!HelperFunctions.IsBasicallyDead(mo))
+            if (!HelperFunctions.isBasicallyDead(mo))
                 addToBot(new FatalAttackAction(mo,
                     new DamageInfo(p, damage, damageTypeForTurn),
                     () -> { upgradeDamage(magicNumber); initializeDescription(); }));

@@ -274,7 +274,7 @@
   },
   "theEdgeheg:SkateboardTrick": {
     "NAME": "Skateb Trick",
-    "DESCRIPTION": "do a sick trick. Draw !M! cards."
+    "DESCRIPTION": "do a sick trick. Draw !M! cards and discard 1. also chaos energy."
   },
   "theEdgeheg:DualPistols": {
     "NAME": "Dual Wield Pistols",

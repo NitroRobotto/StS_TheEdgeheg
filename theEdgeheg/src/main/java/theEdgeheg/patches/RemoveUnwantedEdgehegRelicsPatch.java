@@ -31,9 +31,9 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 /*AbstractDungeon.relicsToRemoveOnStart.add(Anchor.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Orichalcum.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(HornCleat.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(OrnamentalFan.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(Calipers.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(CaptainsWheel.ID);
+                AbstractDungeon.relicsToRemoveOnStart.add(OrnamentalFan.ID);*/
+                AbstractDungeon.relicsToRemoveOnStart.add(Calipers.ID); // we do take out the calipers because they're useless here
+                /*AbstractDungeon.relicsToRemoveOnStart.add(CaptainsWheel.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(ThreadAndNeedle.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Abacus.ID);*/
 
@@ -47,15 +47,14 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(Waffle.ID);
                 // TODO: Also replace values in maxhp potion
 
-                // The Edgeheg shouldn't get healed this much.
-                // TODO: Patch or create replacements that heal by 1 instead.
-                AbstractDungeon.relicsToRemoveOnStart.add(EternalFeather.ID);
+                // Healing relics are handled by a code in The Edgeheg's "Heal" function that limits it to healing by 1 HP.
+                /*AbstractDungeon.relicsToRemoveOnStart.add(EternalFeather.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Pantograph.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MeatOnTheBone.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(BirdFacedUrn.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(MealTicket.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(BloodVial.ID);
-                // TODO: Patch the Bloody Idol, too
+                AbstractDungeon.relicsToRemoveOnStart.add(BloodVial.ID);*/
+                // Bloody Idol, too
 
             }
         }
