@@ -57,7 +57,7 @@
 },
 "theEdgeheg:CrazyGirlfriendPower": {
         "NAME": "Krazi Grrrfrend",
-        "DESCRIPTION": ["when use gerlfrend cards cream does a random attack of #b."]
+        "DESCRIPTIONS": ["when use gerlfrend cards cream does a random attack of #b."]
 },
 "theEdgeheg:BlockGFPower": {
         "NAME": "Amy with GUN",
