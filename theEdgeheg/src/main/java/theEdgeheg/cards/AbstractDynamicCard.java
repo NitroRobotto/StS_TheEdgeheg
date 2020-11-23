@@ -1,6 +1,6 @@
 package theEdgeheg.cards;
 
-import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
+import theEdgeheg.util.HelperFunctions;
 
 public abstract class AbstractDynamicCard extends AbstractDefaultCard {
 
@@ -20,8 +20,6 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
                                final CardColor color,
                                final CardRarity rarity,
                                final CardTarget target) {
-
-        super(id, languagePack.getCardStrings(id).NAME, img, cost, languagePack.getCardStrings(id).DESCRIPTION, type, color, rarity, target);
-
+        super(id, HelperFunctions.GetCardString(id).NAME, img, cost, HelperFunctions.GetCardString(id).DESCRIPTION, type, color, rarity, target);
     }
 }

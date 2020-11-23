@@ -15,10 +15,10 @@ import theEdgeheg.powers.GunsPower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Gain 1 Dexterity and 1 GUNS.
- * After playing a Katana or GUN card, gain 1(2) GUNs and 1(2) Dexterity respectively until the start of your next turn.
+ * (2): Gain 1(2) Dexterity and 1(2) GUNS.
+ * After playing a Katana or GUN card, gain 1 GUNs and 1 Dexterity respectively until the start of your next turn.
  *  @author NITRO
- *  @version 1.1
+ *  @version 1.2
  *  @since 2020-07-17
  */
 public class GunFu extends AbstractDynamicCard {
@@ -58,9 +58,9 @@ public class GunFu extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new DexterityPower(p,1)));
-        addToBot(new ApplyPowerAction(p,p,new GunsPower(p)));
-        addToBot(new ApplyPowerAction(p, p, new GunFuPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p,p,new DexterityPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p,p,new GunsPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new GunFuPower(p, 1)));
     }
 
     //Upgraded stats.

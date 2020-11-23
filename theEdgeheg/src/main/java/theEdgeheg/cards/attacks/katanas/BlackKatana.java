@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.actions.DrawCardWithTagAction;
@@ -12,6 +13,7 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.PreciseModifier;
+import theEdgeheg.util.HelperFunctions;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -69,7 +71,8 @@ public class BlackKatana extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = rawDescription + languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+            CardStrings strings = HelperFunctions.GetCardString(ID);
+            rawDescription = strings.NAME + strings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

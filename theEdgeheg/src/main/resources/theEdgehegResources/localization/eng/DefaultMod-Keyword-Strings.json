@@ -40,6 +40,8 @@
     "PROPER_NAME": "Gun Card",
     "NAMES": [
       "Gun Card",
+      "Gun Cards",
+      "gun_cards",
       "gun_card",
       "guncard"
     ],
@@ -49,7 +51,9 @@
     "PROPER_NAME": "Katana Card",
     "NAMES": [
       "Katana Card",
+      "Katana Cards",
       "katana_card",
+      "katana_cards",
       "katanacard"
     ],
     "DESCRIPTION": "KATANA cards use a katana to do things."

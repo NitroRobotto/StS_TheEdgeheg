@@ -11,7 +11,6 @@ import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.modifiers.DamageGunScalingModifier;
-import theEdgeheg.modifiers.PreciseModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 

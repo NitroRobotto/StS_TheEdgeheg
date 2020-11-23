@@ -10,6 +10,7 @@ import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
+import theEdgeheg.util.HelperFunctions;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -70,7 +71,7 @@ public class ChaosBlast extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
+            rawDescription = HelperFunctions.GetCardString(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

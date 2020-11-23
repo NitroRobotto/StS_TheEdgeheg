@@ -5,7 +5,6 @@ import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
 import basemod.abstracts.CustomCard;
 import basemod.eventUtil.AddEventParams;
-import basemod.eventUtil.EventUtils;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -18,7 +17,6 @@ import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.Exordium;
 import com.megacrit.cardcrawl.dungeons.TheCity;
-import com.megacrit.cardcrawl.events.shrines.FaceTrader;
 import com.megacrit.cardcrawl.helpers.CardHelper;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
@@ -90,8 +88,8 @@ public class DefaultMod implements
 
     // Mod-settings settings. This is if you want an on/off savable button
     public static Properties theDefaultDefaultSettings = new Properties();
-    public static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
-    public static boolean enablePlaceholder = true; // The boolean we'll be setting on/off (true/false)
+    public static final String ENABLE_EDGEHEG_DESCRIPTIONS = "edgehegDescriptions";
+    public static boolean useEdgehegDescriptions = true; // The boolean we'll be setting on/off (true/false)
 
     //This is for the in-game mod settings panel.
     private static final String MODNAME = "the Edgeheg";
@@ -221,12 +219,12 @@ public class DefaultMod implements
         logger.info("Adding mod settings");
         // This loads the mod settings.
         // The actual mod Button is added below in receivePostInitialize()
-        theDefaultDefaultSettings.setProperty(ENABLE_PLACEHOLDER_SETTINGS, "FALSE"); // This is the default setting. It's actually set...
+        theDefaultDefaultSettings.setProperty(ENABLE_EDGEHEG_DESCRIPTIONS, "TRUE"); // This is the default setting. It's actually set...
         try {
             SpireConfig config = new SpireConfig("theEdgeheg", "theEdgehegConfig", theDefaultDefaultSettings); // ...right here
             // the "fileName" parameter is the name of the file MTS will create where it will save our setting.
             config.load(); // Load the setting and set the boolean to equal it
-            enablePlaceholder = config.getBool(ENABLE_PLACEHOLDER_SETTINGS);
+            useEdgehegDescriptions = config.getBool(ENABLE_EDGEHEG_DESCRIPTIONS);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -317,18 +315,18 @@ public class DefaultMod implements
         ModPanel settingsPanel = new ModPanel();
         
         // Create the on/off button:
-        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("This is the text which goes next to the checkbox.",
+        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("Improve Mod.",
                 350.0f, 700.0f, Settings.CREAM_COLOR, FontHelper.charDescFont, // Position (trial and error it), color, font
-                enablePlaceholder, // Boolean it uses
+                useEdgehegDescriptions, // Boolean it uses
                 settingsPanel, // The mod panel in which this button will be in
                 (label) -> {}, // thing??????? idk
                 (button) -> { // The actual button:
             
-            enablePlaceholder = button.enabled; // The boolean true/false will be whether the button is enabled or not
+            useEdgehegDescriptions = button.enabled; // The boolean true/false will be whether the button is enabled or not
             try {
                 // And based on that boolean, set the settings and save them
                 SpireConfig config = new SpireConfig("theEdgeheg", "theEdgehegConfig", theDefaultDefaultSettings);
-                config.setBool(ENABLE_PLACEHOLDER_SETTINGS, enablePlaceholder);
+                config.setBool(ENABLE_EDGEHEG_DESCRIPTIONS, useEdgehegDescriptions);
                 config.save();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -535,7 +533,9 @@ public class DefaultMod implements
         // CardStrings
         BaseMod.loadCustomStringsFile(CardStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Card-Strings.json");
-        
+        BaseMod.loadCustomStringsFile(CardStrings.class,
+                getModID() + "Resources/localization/eng/Edgeheg-CorrectCard-Strings.json");
+
         // PowerStrings
         BaseMod.loadCustomStringsFile(PowerStrings.class,
                 getModID() + "Resources/localization/eng/DefaultMod-Power-Strings.json");
