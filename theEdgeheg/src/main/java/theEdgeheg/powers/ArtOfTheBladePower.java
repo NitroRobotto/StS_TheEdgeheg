@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makePowerPath;
@@ -55,6 +56,8 @@ public class ArtOfTheBladePower extends AbstractPower {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (!card.hasTag(EdgehegCardTags.KATANA)) return;
+
         if (!card.purgeOnUse && charges > 0) {
             flash();
             --charges;
