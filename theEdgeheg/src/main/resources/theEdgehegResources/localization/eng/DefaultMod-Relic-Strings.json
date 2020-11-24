@@ -10,7 +10,7 @@
     "NAME": "Ultimate Lifeform",
     "FLAVOR": "Only a flesh wound.",
     "DESCRIPTIONS": [
-      "As the ultimate lifeform, attacks merely scratch you. NL Take a maximum of #b1 Damage from all sources.",
+      "As the ultimate lifeform, attacks merely scratch you. NL Take a maximum of #b1 Damage from all sources, or 2 when Vulnerable.",
       "heh",
       "nuthinn personnel",
       "die",

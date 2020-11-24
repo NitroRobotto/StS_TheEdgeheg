@@ -5,21 +5,20 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.util.TextureLoader;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
 /**
- * Reduce all damage taken to 1 (like a sort of permanent intangible).
+ * Reduce all damage taken to 1 (like a sort of permanent intangible). If the player is Vulnerable, the minimum damage is 2 instead.
  * At the end of the turn, has a random % of saying a random phrase.
  *  @author NITRO
- *  @version 1.1
+ *  @version 2.0
  *  @since 2020-07-08
  */
 public class UltimateLifeformRelic extends CustomRelic {
@@ -41,7 +40,7 @@ public class UltimateLifeformRelic extends CustomRelic {
     public int onLoseHpLast(int damageAmount) {
         if (damageAmount > 1) {
             this.flash();
-            return 1;
+            return AbstractDungeon.player.hasPower(VulnerablePower.POWER_ID) ? 2 : 1;
         }
 
         return damageAmount;
