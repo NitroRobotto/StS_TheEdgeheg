@@ -25,10 +25,14 @@ public class HelperFunctions {
     }
 
     public static CardStrings GetCardString(String ID) {
-        if (!DefaultMod.useEdgehegDescriptions || Math.random() < 0.069) {
+        if (!DefaultMod.useEdgehegDescriptions) {
             return CardCrawlGame.languagePack.getCardStrings(ID + "_Correct");
-        } else {
-            return CardCrawlGame.languagePack.getCardStrings(ID);
         }
+
+        if (Math.random() <= 0.08) {
+            return Math.random() <= 0.9 ? CardCrawlGame.languagePack.getCardStrings(ID + "_Correct") : CardStrings.getMockCardString();
+        }
+
+        return CardCrawlGame.languagePack.getCardStrings(ID);
     }
 }

@@ -71,7 +71,7 @@ public class ChaosBlast extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = HelperFunctions.GetCardString(ID).UPGRADE_DESCRIPTION;
+            rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

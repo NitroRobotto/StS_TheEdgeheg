@@ -7,7 +7,6 @@ import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractChaosControlCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.DodgePower;
 import theEdgeheg.powers.TeleportBehindPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -48,6 +47,7 @@ public class TeleportsBehind extends AbstractChaosControlCard {
     public TeleportsBehind() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = CHAOS_ENERGY_COST;
+        secondMagicNumber = baseSecondMagicNumber = 2;
 
         tags.add(EdgehegCardTags.CHAOS);
         tags.add(EdgehegCardTags.CHAOS_CONTROL);
@@ -56,7 +56,7 @@ public class TeleportsBehind extends AbstractChaosControlCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new TeleportBehindPower(p,upgraded ? 2 : 1)));
+        addToBot(new ApplyPowerAction(p,p,new TeleportBehindPower(p, secondMagicNumber-1)));
         spendChaosEnergy(p);
     }
 
@@ -65,6 +65,7 @@ public class TeleportsBehind extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeSecondMagicNumber(1);
             initializeDescription();
         }
     }

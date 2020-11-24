@@ -52,13 +52,13 @@ public class BulletStorm extends AbstractChaosControlCard {
         this.tags.add(EdgehegCardTags.CHAOS);
         this.tags.add(EdgehegCardTags.CHAOS_CONTROL);
         magicNumber = baseMagicNumber = CHAOS_CONTROL_COST;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = STACKS_PER_GUN;
+        secondMagicNumber = baseSecondMagicNumber = STACKS_PER_GUN;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new BulletStormPower(p, defaultSecondMagicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new BulletStormPower(p, secondMagicNumber)));
         spendChaosEnergy(p);
     }
 
@@ -67,7 +67,7 @@ public class BulletStorm extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDefaultSecondMagicNumber(STACKS_PER_GUN_UPGRADE);
+            upgradeSecondMagicNumber(STACKS_PER_GUN_UPGRADE);
             initializeDescription();
         }
     }

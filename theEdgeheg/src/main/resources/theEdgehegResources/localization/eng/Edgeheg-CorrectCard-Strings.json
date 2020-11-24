@@ -1,7 +1,7 @@
 {
   "theEdgeheg:StarterShootAttack_Correct": {
     "NAME": "Shoot",
-    "DESCRIPTION": "theedgeheg:Gun_Card NL Deal !D! Damage."
+    "DESCRIPTION": "Deal !D! Damage."
   },
   "theEdgeheg:StarterDodgeSkill_Correct": {
     "NAME": "Dodge",
@@ -9,7 +9,7 @@
   },
   "theEdgeheg:BloodyKatana_Correct": {
     "NAME": "Bloody Katana",
-    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL theedgeheg:Katana_Card NL Fatal: Heal !M!."
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Fatal: Heal !M!."
   },
   "theEdgeheg:ChaosControlSkill_Correct": {
     "NAME": "Chaos Control",
@@ -92,268 +92,268 @@
     "NAME": "Reload",
     "DESCRIPTION": "Gain !M! theedgeheg:GUNS."
   },
-  "theEdgeheg:PerfectAim": {
-    "NAME": "\"i never miss\" - dusk the HEDEHEG",
-    "DESCRIPTION": "gain dexterity and critical hits"
+  "theEdgeheg:PerfectAim_Correct": {
+    "NAME": "Perfect Aim",
+    "DESCRIPTION": "Gain 3 Dexterity. NL Whenever you deal damage, there's a (3*Dexterity)% chance of dealing +50% damage."
   },
-  "theEdgeheg:Sniper": {
+  "theEdgeheg:Sniper_Correct": {
     "NAME": "Sniper Rifle",
-    "DESCRIPTION": "precision shot weith sniper rifle to make deal 30 dadmage ( !D! [#ff0000]damage)[]"
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL theedgeheg:GUNS and Dexterity count twice."
   },
-  "theEdgeheg:TeleportsBehind": {
-    "NAME": "*teleports behind u*",
-    "DESCRIPTION": "theedgeheg:chaos_control 2 repeat card (upgrade: three times)"
+  "theEdgeheg:TeleportsBehind_Correct": {
+    "NAME": "Teleport Behind",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. NL Your next card is played !theEdgeheg:SecondMagic! times."
   },
-  "theEdgeheg:DodgeKatana": {
-    "NAME": "katana(purple)",
-    "DESCRIPTION": "Doge and then attack with katana and do a backflip if you killed"
+  "theEdgeheg:DodgeKatana_Correct": {
+    "NAME": "Dodge Katana",
+    "DESCRIPTION": "Gain theedgeheg:Dodge 1. NL Deal !D! Damage. theedgeheg:Precise. NL Fatal: Gain theedgeheg:Dodge 1."
   },
-  "theEdgeheg:ChaosKatana": {
-    "NAME": "CHAOS katana",
-    "DESCRIPTION": "folded 100000000 times by a master swordsmith to make the STRONGEST steel precise cut to deal DAMAGE ( !D! damage and kills enemys to gain energy"
+  "theEdgeheg:ChaosKatana_Correct": {
+    "NAME": "Chaos Katana",
+    "DESCRIPTION": "Gain 2 theedgeheg:Chaos_Energy. NL Deal !D! Damage. theedgeheg:Precise. NL Fatal: Gain 2 theedgeheg:Chaos_Energy."
   },
-  "theEdgeheg:QuickKatana": {
-    "NAME": "Quic kslash",
-    "DESCRIPTION": "you slash all enemies with a katana and then if fatal you use this card another time"
+  "theEdgeheg:QuickKatana_Correct": {
+    "NAME": "Quick Katana",
+    "DESCRIPTION": "Deal !D! Damage to all enemies. theedgeheg:Precise. NL Fatal: Play this card again."
   },
-  "theEdgeheg:DashKatana": {
-    "NAME": "dash KATANA",
-    "DESCRIPTION": "attack and deal damage and draw cards draw more if it Fatal a bad guy"
+  "theEdgeheg:DashKatana_Correct": {
+    "NAME": "Dash Katana",
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Draw !M! card(s). NL Fatal: Draw 1 Card."
   },
-  "theEdgeheg:Shotgun": {
-    "NAME": "Shogun",
-    "DESCRIPTION": "theedgeheg:Precise. Deals a lot of damage to enemy in front but less to the others because the one in front is shielding them ofc"
+  "theEdgeheg:Shotgun_Correct": {
+    "NAME": "Shotgun",
+    "DESCRIPTION": "Deal !D! damage !M! times to the first enemy, then the same -2 times for the next. NL It keeps going as long as there are shots left. NL theedgeheg:GUNS improves shot count instead of damage."
   },
-  "theEdgeheg:BloodyNodachi": {
-    "NAME": "Bloody Big Katana",
-    "DESCRIPTION": "1"
+  "theEdgeheg:BloodyNodachi_Correct": {
+    "NAME": "Bloody Nodachi",
+    "DESCRIPTION": "Deal !D! Damage to all enemies. theedgeheg:Precise. NL Dexterity counts twice."
   },
-  "theEdgeheg:Knives": {
-    "NAME": "Knife's",
-    "DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card ). Exhaust",
-    "UPGRADE_DESCRIPTION": "throw theedgeheg:precise knife's at the enemys ( !D! damage )you gain theedgeheg:chaos_energy ( !M! energy ) and get one card ( 1 card )."
+  "theEdgeheg:Knives_Correct": {
+    "NAME": "Knives",
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Gain 1 theedgeheg:Chaos_Energy. NL Draw 1 Card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Gain 1 theedgeheg:Chaos_Energy. NL Draw 1 Card."
   },
-  "theEdgeheg:EndlessKatanas": {
-    "NAME": "Endless   Katana's",
-    "DESCRIPTION": "Dexterity 1 and use katana to replace with another katana. their tools of war so dusk feels nothin personnel"
+  "theEdgeheg:EndlessKatanas_Correct": {
+    "NAME": "Endless Katanas",
+    "DESCRIPTION": "Gain 1 Dexterity. NL After playing a theedgeheg:Katana_Card, Exhaust it and add a random katana card of the same type to your hand."
   },
-  "theEdgeheg:CoolExplosion": {
-    "NAME": "COOL Explosion",
-    "DESCRIPTION": "chaos control !M! !D! damage nice NL Exhaust"
+  "theEdgeheg:CoolExplosion_Correct": {
+    "NAME": "Cool Explosion",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Deal !D! Damage to all enemies. NL theedgeheg:GUNS counts twice. NL Exhaust."
   },
-  "theEdgeheg:PlayRandomCard": {
-    "NAME": "RANDOM",
-    "DESCRIPTION": "its random XD ( Discard )"
+  "theEdgeheg:PlayRandomCard_Correct": {
+    "NAME": "Random",
+    "DESCRIPTION": "Play a random card from the entire card library. NL Exhaust."
   },
-  "theEdgeheg:Butt": {
-    "NAME": "*showsbutt*",
-    "DESCRIPTION": "OK SO PLS STOP DMING ME ITS NOT SHOWING BUTT IN A GAY WAY ITS TAUNTING OK? IM NOT GAY, AND DUSK THE HEGHEHEGH IS NOT GAY OK? WE BOTH LIKE BIG BOBS"
+  "theEdgeheg:Butt_Correct": {
+    "NAME": "Show Butt",
+    "DESCRIPTION": "Has a random chance of either applying Stun or Vulnerable !M! to enemies. NL It's less effective on Elites and Bosses."
   },
-  "theEdgeheg:Girlfriend": {
-    "NAME": "EMI THE HEDHGEHG",
-    "DESCRIPTION": "DUSK REALLY HAS A GIRLFRIEND OKAY THIS IS HIR GIRLFRIEND HER NAME IS AMY BUT YOU WOULDNT KNOW HER OKAY SHE GOES TO ANOTHER SCHOOL BUT SHE KISSES DUSK AND HE HEALS TO FULL HP BUT ONLY BECAUSE HEIS A COOL DUDE WHO DOESNT AFRAID OF NOTHIGNHE DOESNT' LIKE GAY THINGS LIKE KISSES OKAY"
+  "theEdgeheg:Girlfriend_Correct": {
+    "NAME": "Girlfriend",
+    "DESCRIPTION": "Heal 1. NL Exhaust."
   },
-  "theEdgeheg:SuperDodge": {
-    "NAME": "FUCK you KEVINGfrom school",
-    "DESCRIPTION": "fuck you kevin from SCHOOL stop sharing my DEVIANT ART ALSO DUSK WOULD TOTALLY DODGE SUPERSONIC HE'S FASTER"
+  "theEdgeheg:SuperDodge_Correct": {
+    "NAME": "Super Dodge",
+    "DESCRIPTION": "Gain 4 theedgeheg:Dodge. NL Keep all of your theedgeheg:Dodge at the start of your next turn."
   },
-  "theEdgeheg:BetterShoot": {
-    "NAME": "*shoots*",
-    "DESCRIPTION": "*SHOTs GUN* !D! X damge"
+  "theEdgeheg:BetterShoot_Correct": {
+    "NAME": "Better Shoot*",
+    "DESCRIPTION": "Deal !D! Damage. NL Multiply total damage by X."
   },
-  "theEdgeheg:SpireCrasher": {
-    "NAME": "it thebspire",
-    "DESCRIPTION": "u win"
+  "theEdgeheg:SpireCrasher_Correct": {
+    "NAME": "it the Spire",
+    "DESCRIPTION": "Crashes the game."
   },
-  "theEdgeheg:DoubleStun": {
-    "NAME": "GOTTA GO FAST",
-    "DESCRIPTION": "chaos control !M! and stuns all and gives you and also skips enemy turn . . exhaust"
+  "theEdgeheg:DoubleStun_Correct": {
+    "NAME": "Double Stun",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. NL Stun all enemies AND skips their next turn. NL Exhaust."
   },
-  "theEdgeheg:CSGun": {
-    "NAME": "IMI/Magnum Research Desert Eagle Mark XIX chambered in .50AE",
-    "DESCRIPTION": "DEALS A LOT OF [#ff0000]DAMAGE[] 100 DAMAGE"
+  "theEdgeheg:CSGun_Correct": {
+    "NAME": "Desert Eagle",
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Dexterity and theedgeheg:GUNS count twice. NL If you have the Desert Eagle relic, deal double damage."
   },
-  "theEdgeheg:Heh": {
-    "NAME": "heh",
-    "DESCRIPTION": "\"heh\" - dusk the edghehog (Precise Vulnerable) Exhaust",
-    "UPGRADE_DESCRIPTION": "(also draw card)"
+  "theEdgeheg:Heh_Correct": {
+    "NAME": "Heh",
+    "DESCRIPTION": "Apply !M! Vulnerable. NL Scales with theedgeheg:GUNS. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": " NL Draw 1 Card."
   },
-  "theEdgeheg:BlankCard": {
-    "NAME": "",
-    "DESCRIPTION": "your cards give you dexterity to dodge more enemys.and make u cool (my mom told me it was too strong so i made it so its really bad but when you upgrade its strong again)"
+  "theEdgeheg:BlankCard_Correct": {
+    "NAME": "Blank Card",
+    "DESCRIPTION": "Gain 1 Temporary Dexterity after playing any card."
   },
-  "theEdgeheg:HappyTimmy": {
-    "NAME": "ok so",
-    "DESCRIPTION": "im really happy that you guys are playing my mod i put a lot of effort in it so this card is for u its really good and you gain Dodge and Guns for free i hope u like it"
+  "theEdgeheg:HappyTimmy_Correct": {
+    "NAME": "Happy Timmy",
+    "DESCRIPTION": "Gain 1 theedgeheg:Dodge. NL Gain 1 theedgeheg:GUNS. NL Add a \"Happier Timmy\" card to your hand. NL Exhaust."
   },
-  "theEdgeheg:HappierTimmy": {
-    "NAME": "ok so (part 2)",
-    "DESCRIPTION": "also i thought maybe u dont have guns in your deck bcous you can amke your own deck however you like, guns katana or chaos, so this card is a gun and deals dmg"
+  "theEdgeheg:HappierTimmy_Correct": {
+    "NAME": "Happier Timmy",
+    "DESCRIPTION": "Deal !D! Damage. NL Exhaust."
   },
-  "theEdgeheg:HappiestTimmy": {
-    "NAME": "ok so(part 4",
-    "DESCRIPTION": "so thank you it was really hard to write all this specially part 3. idk what to do with this card so it gives 1 dodge"
+  "theEdgeheg:HappiestTimmy_Correct": {
+    "NAME": "Happiest Timmy",
+    "DESCRIPTION": "Gain 1 theedgeheg:Dodge. NL Add a \"Game Designer Timmy\" card to your hand. NL Exhaust."
   },
-  "theEdgeheg:GameDesignerTimmy": {
-    "NAME": "ok so 8part 5",
-    "DESCRIPTION": "hi guy's i gave this card 1 cost because if it weas 0 cost it would be overpowered i am really trying to balance ther mod like u guise told me"
+  "theEdgeheg:GameDesignerTimmy_Correct": {
+    "NAME": "Game Designer Timmy",
+    "DESCRIPTION": "Gain 2 theedgeheg:Dodge. NL Exhaust."
   },
-  "theEdgeheg:ArtOfTheBlade": {
-    "NAME": "the ART of the blade",
-    "DESCRIPTION": "when your study the ART of the blade like me u become very good with a sword (katana's are swords) its what it means so now u make deal more damage(2 damage"
+  "theEdgeheg:ArtOfTheBlade_Correct": {
+    "NAME": "The Art of the Blade",
+    "DESCRIPTION": "The first !M! theedgeheg:Katana_Card (s) you play each turn are played twice."
   },
-  "theEdgeheg:DrawBlade": {
-    "NAME": "*unsheathes katana*",
-    "DESCRIPTION": "\"ill kill you\"-dusk the hedg hog (get a random katana)",
-    "UPGRADE_DESCRIPTION": "(free katana)"
+  "theEdgeheg:DrawBlade_Correct": {
+    "NAME": "Draw Blade",
+    "DESCRIPTION": "Draw a theedgeheg:Katana_Card from your Draw Pile.",
+    "UPGRADE_DESCRIPTION": " NL It costs 0 this turn."
   },
-  "theEdgeheg:DieDieDie": {
-    "NAME": "DIE DIE DIE",
-    "DESCRIPTION": "\"die die die\" - reaper, overwatch2(with yourGUNS !D! )"
+  "theEdgeheg:DieDieDie_Correct": {
+    "NAME": "Die Die Die",
+    "DESCRIPTION": "Deal !D! damage to all enemies. theedgeheg:Precise."
   },
-  "theEdgeheg:ChaosEnergyKatana": {
-    "NAME": "CHAOS katana1",
-    "DESCRIPTION": "theedgeheg:chaos_energy from katana (gain dex and then chaos)"
+  "theEdgeheg:ChaosEnergyKatana_Correct": {
+    "NAME": "Chaos Energy Katana",
+    "DESCRIPTION": "Gain 1 Dexterity. NL Then, gain !M! + Dexterity theedgeheg:Chaos_Energy."
   },
-  "theEdgeheg:Tsk": {
-    "NAME": "tsk",
-    "DESCRIPTION": "\"tsk\" NL dexterity and DODGE"
+  "theEdgeheg:Tsk_Correct": {
+    "NAME": "Tsk",
+    "DESCRIPTION": "Gain 1 Dexterity. NL Gain 1 theedgeheg:Dodge."
   },
-  "theEdgeheg:OkSo8": {
-    "NAME": "ok so (part8)",
-    "DESCRIPTION": "so tl;dr i really love u guys ^^ (card gives chaos energy every turn!)"
+  "theEdgeheg:OkSo8_Correct": {
+    "NAME": "Chaos Energy Engine",
+    "DESCRIPTION": "Gain 1 theedgeheg:Chaos_Energy at the start of each turn."
   },
-  "theEdgeheg:TurboChaos": {
-    "NAME": "Turbo",
-    "DESCRIPTION": "i never understood this card it dosent make u go fast so i made it better and now it makes u go fast because i created this new animation to mkae u go fast because dusk is the fastest he is faster than sonic the hgedehog"
+  "theEdgeheg:TurboChaos_Correct": {
+    "NAME": "Turbo Chaos",
+    "DESCRIPTION": "Gain !M! theedgeheg:Chaos_Energy. NL Gain 1 theedgeheg:Dodge. NL Exhaust."
   },
-  "theEdgeheg:GoldKatana": {
+  "theEdgeheg:GoldKatana_Correct": {
     "NAME": "Gold Katana",
-    "DESCRIPTION": "you kill your enemy ( !D! ) with a katana and get money ( !M! ) because your awesome"
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Fatal: Gain !M! gold."
   },
-  "theEdgeheg:UnplayableBomb": {
-    "NAME": "NUCLEARBOM",
-    "DESCRIPTION": "KILL ALL ENEMYS IN ALL COMBAT'S WITH NUCULAR BOMB ( theedgeheg:Precise )"
+  "theEdgeheg:UnplayableBomb_Correct": {
+    "NAME": "Unplayable Bomb",
+    "DESCRIPTION": "Deal !D! to all enemies. NL Cannot be played."
   },
-  "theEdgeheg:RedGun": {
-    "NAME": "gun(red bullets)",
-    "DESCRIPTION": "deals [#ff0000]1more[] damage and gains energys (not now)"
+  "theEdgeheg:RedGun_Correct": {
+    "NAME": "Red Gun",
+    "DESCRIPTION": "Deal !D! Damage. NL On your next turn, gain 1 Energy."
   },
-  "theEdgeheg:QuickDraw": {
-    "NAME": "*quick draws katana*",
-    "DESCRIPTION": "cut people down to become stronger ( !D! damage )"
+  "theEdgeheg:QuickDraw_Correct": {
+    "NAME": "Quickdraw",
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise NL Gain 2 Temporary Dexterity. NL Fatal: Gain 1 Strength."
   },
-  "theEdgeheg:GunSteal": {
-    "NAME": "*steals gun*",
-    "DESCRIPTION": "\"heh whatchagonna do now huh?\" - dusk the edhehog deals !D! damage and steals a gun ( gain !M! theedgeheg:guns)"
+  "theEdgeheg:GunSteal_Correct": {
+    "NAME": "Steal Gun",
+    "DESCRIPTION": "If the enemy intends to attack, gain !M! theedgeheg:GUNS. NL Deal !D! Damage."
   },
-  "theEdgeheg:TeleportsAbove": {
-    "NAME": "*teleports above u*",
-    "DESCRIPTION": "*falls really fast and cuts u in half* theedgeheg:Chaos_Control 1. !D! theedgeheg:Precise"
+  "theEdgeheg:TeleportsAbove_Correct": {
+    "NAME": "Teleport Above",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. NL Gain theedgeheg:Dodge 1. NL Deal !D! Damage. theedgeheg:Precise."
   },
-  "theEdgeheg:ChaosCards": {
-    "NAME": "Chaos Control Draw Cards",
-    "DESCRIPTION": "Use theedgeheg:Chaos_Control 2 to get more cards."
+  "theEdgeheg:ChaosCards_Correct": {
+    "NAME": "Chaos Cards",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. NL Draw !theEdgeheg:SecondMagic! cards."
   },
-  "theEdgeheg:Glare": {
-    "NAME": "*glare*",
-    "DESCRIPTION": "Vulnerable 1 and enemy loses !D! HP and Stuns but thats op so it might fail against strong enemys (also theedgeheg:Chaos_Control 2 )",
-    "UPGRADE_DESCRIPTION": "(its stuns more often)"
+  "theEdgeheg:Glare_Correct": {
+    "NAME": "Glare",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. NL Target loses !D! HP. NL Apply Vulnerable 1. NL Might stun.",
+    "UPGRADE_DESCRIPTION": " (high %)."
   },
-  "theEdgeheg:Parry": {
-    "NAME": "*parry*",
-    "DESCRIPTION": "parry is when you are like *dodge* but with a COOL sword so its better (Draw !M! cards)"
+  "theEdgeheg:Parry_Correct": {
+    "NAME": "Parry",
+    "DESCRIPTION": "Gain theedgeheg:Dodge 1. NL Draw !M! Cards."
   },
-  "theEdgeheg:Disrobe": {
-    "NAME": "cut armoire with katan**",
-    "DESCRIPTION": "naked people take more damage"
+  "theEdgeheg:Disrobe_Correct": {
+    "NAME": "Disrobe",
+    "DESCRIPTION": "Apply Vulnerable !M!. NL Draw !M! Cards. NL Discard 1 Card."
   },
-  "theEdgeheg:RandomChaosCard": {
-    "NAME": "chaaaos CONTROL!",
-    "DESCRIPTION": "*pulls out emerald* CHAOS CONTROL (exhaust)",
-    "UPGRADE_DESCRIPTION": "*pulls out emerald* CHAOS CONTROL"
+  "theEdgeheg:RandomChaosCard_Correct": {
+    "NAME": "Random Chaos Card",
+    "DESCRIPTION": "theedgeheg:Chaos_Control 1. NL Create a random theedgeheg:Chaos_Card Skill in your hand. It costs 0 this turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "theedgeheg:Chaos_Control 1. NL Create a random theedgeheg:Chaos_Card Skill in your hand. It costs 0 this turn."
   },
-  "theEdgeheg:SkateboardTrick": {
-    "NAME": "Skateb Trick",
-    "DESCRIPTION": "do a sick trick. Draw !M! cards and discard 1. also chaos energy."
+  "theEdgeheg:SkateboardTrick_Correct": {
+    "NAME": "Skateboard Trick",
+    "DESCRIPTION": "Gain !M! Chaos Energy. NL Draw !M! Cards. NL Discard 1 card."
   },
-  "theEdgeheg:DualPistols": {
-    "NAME": "Dual Wield Pistols",
-    "DESCRIPTION": "Shoot twice ( !D! damage) and then draw sword and gun. Exile."
+  "theEdgeheg:DualPistols_Correct": {
+    "NAME": "Dual Pistols",
+    "DESCRIPTION": "Shoot !D! Damage twice. NL Draw 1 theedgeheg:Gun_Card. NL Draw 1 theedgeheg:Katana_Card. NL Exhaust."
   },
-  "theEdgeheg:RevolverOcelot": {
+  "theEdgeheg:RevolverOcelot_Correct": {
     "NAME": "Revolver Ocelot",
-    "DESCRIPTION": "the revolver from ocelot fires six times idk. upgrade for two guns",
-    "UPGRADE_DESCRIPTION": "Revolvers Ocelots"
+    "DESCRIPTION": "Deal !D! Damage !M! times. theedgeheg:Precise.",
+    "UPGRADE_DESCRIPTION": "Revolver Ocelot+"
   },
-  "theEdgeheg:SephirotKatana": {
-    "NAME": "Sephirots Katana",
-    "DESCRIPTION": "katana of sephirot (bad guy in ff7). hits everyone because its really big ( !D! ), and becomes stronher ( !M! )by killing"
+  "theEdgeheg:SephirotKatana_Correct": {
+    "NAME": "Sephirot's Katana",
+    "DESCRIPTION": "Deal !D! Damage to all enemies. theedgeheg:Precise. NL Fatal: Permanently increase this card's damage by !M!."
   },
-  "theEdgeheg:SoulSiphon": {
-    "NAME": "sSuck Soul",
-    "DESCRIPTION": "theedgeheg:Chaos_Control 2 eat the soul of your enemy's and become stronger (IAM TRIED FORTHE LAST TIME THIS CARD IS NOT GAY OK HES BECOMING MORE POWERFUL WITH THE SOULS OF HIS ENEMY'S ITS NOT A GAY THINK OKAY DUSK IS NOT GAY FOR THE LAST TIME"
+  "theEdgeheg:SoulSiphon_Correct": {
+    "NAME": "Soul Siphon",
+    "DESCRIPTION": "theedgeheg:Chaos_Control 2. NL Deal !D! Damage. NL Fatal: Heal 1 and gain 1 theedgeheg:Chaos_Energy."
   },
-  "theEdgeheg:SelfHarmIsNotCool": {
-    "NAME": "cut veins",
-    "DESCRIPTION": "ok so i tried it and mom had to take me to the hospital so plz dont try it. dusk is immortal tho so he can take 1 damage to gain 5 chaos energy no biggie",
-    "UPGRADE_DESCRIPTION": " (also theedgeheg:Dodge)"
+  "theEdgeheg:SelfHarmIsNotCool_Correct": {
+    "NAME": "Self-harm is not cool",
+    "DESCRIPTION": "Lose 1 HP. Gain !M! Chaos Energy.",
+    "UPGRADE_DESCRIPTION": " NL Gain 1 theedgeheg:Dodge."
   },
-  "theEdgeheg:RollAndShoot": {
+  "theEdgeheg:RollAndShoot_Correct": {
     "NAME": "Roll and Shoot",
-    "DESCRIPTION": "roll to theedgeheg:Dodge, then shoot lots of times ( !D! x !M! ) and leave ppl Vulnerable"
+    "DESCRIPTION": "Gain !theEdgeheg:SecondMagic! Dodge. NL Deal !D! damage !M! times. NL Apply 2 Vulnerable."
   },
-  "theEdgeheg:BlowCover": {
+  "theEdgeheg:BlowCover_Correct": {
     "NAME": "Blow Cover",
-    "DESCRIPTION": "throw grenade that hurts everyone and leaves them without cover"
+    "DESCRIPTION": "Deal !D! Damage to all enemies. NL Apply !M! Vulnerable to all enemies. NL theedgeheg:GUNS increases vulnerable stacks instead of damage."
   },
-  "theEdgeheg:FastRevolver": {
-    "NAME": "Fast Trigger Revolver",
-    "DESCRIPTION": "theedgeheg:Precise Shoot gun ( !D! damage) so other guns shoot faster (exile only if not ugpraded)"
+  "theEdgeheg:FastRevolver_Correct": {
+    "NAME": "Fast Revolver",
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise Shoot gun. NL Reduce the cost of a random card in hand by 1: Repeat this for every theedgeheg:GUNS stack. NL Exhausts when unupgraded."
   },
-  "theEdgeheg:Fastness": {
+  "theEdgeheg:Fastness_Correct": {
     "NAME": "Fastness",
-    "DESCRIPTION": "heh * gains armoire*"
+    "DESCRIPTION": "Gain !M! Plated Armor. NL Gain !theedgeheg:SecondMagic! Block."
   },
-  "theEdgeheg:Grr": {
+  "theEdgeheg:Grr_Correct": {
     "NAME": "Grr",
-    "DESCRIPTION": "grr *enemy becomes vulnerable* NL GRR *if they were vulnerable, gain energys*"
+    "DESCRIPTION": "Gain 1 theedgeheg:Chaos_Energy per Vulnerable enemy. NL Apply 1 Vulnerable to all enemies."
   },
-  "theEdgeheg:SuperEdgeheg": {
-    "NAME": "SUPER HEDGEHEg",
-    "DESCRIPTION": "theedgeheg:Chaos_Control !M! become super dusk the Hegdehog and gain 666 strengt dexterity and guns respectevellly"
+  "theEdgeheg:SuperEdgeheg_Correct": {
+    "NAME": "Super Edgeheg",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Heal 1, gain 6 Strength, 6 Dexterity, and 6 theedgeheg:GUNS. Gain 1 Energy and 1 theedgeheg:Chaos_Energy at the start of every turn."
   },
-  "theEdgeheg:Birthday": {
-    "NAME": "birthday",
-    "DESCRIPTION": "dusk doesnt' like his birthday because he dosent like gay things like girls or birthdays so he kills everyone.               but he still gets present's"
+  "theEdgeheg:Birthday_Correct": {
+    "NAME": "Birthday",
+    "DESCRIPTION": "Deal (Current HP + Current theedgeheg:GUNS) damage to all enemies. NL When upgraded, gains theedgeheg:Precise."
   },
-  "theEdgeheg:ChaosWhip": {
-    "NAME": "Katana of Chaos",
-    "DESCRIPTION": "create a katana of chaos and attack twice. !D! damage. gain !M! theedgeheg:chaos_energy"
+  "theEdgeheg:ChaosWhip_Correct": {
+    "NAME": "Chaos Whip",
+    "DESCRIPTION": "Deal !D! damage to 2 random enemies. theedgeheg:Precise. NL Gain !M! theedgeheg:Chaos_Energy."
   },
-  "theEdgeheg:SexyGirlfriend": {
-    "NAME": "Sex-y GF uwu",
-    "DESCRIPTION": "OMG shes so sexy why Wave is not real? BTW she givs u 1 theedgeheg:Dodge cause she distracts the enemi",
-    "UPGRADE_DESCRIPTION": " (also theedgeheg:Chaos_Energy 1 because she makes u happy)"
+  "theEdgeheg:SexyGirlfriend_Correct": {
+    "NAME": "Sexy Girlfriend",
+    "DESCRIPTION": "Gain 1 theedgeheg:Dodge.",
+    "UPGRADE_DESCRIPTION": " NL Gain 1 theedgeheg:Chaos_Energy."
   },
-  "theEdgeheg:EmeraldGirlfriend": {
-    "NAME": "E",
-    "DESCRIPTION": "Charmy have a secret emerald!!! but its only for her because u give her as a gift and she say u were the best boyfrend ever. But when she holds it you gain !M! chaos power"
+  "theEdgeheg:EmeraldGirlfriend_Correct": {
+    "NAME": "Emerald Girlfriend",
+    "DESCRIPTION": "Draw 1 Card. NL Gain !M! Chaos Energy."
   },
-  "theEdgeheg:CrazyGirlfriend": {
-    "NAME": "yandere GF",
-    "DESCRIPTION": "so Cream is my girlrend now. She will do everytin i want so when use gerlfrend cards she wil do a random attack of !M!."
+  "theEdgeheg:CrazyGirlfriend_Correct": {
+    "NAME": "Yandere Girlfriend",
+    "DESCRIPTION": "Whenever you play a Girlfriend card, a random enemy loses !M! HP."
   },
-  "theEdgeheg:GirlWithGun": {
-    "NAME": "GF with gun",
-    "DESCRIPTION": "U givee Rouge one of ur guns so she can shoot for you but she does less damage because shes not Dust!!!"
+  "theEdgeheg:GirlWithGun_Correct": {
+    "NAME": "Girlfriend with a Gun",
+    "DESCRIPTION": "Deal !D! Damage to a random enemy."
   },
-  "theEdgeheg:KatanaGF": {
-    "NAME": "Katana GF!",
-    "DESCRIPTION": "U give Blaze (u girlfrend) a katana! so she kicks enemies buts with her fist dealing !D! damages to !M! emenies she wants to attack I KNOW ITS A AXE I CANT FIND A PIC OF A KATANA OK"
+  "theEdgeheg:KatanaGF_Correct": {
+    "NAME": "Katana Girlfriend",
+    "DESCRIPTION": "Deal !D! Damage to !M! random enemies. theedgeheg:Precise."
   },
-  "theEdgeheg:BlockingGF": {
-    "NAME": "Blocqueen GF",
-    "DESCRIPTION": "Amy takes a parking sign & uses it to block som ataks to u! But she is not that fast she cant dodge so she givs u !M! armor at the start of ur turn and deal !M! dmg to a random enemys"
+  "theEdgeheg:BlockingGF_Correct": {
+    "NAME": "Block Girlfriend",
+    "DESCRIPTION": "Gain !M! Block at the start of each turn and a random enemy loses !M! HP."
   }
 }

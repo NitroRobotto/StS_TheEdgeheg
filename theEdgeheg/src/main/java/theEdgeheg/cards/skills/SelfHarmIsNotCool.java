@@ -1,4 +1,4 @@
-package theEdgeheg.cards.attacks.katanas;
+package theEdgeheg.cards.skills;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;

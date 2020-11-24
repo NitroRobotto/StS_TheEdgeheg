@@ -38,7 +38,7 @@ import theEdgeheg.events.NerfedBigFish;
 import theEdgeheg.relics.*;
 import theEdgeheg.util.IDCheckDontTouchPls;
 import theEdgeheg.util.TextureLoader;
-import theEdgeheg.variables.DefaultSecondMagicNumber;
+import theEdgeheg.variables.SecondMagicNumber;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -414,7 +414,7 @@ public class DefaultMod implements
         //logger.info("Add variables");
         // Add the Custom Dynamic variables
         //BaseMod.addDynamicVariable(new DefaultCustomVariable());
-        BaseMod.addDynamicVariable(new DefaultSecondMagicNumber());
+        BaseMod.addDynamicVariable(new SecondMagicNumber());
         
         logger.info("Adding cards for Edgeheg");
 

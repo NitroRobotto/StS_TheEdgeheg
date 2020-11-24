@@ -1,10 +1,7 @@
 package theEdgeheg.cards.skills;
 
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractChaosControlCard;
@@ -44,6 +41,7 @@ public class ChaosCards extends AbstractChaosControlCard {
     public ChaosCards() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = CHAOS_ENERGY_COST;
+        secondMagicNumber = baseSecondMagicNumber = 4;
 
         tags.add(EdgehegCardTags.CHAOS);
         tags.add(EdgehegCardTags.CHAOS_CONTROL);
@@ -52,7 +50,7 @@ public class ChaosCards extends AbstractChaosControlCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(p,upgraded ? 6 : 4));
+        addToBot(new DrawCardAction(p,secondMagicNumber));
         spendChaosEnergy(p);
     }
 
@@ -61,6 +59,7 @@ public class ChaosCards extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeSecondMagicNumber(2);
             initializeDescription();
         }
     }

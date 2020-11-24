@@ -13,10 +13,10 @@ import theEdgeheg.characters.TheEdgeheg;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Gain 4 Plated Armour. (Gain 6 Block)
+ * (1): Gain 4(6) Plated Armour. Gain 2(4) Block.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-17
+ *  @version 1.1
+ *  @since 2020-11-24
  */
 public class Fastness extends AbstractDynamicCard {
 
@@ -45,13 +45,15 @@ public class Fastness extends AbstractDynamicCard {
 
     public Fastness() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+        secondMagicNumber = baseSecondMagicNumber = 2;
+        magicNumber = baseMagicNumber = 4;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p, new PlatedArmorPower(p,4)));
-        if (upgraded) addToBot(new GainBlockAction(p,p,6));
+        addToBot(new ApplyPowerAction(p,p, new PlatedArmorPower(p,magicNumber)));
+        addToBot(new GainBlockAction(p,p,secondMagicNumber));
     }
 
     //Upgraded stats.
@@ -59,6 +61,8 @@ public class Fastness extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(2);
+            upgradeSecondMagicNumber(2);
             initializeDescription();
         }
     }

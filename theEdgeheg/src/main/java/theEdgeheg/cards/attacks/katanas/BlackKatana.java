@@ -71,8 +71,7 @@ public class BlackKatana extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            CardStrings strings = HelperFunctions.GetCardString(ID);
-            rawDescription = strings.NAME + strings.UPGRADE_DESCRIPTION;
+            rawDescription = cardStrings.NAME + cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

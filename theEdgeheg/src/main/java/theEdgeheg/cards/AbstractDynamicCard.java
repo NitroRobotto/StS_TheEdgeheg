@@ -1,5 +1,6 @@
 package theEdgeheg.cards;
 
+import com.megacrit.cardcrawl.localization.CardStrings;
 import theEdgeheg.util.HelperFunctions;
 
 public abstract class AbstractDynamicCard extends AbstractDefaultCard {
@@ -13,6 +14,8 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
     // the NAME and the DESCRIPTION into your card - it'll get it automatically. Of course, this functionality could have easily
     // Been added to the default card rather than creating a new Dynamic one, but was done so to deliberately.
 
+    protected CardStrings cardStrings;
+
     public AbstractDynamicCard(final String id,
                                final String img,
                                final int cost,
@@ -20,6 +23,14 @@ public abstract class AbstractDynamicCard extends AbstractDefaultCard {
                                final CardColor color,
                                final CardRarity rarity,
                                final CardTarget target) {
-        super(id, HelperFunctions.GetCardString(id).NAME, img, cost, HelperFunctions.GetCardString(id).DESCRIPTION, type, color, rarity, target);
+        super(id, "", img, cost, "", type, color, rarity, target);
+
+        cardStrings = HelperFunctions.GetCardString(id);
+
+        originalName = name = cardStrings.NAME;
+        rawDescription = cardStrings.DESCRIPTION;
+
+        initializeTitle();
+        initializeDescription();
     }
 }

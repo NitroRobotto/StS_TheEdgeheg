@@ -57,6 +57,7 @@ public class RollAndShoot extends AbstractDynamicCard {
 
         damage = baseDamage = DAMAGE;
         magicNumber = baseMagicNumber = SHOTS;
+        secondMagicNumber = baseSecondMagicNumber = 1;
         tags.add(EdgehegCardTags.GUN);
         isMultiDamage = true;
 
@@ -68,7 +69,7 @@ public class RollAndShoot extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int shotCount = magicNumber;
-        addToBot(new ApplyPowerAction(p,p,new DodgePower(p,upgraded ? 2 : 1)));
+        addToBot(new ApplyPowerAction(p,p,new DodgePower(p,secondMagicNumber)));
         for (int i = 0; i < shotCount; ++i)  {
             addToBot(
                     new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn),
@@ -84,6 +85,7 @@ public class RollAndShoot extends AbstractDynamicCard {
         if (!upgraded) {
             upgradeName();
             upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeSecondMagicNumber(1);
             initializeDescription();
         }
     }

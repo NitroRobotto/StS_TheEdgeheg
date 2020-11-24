@@ -62,7 +62,9 @@
     "PROPER_NAME": "Chaos Card",
     "NAMES": [
       "Chaos Card",
+      "Chaos Cards",
       "chaos_card",
+      "chaos_cards",
       "chaoscard"
     ],
     "DESCRIPTION": "CHAOS cards play with Chaos Energy."
