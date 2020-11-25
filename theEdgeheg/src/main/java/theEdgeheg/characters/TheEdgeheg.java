@@ -29,6 +29,7 @@ import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
 import theEdgeheg.relics.*;
+import theEdgeheg.util.HelperFunctions;
 import theEdgeheg.util.NullAnimation;
 
 import java.util.ArrayList;
@@ -212,6 +213,7 @@ public class TheEdgeheg extends CustomPlayer {
         CardCrawlGame.sound.playA("ATTACK_DAGGER_1", 1.25f); // Sound Effect
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT,
                 false); // Screen Effect
+        HelperFunctions.FlushBuggedCardStrings();
     }
 
     // character Select on-button-press sound effect

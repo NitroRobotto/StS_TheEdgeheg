@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import theEdgeheg.DefaultMod;
 
 import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 
 public class HelperFunctions {
@@ -24,15 +26,19 @@ public class HelperFunctions {
                 .findFirst();
     }
 
+    private static final Map<String, Boolean> BuggedItems = new HashMap<>();
+
+    public static void FlushBuggedCardStrings() {
+        BuggedItems.clear();
+    }
+
     public static CardStrings GetCardString(String ID) {
-        if (!DefaultMod.useEdgehegDescriptions) {
+        if (!DefaultMod.useEdgehegDescriptions) { // Always the "correct" text
             return CardCrawlGame.languagePack.getCardStrings(ID + "_Correct");
         }
 
-        if (Math.random() <= 0.08) {
-            return Math.random() <= 0.9 ? CardCrawlGame.languagePack.getCardStrings(ID + "_Correct") : CardStrings.getMockCardString();
-        }
-
-        return CardCrawlGame.languagePack.getCardStrings(ID);
+        // First time for general case
+        BuggedItems.putIfAbsent(ID, Math.random() <= 0.069);
+        return CardCrawlGame.languagePack.getCardStrings(ID + (BuggedItems.get(ID) ? "_Correct" : ""));
     }
 }
