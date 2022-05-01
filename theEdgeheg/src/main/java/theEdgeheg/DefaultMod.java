@@ -506,7 +506,8 @@ public class DefaultMod implements
                 new CrazyGirlfriend(),
                 new GirlWithGun(),
                 new KatanaGF(),
-                new BlockingGF()
+                new BlockingGF(),
+                new KillTheHeart()
         };
 
         for (CustomCard card : cards) {

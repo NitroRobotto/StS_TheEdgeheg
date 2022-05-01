@@ -38,7 +38,7 @@ public class HelperFunctions {
         }
 
         // First time for general case
-        BuggedItems.putIfAbsent(ID, Math.random() <= 0.069);
+        BuggedItems.putIfAbsent(ID, Math.random() <= 0.04269);
         return CardCrawlGame.languagePack.getCardStrings(ID + (BuggedItems.get(ID) ? "_Correct" : ""));
     }
 }
