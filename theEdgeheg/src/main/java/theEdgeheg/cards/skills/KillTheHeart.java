@@ -40,12 +40,15 @@ public class KillTheHeart extends AbstractChaosControlCard {
 
     private static final int COST = 0;
 
+    private static final int CARD_DRAW = 1;
+    private static final int CARD_DRAW_UPGRADE = 1;
+
     // /STAT DECLARATION/
 
 
     public KillTheHeart() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        magicNumber = baseMagicNumber = 0;
+        magicNumber = baseMagicNumber = CARD_DRAW;
 
         tags.add(EdgehegCardTags.CHAOS);
         tags.add(EdgehegCardTags.KATANA);
@@ -61,7 +64,7 @@ public class KillTheHeart extends AbstractChaosControlCard {
         if (m.id.equals("CorruptHeart")) {
             m.die(true);
         } else {
-            addToBot(new DrawCardAction(upgraded ? 2 : 1));
+            addToBot(new DrawCardAction(magicNumber));
         }
     }
 
@@ -70,6 +73,7 @@ public class KillTheHeart extends AbstractChaosControlCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            upgradeMagicNumber(CARD_DRAW_UPGRADE);
             initializeDescription();
         }
     }

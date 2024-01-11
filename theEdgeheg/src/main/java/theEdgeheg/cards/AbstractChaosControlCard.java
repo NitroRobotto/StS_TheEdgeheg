@@ -27,11 +27,13 @@ public abstract class AbstractChaosControlCard extends AbstractDynamicCard {
     }
 
     public boolean hasEnoughChaosEnergy() {
-        return magicNumber <= ChaosEnergyPower.GetChaosStrength(AbstractDungeon.player);
+        return magicNumber <= ChaosEnergyPower.GetChaosStrength(AbstractDungeon.player) || purgeOnUse;
     }
 
     /**
      * Adds to the bottom of the action queue the spending of chaos energy.
      */
-    protected void spendChaosEnergy(AbstractPlayer p) {addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));}
+    protected void spendChaosEnergy(AbstractPlayer p) {
+        addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
+    }
 }

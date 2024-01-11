@@ -81,8 +81,8 @@
   },
   "theEdgeheg:BlackKatana_Correct": {
     "NAME": "Black Katana",
-    "DESCRIPTION": "Deal !D! Damage. NL Draw a theedgeheg:Katana_Card from your Draw Pile.",
-    "UPGRADE_DESCRIPTION": " NL It costs 0 this turn."
+    "DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Draw a theedgeheg:Katana_Card from your Draw Pile.",
+    "UPGRADE_DESCRIPTION": "Deal !D! Damage. theedgeheg:Precise. NL Draw a theedgeheg:Katana_Card from your Draw Pile. NL It costs 0 this turn."
   },
   "theEdgeheg:GunFu_Correct": {
     "NAME": "Gun-Fu",
@@ -90,7 +90,7 @@
   },
   "theEdgeheg:Reload_Correct": {
     "NAME": "Reload",
-    "DESCRIPTION": "Gain !M! theedgeheg:GUNS."
+    "DESCRIPTION": "Gain !M! theedgeheg:GUNS. At the end of this turn, lose !M! theedgeheg:GUNS."
   },
   "theEdgeheg:PerfectAim_Correct": {
     "NAME": "Perfect Aim",
@@ -162,7 +162,7 @@
     "DESCRIPTION": "Deal !D! Damage. NL Multiply total damage by X."
   },
   "theEdgeheg:SpireCrasher_Correct": {
-    "NAME": "it the Spire",
+    "NAME": "Exit the Spire",
     "DESCRIPTION": "Crashes the game."
   },
   "theEdgeheg:DoubleStun_Correct": {
@@ -355,5 +355,9 @@
   "theEdgeheg:BlockingGF_Correct": {
     "NAME": "Block Girlfriend",
     "DESCRIPTION": "Gain !M! Block at the start of each turn and a random enemy loses !M! HP."
+  },
+  "theEdgeheg:KillTheHeart_Correct": {
+    "NAME": "Kill the Heart",
+    "DESCRIPTION": "Kills the heart. NL If used on anything else, draw !M! cards."
   }
 }

@@ -81,7 +81,7 @@
   "theEdgeheg:BlackKatana": {
     "NAME": "katana no kuroi",
     "DESCRIPTION": "its a katana that deals damage and gives yo uanother katana from your deck (PS: kuroi means black)",
-    "UPGRADE_DESCRIPTION": " (new katana costs 0 this turn)"
+    "UPGRADE_DESCRIPTION": "katana no kuroi (new katana costs 0 this turn)"
   },
   "theEdgeheg:GunFu": {
     "NAME": "GUNFU",

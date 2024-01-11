@@ -88,6 +88,9 @@ public class TheEdgeheg extends CustomPlayer {
     // =============== TEXTURES ===============
 
     private static final String EDGEHEG_BODY = "theEdgehegResources/images/char/edgeheg/sprite.jpg";
+    private static final String EDGEHEG_SHOULDER_1 = "theEdgehegResources/images/char/defaultCharacter/shoulder.png";
+    private static final String EDGEHEG_SHOULDER_2 = "theEdgehegResources/images/char/defaultCharacter/shoulder2.png";
+    private static final String EDGEHEG_CORPSE = "theEdgehegResources/images/char/defaultCharacter/corpse.png";
 
     public static final String[] orbTextures = {
             "theEdgehegResources/images/char/defaultCharacter/orb/layer1.png",
@@ -115,9 +118,9 @@ public class TheEdgeheg extends CustomPlayer {
 
         initializeClass(EDGEHEG_BODY, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)
-                THE_DEFAULT_SHOULDER_2, // campfire pose
-                THE_DEFAULT_SHOULDER_1, // another campfire pose
-                THE_DEFAULT_CORPSE, // dead corpse
+                EDGEHEG_SHOULDER_2, // campfire pose
+                EDGEHEG_SHOULDER_1, // another campfire pose
+                EDGEHEG_CORPSE, // dead corpse
                 getLoadout(), 20.0F, -10.0F, 220.0F, 290.0F, new EnergyManager(ENERGY_PER_TURN)); // energy manager
 
         // =============== /TEXTURES, ENERGY, LOADOUT/ =================
@@ -226,7 +229,7 @@ public class TheEdgeheg extends CustomPlayer {
     // Ascension 14 or higher. (ironclad loses 5, defect and silent lose 4 hp respectively)
     @Override
     public int getAscensionMaxHPLoss() {
-        return 0;
+        return 1;
     }
 
     // Should return the card color enum to be associated with your character.
