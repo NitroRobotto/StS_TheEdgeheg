@@ -16,12 +16,12 @@ import theEdgeheg.modifiers.DamageGunScalingModifier;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Deals 1 damage 8(12)+GUNS times to random enemies.
+ * (0): Deals 1 damage 3+GUNS times to all enemies. Innate. Exhaust.
  *  @author NITRO
- *  @version 2.0
+ *  @version 1.0
  *  @since 2024-04-02
  */
-public class MachineGun extends AbstractDynamicCard {
+public class SprayAndPray extends AbstractDynamicCard {
 
     /*
      * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
@@ -29,7 +29,7 @@ public class MachineGun extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(MachineGun.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(SprayAndPray.class.getSimpleName());
     public static final String IMG = makeCardPath("Attacks/machinegun.jpg");
 
     // /TEXT DECLARATION/
@@ -43,17 +43,19 @@ public class MachineGun extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int DAMAGE = 3;
+    private static final int UPGRADE_PLUS_DMG = 2;
 
     // /STAT DECLARATION/
 
-    public MachineGun() {
+    public SprayAndPray() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         damage = baseDamage = DAMAGE;
         tags.add(EdgehegCardTags.GUN);
         isMultiDamage = true;
+        isInnate = true;
+        exhaust = true;
 
         CardModifierManager.addModifier(this, new DamageGunScalingModifier( true));
         // We don't call "initializeDescription" here because addModifier already does it
@@ -63,10 +65,13 @@ public class MachineGun extends AbstractDynamicCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < damage; ++i)  {
-            addToBot(
-                    new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, 1, damageTypeForTurn),
-                    AbstractGameAction.AttackEffect.BLUNT_LIGHT)
-            );
+            for (AbstractMonster target : AbstractDungeon.getMonsters().monsters)
+            {
+                addToBot(
+                        new DamageAction(target, new DamageInfo(p, 1, damageTypeForTurn),
+                                AbstractGameAction.AttackEffect.BLUNT_LIGHT)
+                );
+            }
         }
     }
 

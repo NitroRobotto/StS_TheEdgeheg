@@ -38,14 +38,14 @@ public class RemoveUnwantedEdgehegRelicsPatch {
                 AbstractDungeon.relicsToRemoveOnStart.add(Abacus.ID);*/
 
                 // The Edgeheg shouldn't gain this much max HP.
-                // TODO: Patch or create replacements that grant increase MaxHP by 1 instead
+                // TODO: Patch or create replacements that increase MaxHP by 1 instead
                 AbstractDungeon.relicsToRemoveOnStart.add(Strawberry.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(DarkstonePeriapt.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Pear.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Mango.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(TinyHouse.ID);
                 AbstractDungeon.relicsToRemoveOnStart.add(Waffle.ID);
-                // TODO: Also replace values in maxhp potion
+                // TODO: Also replace values in that maxhp potion
 
                 // Healing relics are handled by a code in The Edgeheg's "Heal" function that limits it to healing by 1 HP.
                 /*AbstractDungeon.relicsToRemoveOnStart.add(EternalFeather.ID);

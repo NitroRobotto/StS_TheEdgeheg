@@ -26,7 +26,7 @@ public class DamageGunScalingModifier extends AbstractCardModifier {
     }
 
     @Override
-    public float modifyDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
+    public float modifyBaseDamage(float damage, DamageInfo.DamageType type, AbstractCard card, AbstractMonster target) {
         return damage + GunsPower.GetGunStrength(AbstractDungeon.player) * gunsScaling;
     }
 

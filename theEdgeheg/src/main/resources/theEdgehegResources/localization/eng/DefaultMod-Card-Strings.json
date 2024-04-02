@@ -17,7 +17,11 @@
   },
   "theEdgeheg:MachineGun": {
     "NAME": "machine GUN",
-    "DESCRIPTION": "Deal !D! Damage !M! [#ff0000]times[] or more if you have more guns."
+    "DESCRIPTION": "Deal 1 Damage !D! [#ff0000]times[] or more if you have more guns."
+  },
+  "theEdgeheg:SprayAndPray": {
+    "NAME": "sprayer and PRAYER",
+    "DESCRIPTION": "shoot everion !D! [#ff00ff]times[] with [#00ffff]guns[]"
   },
   "theEdgeheg:BadassArsenal": {
     "NAME": "Badass Arsenal",
@@ -161,7 +165,7 @@
     "DESCRIPTION": "*SHOTs GUN* !D! X damge"
   },
   "theEdgeheg:SpireCrasher": {
-    "NAME": "it thebspire",
+    "NAME": "it the spire",
     "DESCRIPTION": "u win"
   },
   "theEdgeheg:DoubleStun": {
@@ -291,12 +295,17 @@
   },
   "theEdgeheg:SoulSiphon": {
     "NAME": "sSuck Soul",
-    "DESCRIPTION": "theedgeheg:Chaos_Control 2 eat the soul of your enemy's and become stronger (IAM TRIED FORTHE LAST TIME THIS CARD IS NOT GAY OK HES BECOMING MORE POWERFUL WITH THE SOULS OF HIS ENEMY'S ITS NOT A GAY THINK OKAY DUSK IS NOT GAY FOR THE LAST TIME"
+    "DESCRIPTION": "theedgeheg:Chaos_Control 4 eat the soul of your enemy's and become stronger (IAM TRIED FORTHE LAST TIME THIS CARD IS NOT GAY OK HES BECOMING MORE POWERFUL WITH THE SOULS OF HIS ENEMY'S ITS NOT A GAY THINK OKAY DUSK IS NOT GAY FOR THE LAST TIME"
   },
   "theEdgeheg:SelfHarmIsNotCool": {
-    "NAME": "cut veins",
-    "DESCRIPTION": "ok so i tried it and mom had to take me to the hospital so plz dont try it. dusk is immortal tho so he can take 1 damage to gain 5 chaos energy no biggie",
-    "UPGRADE_DESCRIPTION": " (also theedgeheg:Dodge)"
+    "NAME": "ANGER",
+    "DESCRIPTION": "you wouldnt like it when im angre (exhume)",
+    "UPGRADE_DESCRIPTION": " (dont exhume)"
+  },
+  "theEdgeheg:SayNoToDrugs": {
+    "NAME": "say NO to drogs",
+    "DESCRIPTION": "or i get angre",
+    "UPGRADE_DESCRIPTION": " (also no drug later)"
   },
   "theEdgeheg:RollAndShoot": {
     "NAME": "Roll and Shoot",

@@ -2,9 +2,11 @@ package theEdgeheg.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.util.TextureLoader;
@@ -61,4 +63,21 @@ public class UltimateLifeformRelic extends CustomRelic {
         return DESCRIPTIONS[0];
     }
 
+    @Override
+    public void onMonsterDeath(AbstractMonster m) {
+        super.onMonsterDeath(m);
+        if (m.type == AbstractMonster.EnemyType.BOSS) {
+            int i = AbstractDungeon.ascensionLevel >= 5 ?
+                    MathUtils.round((float) (AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth) * 0.75F) - 1
+                    : AbstractDungeon.player.maxHealth - AbstractDungeon.player.currentHealth - 1;
+
+            while (--i >= 0) {
+                AbstractDungeon.player.heal(1, true);
+            }
+
+            addToBot(
+                    new TalkAction(true, "FUCK u keving!!",2.0f,2.0f)
+            );
+        }
+    }
 }

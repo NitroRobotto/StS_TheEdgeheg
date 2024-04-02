@@ -24,7 +24,6 @@ import org.apache.logging.log4j.Logger;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.attacks.katanas.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
-import theEdgeheg.cards.powers.RuleOfCool;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
@@ -88,9 +87,9 @@ public class TheEdgeheg extends CustomPlayer {
     // =============== TEXTURES ===============
 
     private static final String EDGEHEG_BODY = "theEdgehegResources/images/char/edgeheg/sprite.jpg";
-    private static final String EDGEHEG_SHOULDER_1 = "theEdgehegResources/images/char/defaultCharacter/shoulder.png";
-    private static final String EDGEHEG_SHOULDER_2 = "theEdgehegResources/images/char/defaultCharacter/shoulder2.png";
-    private static final String EDGEHEG_CORPSE = "theEdgehegResources/images/char/defaultCharacter/corpse.png";
+    private static final String EDGEHEG_SHOULDER_1 = "theEdgehegResources/images/char/edgeheg/shoulder.png";
+    private static final String EDGEHEG_SHOULDER_2 = "theEdgehegResources/images/char/edgeheg/shoulder2.png";
+    private static final String EDGEHEG_CORPSE = "theEdgehegResources/images/char/edgeheg/corpse.png";
 
     public static final String[] orbTextures = {
             "theEdgehegResources/images/char/defaultCharacter/orb/layer1.png",
@@ -114,7 +113,7 @@ public class TheEdgeheg extends CustomPlayer {
                 "theEdgehegResources/images/char/defaultCharacter/orb/vfx.png",
                 new NullAnimation());
 
-        // =============== TEXTURES, ENERGY, LOADOUT =================  
+        // =============== TEXTURES, ENERGY, LOADOUT =================
 
         initializeClass(EDGEHEG_BODY, // required call to load textures and setup energy/loadout.
                 // I left these in DefaultMod.java (Ctrl+click them to see where they are, Ctrl+hover to see what they read.)

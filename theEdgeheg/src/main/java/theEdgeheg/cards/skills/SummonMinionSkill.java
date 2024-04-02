@@ -1,60 +1,50 @@
 package theEdgeheg.cards.skills;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.DodgePower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1->0): Gain 1 Dodge.
+ * (1): Summons the special "Keving" minion. Exhaust.
+ * Upgrade: It doesn't exhaust.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-09
+ *  @version 0.0
+ *  @since 2024-01-11
  */
-public class StarterDodgeSkill extends AbstractDynamicCard {
-
-    /*
-     * Wiki-page: https://github.com/daviscook477/BaseMod/wiki/Custom-Cards
-     */
-
-
+public abstract class SummonMinionSkill extends AbstractDynamicCard {
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(StarterDodgeSkill.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skills/basicdodge.jpg");
+    public static final String ID = DefaultMod.makeID(Reload.class.getSimpleName());
+    public static final String IMG = makeCardPath("Skills/kevin.jpg");
 
     // /TEXT DECLARATION/
 
 
-    // STAT DECLARATION 	
+    // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.BASIC;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int UPGRADED_COST = 0;
 
     // /STAT DECLARATION/
 
 
-    public StarterDodgeSkill() {
+    public SummonMinionSkill() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-
-        this.tags.add(CardTags.STARTER_DEFEND); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
+        exhaust = upgraded;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 1)));
-        // TODO: Add a 6.9% chance of playing a sound effect here
+        //addToBot(new SummonKevinAction());
     }
 
     //Upgraded stats.
@@ -62,7 +52,7 @@ public class StarterDodgeSkill extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(UPGRADED_COST);
+            exhaust = false;
             initializeDescription();
         }
     }

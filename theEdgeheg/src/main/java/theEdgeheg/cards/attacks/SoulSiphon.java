@@ -1,6 +1,5 @@
 package theEdgeheg.cards.attacks;
 
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,18 +7,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.actions.FatalAttackAction;
 import theEdgeheg.cards.AbstractChaosControlCard;
-import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.powers.ChaosEnergyPower;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Chaos Control 2. Deal 10(15) Damage. If Fatal, heal 1 and gain 1 chaos energy.
+ * (1): Chaos Control 4. Deal 12(16) Damage. Heal 1. Exhaust. If Fatal, increase Max HP by 1.
  *  @author NITRO
- *  @version 1.2
- *  @since 2020-07-17
+ *  @version 2.0
+ *  @since 2024-04-02
  */
 public class SoulSiphon extends AbstractChaosControlCard {
 
@@ -52,20 +49,22 @@ public class SoulSiphon extends AbstractChaosControlCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
         damage = baseDamage = DAMAGE;
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 4;
+        exhaust = true;
 
         tags.add(EdgehegCardTags.CHAOS);
         tags.add(EdgehegCardTags.CHAOS_CONTROL);
+        tags.add(CardTags.HEALING);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new HealAction(p,p,1));
         addToBot(new FatalAttackAction(m,
                 new DamageInfo(p, damage, damageTypeForTurn),
                 () -> {
-                addToTop(new HealAction(p,p,1));
-                addToTop(new ApplyPowerAction(p,p, new ChaosEnergyPower(p,1)));
+                p.increaseMaxHp(1, true);
                 }));
         spendChaosEnergy(p);
     }

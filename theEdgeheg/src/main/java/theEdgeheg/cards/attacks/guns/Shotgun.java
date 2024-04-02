@@ -68,6 +68,7 @@ public class Shotgun extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        // TODO: Play Doom2 shotgun sound effect
         int shotCount = magicNumber;
         for (AbstractMonster target : AbstractDungeon.getMonsters().monsters.stream().sorted(new PositionSorter()).collect(Collectors
                 .toList())) {
@@ -82,7 +83,7 @@ public class Shotgun extends AbstractDynamicCard {
         }
     }
 
-    public class PositionSorter implements Comparator<AbstractMonster>
+    public static class PositionSorter implements Comparator<AbstractMonster>
     {
         @Override
         public int compare(AbstractMonster o1, AbstractMonster o2) {

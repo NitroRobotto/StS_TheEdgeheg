@@ -3,6 +3,7 @@ package theEdgeheg.relics;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.powers.ChaosEnergyPower;
 import theEdgeheg.util.TextureLoader;
@@ -33,7 +34,7 @@ public class SilverEmeraldRelic extends BaseEmeraldRelic {
 
     @Override
     public void onLoseHp(int damageAmount) {
-        if (damageAmount > 0) {
+        if (damageAmount > 0 && AbstractDungeon.player != null && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             flash();
             addToBot(new ApplyPowerAction(
                     AbstractDungeon.player, AbstractDungeon.player,

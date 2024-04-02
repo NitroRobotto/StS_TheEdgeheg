@@ -9,10 +9,10 @@ import theEdgeheg.characters.TheEdgeheg;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (X): Crash the game.
+ * (X): If you target the Heart, kill it. Otherwise, crash the game.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-15
+ *  @version 2.0
+ *  @since 2024-04-02
  */
 public class SpireCrasher extends AbstractDynamicCard {
 
@@ -30,7 +30,7 @@ public class SpireCrasher extends AbstractDynamicCard {
     // STAT DECLARATION
 
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.SELF;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
@@ -45,15 +45,21 @@ public class SpireCrasher extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        m.heal(1);
+        if (m.id.equals("CorruptHeart")) {
+            m.die(true);
+        } else {
+            m = null;
+            m.heal(1);
+        }
     }
 
-    // Upgraded stats.
+    @Override
+    public boolean canUpgrade() {
+        return false;
+    }
+
     @Override
     public void upgrade() {
-        if (!upgraded) {
-            upgradeName();
-            initializeDescription();
-        }
+
     }
 }
