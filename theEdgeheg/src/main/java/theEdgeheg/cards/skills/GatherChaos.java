@@ -10,13 +10,14 @@ import theEdgeheg.characters.TheEdgeheg;
 import theEdgeheg.powers.ChaosEnergyPower;
 import theEdgeheg.relics.BaseEmeraldRelic;
 
+import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (0): Gain Chaos Energy = Current Chaos Emeralds * 1(2). Exhaust.
+ * (0): Gain Chaos Energy = 1 + Current Chaos Emeralds. Exhaust. (Remove Exhaust)
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-09
+ *  @version 2.0
+ *  @since 2024-04-02
  */
 public class GatherChaos extends AbstractDynamicCard {
 
@@ -52,17 +53,17 @@ public class GatherChaos extends AbstractDynamicCard {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         tags.add(EdgehegCardTags.CHAOS);
         magicNumber = baseMagicNumber = CHAOS_ENERGY;
-        exhaust = true;
+        exhaust = !upgraded;
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int chaosEnergyCount = BaseEmeraldRelic.CountEmeralds() * magicNumber;
-
-        if (chaosEnergyCount > 0) {
-            addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p, chaosEnergyCount)));
-        }
+        addToBot(
+                new ApplyPowerAction(p, p,
+                        new ChaosEnergyPower(p, magicNumber + BaseEmeraldRelic.CountEmeralds())
+                )
+        );
     }
 
     //Upgraded stats.
@@ -70,7 +71,8 @@ public class GatherChaos extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(CHAOS_ENERGY);
+            exhaust = false;
+            rawDescription = languagePack.getCardStrings(ID).UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

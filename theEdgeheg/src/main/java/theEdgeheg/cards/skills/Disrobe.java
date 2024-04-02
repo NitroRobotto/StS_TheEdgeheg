@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
+import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
@@ -15,8 +16,8 @@ import static theEdgeheg.DefaultMod.makeCardPath;
 /**
  * (1): Apply Vulnerable 2(3). Draw 2(3). Discard 1.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-16
+ *  @version 1.1
+ *  @since 2024-04-02
  */
 public class Disrobe extends AbstractDynamicCard {
 
@@ -46,6 +47,8 @@ public class Disrobe extends AbstractDynamicCard {
 
     public Disrobe() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
+
+        tags.add(EdgehegCardTags.KATANA);
 
         magicNumber = baseMagicNumber = 2;
     }

@@ -12,10 +12,10 @@ import theEdgeheg.powers.DodgePower;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (2): Gain 2 Dodge. Gain 2(4) Chaos Energy.
+ * (2): Gain 2(3) Dodge. Gain 2 Chaos Energy.
  *  @author NITRO
- *  @version 1.1
- *  @since 2020-07-18
+ *  @version 2.0
+ *  @since 2024-04-02
  */
 public class BetterDodge extends AbstractDynamicCard {
 
@@ -40,9 +40,9 @@ public class BetterDodge extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 2;
-    private static final int BONUS_CHAOS = 2;
-    private static final int BONUS_CHAOS_UPGRADE = 2;
-
+    private static final int CHAOS_ENERGY = 2;
+    private static final int BASE_DODGE = 2;
+    private static final int UPGRADE_DODGE = 1;
 
     // /STAT DECLARATION/
 
@@ -50,14 +50,27 @@ public class BetterDodge extends AbstractDynamicCard {
     public BetterDodge() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        magicNumber = baseMagicNumber = BONUS_CHAOS;
+        magicNumber = baseMagicNumber = BASE_DODGE;
+        secondMagicNumber = baseSecondMagicNumber = CHAOS_ENERGY;
+
+        initializeDescription();
+    }
+
+    public BetterDodge(final String id,
+                               final String img,
+                               final int cost,
+                               final CardType type,
+                               final CardColor color,
+                               final CardRarity rarity,
+                               final CardTarget target) {
+        super(id, img, cost, type, color, rarity, target);
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, 2)));
-        addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new DodgePower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p, secondMagicNumber)));
     }
 
     //Upgraded stats.
@@ -65,7 +78,7 @@ public class BetterDodge extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(BONUS_CHAOS_UPGRADE);
+            upgradeMagicNumber(UPGRADE_DODGE);
             initializeDescription();
         }
     }

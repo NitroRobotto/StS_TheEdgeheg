@@ -101,6 +101,20 @@
       "heh"
     ]
   },
+  "theEdgeheg:NinjaIceCream": {
+    "NAME": "Ninja Icecream",
+    "FLAVOR": "*dodges* heh. almsost superspeed.",
+    "DESCRIPTIONS": [
+      "keep dodge but not all"
+    ]
+  },
+  "theEdgeheg:UmbraBoots": {
+    "NAME": "UMBRA Boots",
+    "FLAVOR": "fuk u birbs",
+    "DESCRIPTIONS": [
+      "THESE ARE THE BOOTS OF UMBRA AND HE USES THEM AND RUNS FASTER THAN THE STUPID BIRDS SO THEY CANT CATCH U FUCK U BIRDS"
+    ]
+  },
   "theEdgeheg:BottledPlaceholderRelic": {
     "NAME": "Bottled Placeholder",
     "FLAVOR": "What is this?",

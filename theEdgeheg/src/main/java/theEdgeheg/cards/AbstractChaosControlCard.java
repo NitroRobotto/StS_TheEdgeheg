@@ -34,6 +34,7 @@ public abstract class AbstractChaosControlCard extends AbstractDynamicCard {
      * Adds to the bottom of the action queue the spending of chaos energy.
      */
     protected void spendChaosEnergy(AbstractPlayer p) {
-        addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
+        if (magicNumber > 0)
+            addToBot(new ReducePowerAction(p, p, ChaosEnergyPower.POWER_ID, magicNumber));
     }
 }

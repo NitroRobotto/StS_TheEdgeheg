@@ -29,7 +29,8 @@
   },
   "theEdgeheg:GatherChaos": {
     "NAME": "Chaos power",
-    "DESCRIPTION": "Gain Chaos Power ( theedgeheg:chaos_energy ) from the emeralds. and exile"
+    "DESCRIPTION": "Gain Chaos Power ( theedgeheg:chaos_energy ) from the emeralds. and exile",
+    "UPGRADE_DESCRIPTION": "Gain Chaos Power ( theedgeheg:chaos_energy ) from the emeralds. and draw."
   },
   "theEdgeheg:RegularGun": {
     "NAME": "gun",
@@ -51,11 +52,20 @@
   "theEdgeheg:ChaosBlast": {
     "NAME": "Blast of Chaotic Energy",
     "DESCRIPTION": "Use the concentrated power of a well placed Blast of Chaotic Enegy spell to deal damage equal to the amount of Chaos Energy you have accumulated up to this point. This card also spends 2 Chaos Energy after calculating the amount of damage dealt.",
-    "UPGRADE_DESCRIPTION": "As an improved form of the Blast of Chaotic Energy, this altered concentration of high power will optimize the threads of chaotic weave, allowing more power to be drawn from a lesser amount of energy. It adds +3 damage and keeps the cost of 2 Chaos Energy intact."
+    "UPGRADE_DESCRIPTION": "As an improved form of the Blast of Chaotic Energy, this altered concentration of high power will optimize the threads of chaotic weave, allowing for a surprising conservation of supernatural energy. It removes the requirement of spending Chaos Energy."
+  },
+  "theEdgeheg:ChaosBeam": {
+    "NAME": "Chaotic Hyperblast",
+    "DESCRIPTION": "Caso Cnotrol X. BEAM to ALL. chaos makes it stronger!!!",
+    "UPGRADE_DESCRIPTION": "Caso Cnotrol X. BEAM to ALL. chaos makes it LOTS OF stronger!!!"
   },
   "theEdgeheg:BetterDodge": {
     "NAME": "*cool dodger*",
     "DESCRIPTION": "theedgeheg:dodge more and gain !M! chaos energy too"
+  },
+  "theEdgeheg:EvenBetterDodge": {
+    "NAME": "*ultrar instinc*",
+    "DESCRIPTION": "*dodges* hmf... not fast enoug..................."
   },
   "theEdgeheg:RuleOfCool": {
     "NAME": "Rule of Cool",
@@ -367,5 +377,9 @@
   "theEdgeheg:KillTheHeart": {
     "NAME": "kll teh hathr",
     "DESCRIPTION": "idont know what the hartr is but imad a card tokkll it"
+  },
+  "theEdgeheg:TrinityPower": {
+    "NAME": "trinity POWER!!",
+    "DESCRIPTION": "TONS of damage (!M! and !theEdgeheg:SecondMagic!)"
   }
 }

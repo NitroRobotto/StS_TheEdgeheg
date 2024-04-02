@@ -1,13 +1,16 @@
 package theEdgeheg.powers;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theEdgeheg.DefaultMod;
+import theEdgeheg.relics.NinjaIceCream;
 
 /**
  * Reduces the damage from the next attack to 0. Removed at the end of turn.
@@ -63,7 +66,19 @@ public class DodgePower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        if (!owner.hasPower(Superspeed.POWER_ID)) {
+        if (owner.hasPower(Superspeed.POWER_ID)) {
+            return;
+        }
+
+
+        if (owner.isPlayer && AbstractDungeon.player.hasRelic(NinjaIceCream.ID)) {
+            this.addToBot(new ReducePowerAction(
+                        this.owner, this.owner,
+                        this,
+                        MathUtils.ceil(amount/2.0f)
+                    )
+            );
+        } else {
             this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
     }

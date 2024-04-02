@@ -25,7 +25,8 @@
   },
   "theEdgeheg:GatherChaos_Correct": {
     "NAME": "Gather Chaos Power",
-    "DESCRIPTION": "Gain (# of Chaos Emeralds) x !M! theedgeheg:Chaos_Energy. NL Exhaust."
+    "DESCRIPTION": "Gain 1 + (# of Chaos Emeralds) theedgeheg:Chaos_Energy. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 + (# of Chaos Emeralds) theedgeheg:Chaos_Energy. NL Draw 1 Card."
   },
   "theEdgeheg:RegularGun_Correct": {
     "NAME": "Regular Gun",
@@ -46,8 +47,13 @@
   },
   "theEdgeheg:ChaosBlast_Correct": {
     "NAME": "Chaos Blast",
-    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Deal damage equal to the theedgeheg:Chaos_Energy you had before using this card.",
-    "UPGRADE_DESCRIPTION": "theedgeheg:Chaos_Control !M!. Deal damage equal to 3 + theedgeheg:Chaos_Energy you had before using this card."
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Deal 4 + (theedgeheg:Chaos_Energy) Damage.",
+    "UPGRADE_DESCRIPTION": "Deal 4 + (theedgeheg:Chaos_Energy) Damage."
+  },
+  "theEdgeheg:ChaosBeam_Correct": {
+    "NAME": "Chaos Blast",
+    "DESCRIPTION": "theedgeheg:Chaos_Control X. Deal 7+X Damage to ALL Enemies.",
+    "UPGRADE_DESCRIPTION": "theedgeheg:Chaos_Control X. Deal 7+(X*2) Damage to ALL Enemies."
   },
   "theEdgeheg:BetterDodge_Correct": {
     "NAME": "Better Dodge",
@@ -368,5 +374,13 @@
     "NAME": "Say NO to Drugs",
     "DESCRIPTION": "Removes all debuffs.",
     "UPGRADE_DESCRIPTION": " NL Grants 1 Artifact."
+  },
+  "theEdgeheg:EvenBetterDodge_Correct": {
+    "NAME": "Ultra Instinct",
+    "DESCRIPTION": "theedgeheg:dodge !M! NL Gain !theedgeheg:SecondMagic! theedgeheg:Chaos_Energy"
+  },
+  "theEdgeheg:TrinityPower_Correct": {
+    "NAME": "Trinity Power",
+    "DESCRIPTION": "Gain !M! Guns. NL Gain !M! Dexterity. !M! Gain !theEdgeheg:SecondMagic! theedgeheg:Chaos_Energy."
   }
 }
