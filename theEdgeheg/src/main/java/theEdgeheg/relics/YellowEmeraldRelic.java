@@ -34,7 +34,7 @@ public class YellowEmeraldRelic extends BaseEmeraldRelic {
         if (c.hasTag(EdgehegCardTags.CHAOS_CONTROL)) {
             flash();
             addToBot(new DamageAllEnemiesAction(
-                    AbstractDungeon.player,c.magicNumber, DamageInfo.DamageType.HP_LOSS,
+                    AbstractDungeon.player, c.magicNumber, DamageInfo.DamageType.HP_LOSS,
                     AbstractGameAction.AttackEffect.LIGHTNING)
             );
         }

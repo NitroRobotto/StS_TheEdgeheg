@@ -7,19 +7,22 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
 import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
-import theEdgeheg.modifiers.DamageGunScalingModifier;
+import theEdgeheg.modifiers.MagicGunScalingModifier;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
  * (1): Deals 1 damage 8(12)+GUNS times to random enemies.
  *  @author NITRO
- *  @version 2.0
- *  @since 2024-04-02
+ *  @version 2.1
+ *  @since 2024-04-03
  */
 public class MachineGun extends AbstractDynamicCard {
 
@@ -43,28 +46,39 @@ public class MachineGun extends AbstractDynamicCard {
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
     private static final int COST = 1;
-    private static final int DAMAGE = 8;
-    private static final int UPGRADE_PLUS_DMG = 4;
+    private static final int SHOT_COUNT = 8;
+    private static final int UPGRADE_PLUS_SHOTS = 4;
 
     // /STAT DECLARATION/
 
     public MachineGun() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
 
-        damage = baseDamage = DAMAGE;
         tags.add(EdgehegCardTags.GUN);
         isMultiDamage = true;
 
-        CardModifierManager.addModifier(this, new DamageGunScalingModifier( true));
+        magicNumber = baseMagicNumber = SHOT_COUNT;
+        CardModifierManager.addModifier(this, new MagicGunScalingModifier( true));
+
+        //initializeDescription();
         // We don't call "initializeDescription" here because addModifier already does it
     }
 
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < damage; ++i)  {
+        final AbstractPower strength = p.getPower(StrengthPower.POWER_ID);
+        final int shotCount = magicNumber + (strength == null ? 0 : strength.amount);
+
+        AbstractMonster target;
+        int totalDamage;
+
+        for (int i = 0; i < shotCount; ++i)  {
+            target = AbstractDungeon.getRandomMonster();
+            totalDamage = target.hasPower(VulnerablePower.POWER_ID) ? 2 : 1;
+
             addToBot(
-                    new DamageAction(AbstractDungeon.getRandomMonster(), new DamageInfo(p, 1, damageTypeForTurn),
+                    new DamageAction(target, new DamageInfo(p, totalDamage, damageTypeForTurn),
                     AbstractGameAction.AttackEffect.BLUNT_LIGHT)
             );
         }
@@ -75,7 +89,7 @@ public class MachineGun extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_PLUS_DMG);
+            upgradeMagicNumber(UPGRADE_PLUS_SHOTS);
             initializeDescription();
         }
     }

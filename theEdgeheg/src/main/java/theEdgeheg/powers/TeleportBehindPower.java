@@ -28,8 +28,8 @@ public class TeleportBehindPower extends AbstractPower {
     public static final String NAME = STRINGS.NAME;
     public static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("chaos84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("chaos32.jpg"));
 
     public TeleportBehindPower(AbstractCreature owner, int cardCount) {
         name = NAME;

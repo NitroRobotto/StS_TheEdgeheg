@@ -17,11 +17,11 @@
   },
   "theEdgeheg:MachineGun": {
     "NAME": "machine GUN",
-    "DESCRIPTION": "Deal 1 Damage !D! [#ff0000]times[] or more if you have more guns."
+    "DESCRIPTION": "Deal 1 Damage !M! [#ff0000]times[] or more if you have more guns."
   },
   "theEdgeheg:SprayAndPray": {
     "NAME": "sprayer and PRAYER",
-    "DESCRIPTION": "shoot everion !D! [#ff00ff]times[] with [#00ffff]guns[]"
+    "DESCRIPTION": "shoot everion !M! [#ff00ff]times[] with [#00ffff]guns[]"
   },
   "theEdgeheg:BadassArsenal": {
     "NAME": "Badass Arsenal",
@@ -381,5 +381,14 @@
   "theEdgeheg:TrinityPower": {
     "NAME": "trinity POWER!!",
     "DESCRIPTION": "TONS of damage (!M! and !theEdgeheg:SecondMagic!)"
+  },
+  "theEdgeheg:EdgyKatana": {
+    "NAME": "*edges u*",
+    "DESCRIPTION": "Spend 2 Energy. NL Dusk the Edgeheg obtains 1d4 additional Chaos Energy when playing this card. NL Edges U gains Bonus Damage equal to the Chaos Energy gathered by Hedges You. NL Dusk the Edgeheg deals !D!+2d6 Damage to target permanent. NL Edges You loses its Bonus Damage after playing it. NL theedgeheg:Precise",
+    "UPGRADED_DESCRIPTION": "Spend 2 Energy. NL Dusk the Edgeheg obtains 1d6 additional Chaos Energy when playing this card. NL Edges U gains Bonus Damage equal to the Chaos Energy gathered by Hedges You. NL Dusk the Edgeheg deals !D!+1d8+d16 Damage to target permanent. NL Edges You loses its Bonus Damage after playing it. NL theedgeheg:Precise"
+  },
+  "theEdgeheg:RandomEmeraldCard": {
+    "NAME": "tHE SEVENBT HEMERELD [0]",
+    "DESCRIPTION": "gUYS IM SORRY I GOT THE BIG REPORT I KNOW IT WASNT WORKING AND U CULDNT GET THE 7TH EMERELD BUT INFIXED IT AND NOW YOU CAN GET IT WITH THI CSARD:) NL theedgeheg:Chaos_Control !M!"
   }
 }

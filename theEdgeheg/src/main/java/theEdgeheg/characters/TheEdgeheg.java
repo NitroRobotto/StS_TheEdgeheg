@@ -3,6 +3,7 @@ package theEdgeheg.characters;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -89,7 +90,7 @@ public class TheEdgeheg extends CustomPlayer {
     private static final String EDGEHEG_BODY = "theEdgehegResources/images/char/edgeheg/sprite.jpg";
     private static final String EDGEHEG_SHOULDER_1 = "theEdgehegResources/images/char/edgeheg/shoulder.png";
     private static final String EDGEHEG_SHOULDER_2 = "theEdgehegResources/images/char/edgeheg/shoulder2.png";
-    private static final String EDGEHEG_CORPSE = "theEdgehegResources/images/char/edgeheg/corpse.png";
+    private static final String EDGEHEG_CORPSE = "theEdgehegResources/images/char/edgeheg/corpse.jpg";
 
     public static final String[] orbTextures = {
             "theEdgehegResources/images/char/defaultCharacter/orb/layer1.png",
@@ -189,6 +190,11 @@ public class TheEdgeheg extends CustomPlayer {
 
     @Override
     public void heal(int healAmount, boolean showEffect) {
+        if (maxHealth > 10 && MathUtils.randomBoolean(0.05f)) {
+            // Edgehg (sometimes) can't have more than 10 HP
+            decreaseMaxHealth(maxHealth - 10);
+        }
+
         // Edgeheg can only be healed for 1 HP
         super.heal(1, showEffect);
     }

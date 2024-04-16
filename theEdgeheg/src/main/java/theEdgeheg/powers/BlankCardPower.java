@@ -18,8 +18,8 @@ import static theEdgeheg.DefaultMod.makePowerPath;
 /**
  * Gain Dexterity per card played. Lose it at the start of your next turn.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-15
+ *  @version 1.1
+ *  @since 2024-04-03
  */
 public class BlankCardPower extends AbstractPower {
 
@@ -27,8 +27,8 @@ public class BlankCardPower extends AbstractPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.jpg"));
 
     public BlankCardPower(AbstractCreature owner, int amount) {
         name = NAME;

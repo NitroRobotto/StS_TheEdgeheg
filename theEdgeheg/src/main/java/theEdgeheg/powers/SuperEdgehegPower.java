@@ -2,6 +2,7 @@ package theEdgeheg.powers;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -28,8 +29,8 @@ public class SuperEdgehegPower extends AbstractPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("kevingpower84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("kevingpower32.jpg"));
 
     public SuperEdgehegPower(AbstractCreature owner) {
         name = NAME;
@@ -54,13 +55,54 @@ public class SuperEdgehegPower extends AbstractPower {
         addToBot(new ApplyPowerAction(owner,owner, new StrengthPower(owner,6)));
         addToBot(new ApplyPowerAction(owner,owner, new DexterityPower(owner,6)));
         addToBot(new ApplyPowerAction(owner,owner, new GunsPower(owner,6)));
-        addToBot(new ApplyPowerAction(owner,owner, new GainChaosEachTurnPower(owner,1)));
     }
 
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        addToBot(new GainEnergyAction(1));
+        addToBot(new ApplyPowerAction(owner,owner, new DodgePower(owner,1)));
+        addToBot(new GainEnergyAction(2));
+        addToBot(new ApplyPowerAction(owner, owner, new ChaosEnergyPower(owner,2)));
+
+        AbstractPower power = null;
+
+        switch (MathUtils.random(0,10)) {
+            case 0:
+                power = new ArtOfTheBladePower(owner, 1);
+                break;
+            case 1:
+                power = new BlankCardPower(owner, 1);
+                break;
+            case 2:
+                power = new BlockGFPower(owner, 1);
+                break;
+            case 4:
+                power = new BulletStormPower(owner, 1);
+                break;
+            case 5:
+                power = new CrazyGirlfriendPower(owner, 1);
+                break;
+            case 6:
+                power = new EndlessKatanasPower(owner);
+                break;
+            case 7:
+                power = new GunFuPower(owner, 1);
+                break;
+            case 8:
+                power = new MasterEmeraldPower(owner);
+                break;
+            case 9:
+                power = new PerfectAimPower(owner);
+                break;
+            case 10:
+                power = new RuleOfCoolPower(owner, false);
+                break;
+            default:
+        }
+
+        if (power != null)  {
+            addToBot(new ApplyPowerAction(owner, owner, power));
+        }
     }
 
     @Override
@@ -69,6 +111,5 @@ public class SuperEdgehegPower extends AbstractPower {
         addToBot(new ReducePowerAction(owner,owner, StrengthPower.POWER_ID,6));
         addToBot(new ReducePowerAction(owner,owner, DexterityPower.POWER_ID,6));
         addToBot(new ReducePowerAction(owner,owner, GunsPower.POWER_ID,6));
-        addToBot(new ReducePowerAction(owner,owner, GainChaosEachTurnPower.POWER_ID,1));
     }
 }

@@ -21,8 +21,8 @@ import static theEdgeheg.DefaultMod.makePowerPath;
 /**
  * Your first X Katana Attacks each turn are played twice.
  *  @author NITRO
- *  @version 1.0
- *  @since 2020-07-16
+ *  @version 1.1
+ *  @since 2024-04-03
  */
 public class ArtOfTheBladePower extends AbstractPower {
 
@@ -31,8 +31,8 @@ public class ArtOfTheBladePower extends AbstractPower {
     public static final String NAME = STRINGS.NAME;
     public static final String[] DESCRIPTIONS = STRINGS.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("swordpower84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("swordpower32.jpg"));
 
     private int charges;
 

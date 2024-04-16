@@ -1,6 +1,5 @@
 package theEdgeheg.powers;
 
-import basemod.BaseMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,8 +22,8 @@ public class BlockGFPower extends AbstractPower {
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("miscpower84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("miscpower32.jpg"));
 
     public BlockGFPower(AbstractCreature owner, int amount)
     {

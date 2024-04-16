@@ -52,7 +52,7 @@ public class SuperEdgeheg extends AbstractChaosControlCard {
         this.tags.add(EdgehegCardTags.CHAOS_CONTROL);
         magicNumber = baseMagicNumber = CHAOS_CONTROL_COST;
         isInnate = true;
-        retain = true;
+        selfRetain = retain = true;
     }
 
     // Actions the card should do.

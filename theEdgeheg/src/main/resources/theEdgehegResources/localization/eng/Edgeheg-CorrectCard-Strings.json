@@ -17,7 +17,7 @@
   },
   "theEdgeheg:MachineGun_Correct": {
     "NAME": "Machine Gun",
-    "DESCRIPTION": "Deal 1 Damage !D! times. NL theedgeheg:GUNS improves shot count."
+    "DESCRIPTION": "Deal 1 Damage !M! times. NL theedgeheg:GUNS improves shot count."
   },
   "theEdgeheg:BadassArsenal_Correct": {
     "NAME": "Badass Arsenal",
@@ -368,7 +368,7 @@
   },
   "theEdgeheg:SprayAndPray_Correct": {
     "NAME": "Spray and Pray",
-    "DESCRIPTION": "Deal 1 Damage !D! times to all enemies. NL theedgeheg:GUNS improves shot count. NL Innate. NL Exhaust."
+    "DESCRIPTION": "Deal 1 Damage !M! times to all enemies. NL theedgeheg:GUNS improves shot count. NL Innate. NL Exhaust."
   },
   "theEdgeheg:SayNoToDrugs_Correct": {
     "NAME": "Say NO to Drugs",
@@ -382,5 +382,14 @@
   "theEdgeheg:TrinityPower_Correct": {
     "NAME": "Trinity Power",
     "DESCRIPTION": "Gain !M! Guns. NL Gain !M! Dexterity. !M! Gain !theEdgeheg:SecondMagic! theedgeheg:Chaos_Energy."
+  },
+  "theEdgeheg:EdgyKatana_Correct": {
+    "NAME": "Edgy Katana",
+    "DESCRIPTION": "Gain 1d4 Chaos Energy. NL Deal !D!+2d6 Damage. NL Edges You deals additional damage equal to the Chaos Energy it gathered. NL theedgeheg:Precise",
+    "UPGRADED_DESCRIPTION": "Gain 1d6 Chaos Energy. NL Deal !D!+1d8+1d6 Damage. NL Edges You+ deals additional damage equal to the Chaos Energy it gathered. NL theedgeheg:Precise"
+  },
+  "theEdgeheg:RandomEmeraldCard_Correct": {
+    "NAME": "Random Emerald Card",
+    "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Gain a random Emerald relic. Then, remove this card from your deck. Exhaust."
   }
 }

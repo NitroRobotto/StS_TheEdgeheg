@@ -124,5 +124,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theEdgeheg:UltimatestLifeformRelic": {
+    "NAME": "ULTIMATEST lifeforms",
+    "FLAVOR": "this is even my final form",
+    "DESCRIPTIONS": [
+      "no damage (sometimes)"
+    ]
   }
 }

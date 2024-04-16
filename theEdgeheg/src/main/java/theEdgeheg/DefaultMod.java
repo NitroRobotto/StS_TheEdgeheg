@@ -288,7 +288,10 @@ public class DefaultMod implements
         
         BaseMod.addCharacter(new TheEdgeheg("the Edgeheg", TheEdgeheg.Enums.THE_DEFAULT),
                 THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, TheEdgeheg.Enums.THE_DEFAULT);
-        
+
+        //BaseMod.addCharacter(new DemonHunterDusk("the Demon Hunter", DemonHunterDusk.Enums.THE_REDHEG),
+        //        THE_DEFAULT_BUTTON, THE_DEFAULT_PORTRAIT, DemonHunterDusk.Enums.THE_REDHEG);
+
         receiveEditPotions();
         logger.info("Added " + TheEdgeheg.Enums.THE_DEFAULT.toString());
     }
@@ -386,7 +389,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new SoulDevourerRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new NinjaIceCream(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new UmbraBoots(), TheEdgeheg.Enums.COLOR_PURPLE);
-
+        BaseMod.addRelicToCustomPool(new UltimatestLifeformRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
 
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new UltimateLifeformRelic(), RelicType.SHARED);
@@ -415,6 +418,7 @@ public class DefaultMod implements
         logger.info("Adding cards for Edgeheg");
 
         CustomCard[] cards = {
+                // Edgeheg
                 new StarterDodgeSkill(),
                 new StarterShootAttack(),
                 new BloodyKatana(),
@@ -506,7 +510,10 @@ public class DefaultMod implements
                 new SayNoToDrugs(),
                 new SprayAndPray(),
                 new EvenBetterDodge(),
-                new ChaosBeam()
+                new ChaosBeam(),
+                new EdgyKatana(),
+                new RandomEmeraldCard()
+                // Demon Hunter Dusk
         };
 
         for (CustomCard card : cards) {

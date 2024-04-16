@@ -11,6 +11,12 @@ import theEdgeheg.util.TextureLoader;
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
+/**
+ *  Gain 1 Chaos energy when an enemy is defeated.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2024-04-03
+ */
 public class BlueEmeraldRelic extends BaseEmeraldRelic {
 
     /*
@@ -24,18 +30,15 @@ public class BlueEmeraldRelic extends BaseEmeraldRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("placeholder_relic.png"));
 
     public BlueEmeraldRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     @Override
     public void onMonsterDeath(AbstractMonster m) {
-        if (!m.escaped && !m.hasPower("Minion"))
-        {
-            flash();
-            addToBot(new ApplyPowerAction(
-                    AbstractDungeon.player, AbstractDungeon.player,
-                    new ChaosEnergyPower(AbstractDungeon.player, 1)));
-        }
+        flash();
+        addToBot(new ApplyPowerAction(
+                AbstractDungeon.player, AbstractDungeon.player,
+                new ChaosEnergyPower(AbstractDungeon.player, 1)));
     }
 
     // Description

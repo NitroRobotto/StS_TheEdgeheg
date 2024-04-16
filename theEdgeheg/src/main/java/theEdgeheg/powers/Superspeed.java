@@ -23,8 +23,8 @@ public class Superspeed extends AbstractPower implements CloneablePowerInterface
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("kevingpower84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("kevingpower32.jpg"));
 
     public Superspeed(AbstractCreature owner, int stacks)
     {

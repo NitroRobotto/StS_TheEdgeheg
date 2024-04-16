@@ -44,7 +44,13 @@ public abstract class BaseEmeraldRelic extends CustomRelic {
             ids.remove(relic.relicId);
         }
 
-        if (ids.size() <= 0) ids.add("Circlet");
+        if (ids.isEmpty()) {
+            if (AbstractDungeon.player.hasRelic(RedEmeraldRelic.ID)) {
+                return "Circlet";
+            } else {
+                return RedEmeraldRelic.ID;
+            }
+        }
 
         return ids.get(new Random().random(0,ids.size()-1));
     }

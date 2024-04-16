@@ -13,6 +13,12 @@ import theEdgeheg.util.TextureLoader;
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
+/**
+ *  Gain 1 Dodge whenever you play a Chaos Control card.
+ *  @author NITRO
+ *  @version 1.1
+ *  @since 2024-04-03
+ */
 public class PurpleEmeraldRelic extends BaseEmeraldRelic {
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
@@ -25,7 +31,7 @@ public class PurpleEmeraldRelic extends BaseEmeraldRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("emeraldOutline.png"));
 
     public PurpleEmeraldRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 
     @Override

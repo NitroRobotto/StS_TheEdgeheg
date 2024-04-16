@@ -23,8 +23,8 @@ public class EndlessKatanasPower extends AbstractPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("swordpower84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("swordpower32.jpg"));
 
     public EndlessKatanasPower(AbstractCreature owner) {
         name = NAME;

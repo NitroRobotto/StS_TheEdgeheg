@@ -26,8 +26,8 @@ public class CrazyGirlfriendPower extends AbstractPower {
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
     public static final String[] DESCRIPTIONS = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("gun84.jpg"));
-    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("gun32.jpg"));
+    private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("sharinganpower84.jpg"));
+    private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("sharinganpower32.jpg"));
 
     public CrazyGirlfriendPower(AbstractCreature owner, int amount) {
         name = NAME;
