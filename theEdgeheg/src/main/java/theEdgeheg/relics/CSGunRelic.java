@@ -5,17 +5,24 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theEdgeheg.DefaultMod;
-import theEdgeheg.powers.GunsPower;
+import theEdgeheg.cards.EdgehegCardTags;
+import theEdgeheg.powers.ChaosEnergyPower;
 import theEdgeheg.util.TextureLoader;
 
 import static theEdgeheg.DefaultMod.makeRelicOutlinePath;
 import static theEdgeheg.DefaultMod.makeRelicPath;
 
 /**
- * When right clicked, says a line.
+ * Gain 1 Chaos Energy whenever you play a GUN card. Greatly increases damage of the CSGun card.
+ *  @author NITRO
+ *  @version 2.0
+ *  @since 2024-04-18
  */
 public class CSGunRelic extends CustomRelic implements ClickableRelic {
     /*
@@ -57,8 +64,12 @@ public class CSGunRelic extends CustomRelic implements ClickableRelic {
     }
 
     @Override
-    public void atBattleStart() {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new GunsPower(AbstractDungeon.player)));
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        super.onPlayCard(c, m);
+        if (c.hasTag(EdgehegCardTags.GUN)) {
+            AbstractPlayer p = AbstractDungeon.player;
+            addToBot(new ApplyPowerAction(p, p, new ChaosEnergyPower(p, 1)));
+        }
     }
 
     public void atTurnStart() {

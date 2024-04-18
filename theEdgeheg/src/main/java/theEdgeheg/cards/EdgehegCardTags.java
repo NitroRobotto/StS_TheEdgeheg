@@ -20,15 +20,14 @@ public class EdgehegCardTags {
     @SpireEnum public static AbstractCard.CardTags CHAOS_CONTROL;
     @SpireEnum public static AbstractCard.CardTags GIRLFRIEND;
 
-    public static AbstractCard createRandomCardWithTag(AbstractCard.CardTags tag, AbstractCard.CardType type)
-    {
+    public static ArrayList<AbstractCard> getAllCardsWithTag(AbstractCard.CardTags tag) {
         ArrayList<AbstractCard> list = new ArrayList<>();
         Iterator<AbstractCard> cardGroup = AbstractDungeon.srcCommonCardPool.group.iterator();
 
         AbstractCard c;
         while(cardGroup.hasNext()) {
             c = cardGroup.next();
-            if (c.type == type && c.hasTag(tag) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
+            if (c.hasTag(tag) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
                 list.add(c);
             }
         }
@@ -37,7 +36,7 @@ public class EdgehegCardTags {
 
         while(cardGroup.hasNext()) {
             c = cardGroup.next();
-            if (c.type == type && c.hasTag(tag) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
+            if (c.hasTag(tag) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
                 list.add(c);
             }
         }
@@ -46,10 +45,26 @@ public class EdgehegCardTags {
 
         while(cardGroup.hasNext()) {
             c = cardGroup.next();
-            if (c.type == type && c.hasTag(tag) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
+            if (c.hasTag(tag) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
                 list.add(c);
             }
         }
+
+        return list;
+    }
+
+    public static AbstractCard createRandomCardWithTag(AbstractCard.CardTags tag, AbstractCard.CardType type)
+    {
+        ArrayList<AbstractCard> list = getAllCardsWithTag(tag);
+
+        list.removeIf(cardToRemove -> cardToRemove.type != type);
+
+        return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
+    }
+
+    public static AbstractCard createRandomCardWithTag(AbstractCard.CardTags tag)
+    {
+        ArrayList<AbstractCard> list = getAllCardsWithTag(tag);
 
         return list.get(AbstractDungeon.cardRandomRng.random(list.size() - 1));
     }

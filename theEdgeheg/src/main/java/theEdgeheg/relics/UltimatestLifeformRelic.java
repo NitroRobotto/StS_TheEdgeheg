@@ -31,6 +31,11 @@ public class UltimatestLifeformRelic extends CustomRelic {
     }
 
     @Override
+    public String getUpdatedDescription() {
+        return DESCRIPTIONS[0];
+    }
+
+    @Override
     public void onLoseHp(int damageAmount) {
         final AbstractPlayer p = AbstractDungeon.player;
 

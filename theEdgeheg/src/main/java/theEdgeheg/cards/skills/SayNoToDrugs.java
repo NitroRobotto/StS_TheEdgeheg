@@ -8,17 +8,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
 import theEdgeheg.DefaultMod;
 import theEdgeheg.cards.AbstractDynamicCard;
-import theEdgeheg.cards.EdgehegCardTags;
 import theEdgeheg.characters.TheEdgeheg;
 
 import static com.megacrit.cardcrawl.core.CardCrawlGame.languagePack;
 import static theEdgeheg.DefaultMod.makeCardPath;
 
 /**
- * (1): Remove all debuffs. (Gain Artifact 1.) Exhaust.
+ * (0): Remove all debuffs. (Gain Artifact 1.) Exhaust.
  *  @author NITRO
- *  @version 1.0
- *  @since 2024-01-11
+ *  @version 1.1
+ *  @since 2024-04-18
  */
 public class SayNoToDrugs extends AbstractDynamicCard {
     // TEXT DECLARATION
@@ -37,14 +36,13 @@ public class SayNoToDrugs extends AbstractDynamicCard {
     private static final CardType TYPE = CardType.SKILL;
     public static final CardColor COLOR = TheEdgeheg.Enums.COLOR_PURPLE;
 
-    private static final int COST = 1;
+    private static final int COST = 0;
 
     // /STAT DECLARATION/
 
 
     public SayNoToDrugs() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
-        tags.add(EdgehegCardTags.CHAOS);
         exhaust = true;
     }
 
@@ -62,8 +60,7 @@ public class SayNoToDrugs extends AbstractDynamicCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            exhaust = false;
-            rawDescription = STRINGS.UPGRADE_DESCRIPTION;
+            rawDescription += STRINGS.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
     }

@@ -391,6 +391,8 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new UmbraBoots(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new UltimatestLifeformRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
 
+        BaseMod.addRelicToCustomPool(new RadiationPoisoning(), TheEdgeheg.Enums.COLOR_PURPLE);
+
         // This adds a relic to the Shared pool. Every character can find this relic.
         //BaseMod.addRelic(new UltimateLifeformRelic(), RelicType.SHARED);
         
@@ -512,8 +514,8 @@ public class DefaultMod implements
                 new EvenBetterDodge(),
                 new ChaosBeam(),
                 new EdgyKatana(),
-                new RandomEmeraldCard()
-                // Demon Hunter Dusk
+                new RandomEmeraldCard(),
+                new HyperdeathCannon()
         };
 
         for (CustomCard card : cards) {

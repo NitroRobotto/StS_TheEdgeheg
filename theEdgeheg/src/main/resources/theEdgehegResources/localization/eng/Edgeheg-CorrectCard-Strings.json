@@ -391,5 +391,9 @@
   "theEdgeheg:RandomEmeraldCard_Correct": {
     "NAME": "Random Emerald Card",
     "DESCRIPTION": "theedgeheg:Chaos_Control !M!. Gain a random Emerald relic. Then, remove this card from your deck. Exhaust."
+  },
+  "theEdgeheg:HyperdeathCannon_Correct": {
+    "NAME": "Hyperdeath Cannon",
+    "DESCRIPTION": "theedgeheg:ChaosControl X NL Play random GUN cards until their combined energy cost exceeds X."
   }
 }

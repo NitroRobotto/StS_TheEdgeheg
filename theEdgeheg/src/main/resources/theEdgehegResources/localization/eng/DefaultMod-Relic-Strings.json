@@ -131,5 +131,12 @@
     "DESCRIPTIONS": [
       "no damage (sometimes)"
     ]
+  },
+  "theEdgeheg:RadiationPoisoning": {
+    "NAME": "radiation POISSON",
+    "FLAVOR": "war never change",
+    "DESCRIPTIONS": [
+      "very bad 4 u"
+    ]
   }
 }
