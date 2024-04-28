@@ -27,6 +27,7 @@ import theEdgeheg.cards.attacks.katanas.BloodyKatana;
 import theEdgeheg.cards.attacks.StarterShootAttack;
 import theEdgeheg.cards.skills.ChaosControlSkill;
 import theEdgeheg.cards.skills.GatherChaos;
+import theEdgeheg.cards.skills.Reload;
 import theEdgeheg.cards.skills.StarterDodgeSkill;
 import theEdgeheg.relics.*;
 import theEdgeheg.util.HelperFunctions;
@@ -183,7 +184,15 @@ public class TheEdgeheg extends CustomPlayer {
 
         retVal.add(BloodyKatana.ID);
         retVal.add(ChaosControlSkill.ID);
-        retVal.add(GatherChaos.ID);
+
+        if (hasRelic(GreenEmeraldRelic.ID))
+        {
+            retVal.add(GatherChaos.ID);
+        }
+        else
+        {
+            retVal.add(Reload.ID);
+        }
 
         return retVal;
     }

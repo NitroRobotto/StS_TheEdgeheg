@@ -45,11 +45,15 @@ public class RadiationPoisoning extends CustomRelic {
             AbstractDungeon.getCurrRoom().rewardAllowed = false;
         }
 
-        addToBot(
-                new DamageAction(AbstractDungeon.player,
-                new DamageInfo(AbstractDungeon.player, 10),
-                AbstractGameAction.AttackEffect.FIRE)
-        );
+        if (!AbstractDungeon.player.hasRelic(RadiationSuit.ID))
+        {
+            addToBot(
+                    new DamageAction(AbstractDungeon.player,
+                            new DamageInfo(AbstractDungeon.player, 10),
+                            AbstractGameAction.AttackEffect.FIRE)
+            );
+        }
+
         addToBot(
                 new DamageAllEnemiesAction(
                         AbstractDungeon.player,

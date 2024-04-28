@@ -30,7 +30,7 @@ public class EdgyKatana extends AbstractDynamicCard {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(EdgyKatana.class.getSimpleName());
-    public static final String IMG = makeCardPath("Attacks/chaoskatana.jpg");
+    public static final String IMG = makeCardPath("Attacks/edgykatana.jpg");
 
     // /TEXT DECLARATION/
 

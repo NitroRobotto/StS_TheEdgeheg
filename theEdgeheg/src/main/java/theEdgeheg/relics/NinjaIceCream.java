@@ -12,8 +12,8 @@ public class NinjaIceCream extends CustomRelic {
 
     public static final String ID = DefaultMod.makeID(NinjaIceCream.class.getSimpleName());
 
-    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("csgun.png"));
-    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("csgun.png"));
+    private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("ninjaIceCream.png"));
+    private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ninjaIceCream.png"));
 
     public NinjaIceCream() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);

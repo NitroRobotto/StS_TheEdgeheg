@@ -390,6 +390,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new NinjaIceCream(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new UmbraBoots(), TheEdgeheg.Enums.COLOR_PURPLE);
         BaseMod.addRelicToCustomPool(new UltimatestLifeformRelic(), TheEdgeheg.Enums.COLOR_PURPLE);
+        BaseMod.addRelicToCustomPool(new RadiationSuit(), TheEdgeheg.Enums.COLOR_PURPLE);
 
         BaseMod.addRelicToCustomPool(new RadiationPoisoning(), TheEdgeheg.Enums.COLOR_PURPLE);
 

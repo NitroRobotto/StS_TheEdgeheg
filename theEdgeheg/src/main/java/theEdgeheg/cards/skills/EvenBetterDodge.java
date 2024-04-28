@@ -1,7 +1,6 @@
 package theEdgeheg.cards.skills;
 
 import theEdgeheg.DefaultMod;
-import theEdgeheg.characters.TheEdgeheg;
 
 import static theEdgeheg.DefaultMod.makeCardPath;
 
@@ -9,7 +8,7 @@ public class EvenBetterDodge extends BetterDodge {
     // TEXT DECLARATION
 
     public static final String ID = DefaultMod.makeID(EvenBetterDodge.class.getSimpleName());
-    public static final String IMG = makeCardPath("Skills/motorcycle.jpg");
+    public static final String IMG = makeCardPath("Skills/ultrainstinct.jpg");
 
     // /TEXT DECLARATION/
 
