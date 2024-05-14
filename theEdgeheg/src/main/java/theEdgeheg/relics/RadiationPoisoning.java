@@ -32,14 +32,19 @@ public class RadiationPoisoning extends CustomRelic {
 
     @Override
     public void atBattleStart() {
+        if (usedUp)
+            return;
+
         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (m.type == AbstractMonster.EnemyType.ELITE) {
                 return;
             } else if (m.type == AbstractMonster.EnemyType.BOSS) {
-                AbstractDungeon.player.loseRelic(ID);
+                usedUp();
                 return;
             }
         }
+
+        flash();
 
         if (MathUtils.randomBoolean()) {
             AbstractDungeon.getCurrRoom().rewardAllowed = false;

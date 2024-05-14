@@ -138,5 +138,12 @@
     "DESCRIPTIONS": [
       "very bad 4 u"
     ]
+  },
+  "theEdgeheg:RadiationSuit": {
+    "NAME": "rad suit",
+    "FLAVOR": "no poisoning 4 u",
+    "DESCRIPTIONS": [
+      "very good 4 u"
+    ]
   }
 }
